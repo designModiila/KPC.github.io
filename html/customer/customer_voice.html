@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KPC</title>
-  <link rel="stylesheet" href="../../src/js/jquery/jquery-ui.min.css">
-  <link rel="stylesheet" href="../../src/plugin/swiper/swiper.min.css">
-  <link rel="stylesheet" href="../../src/plugin/select/select2.min.css">
-
-  <link rel="stylesheet" href="../../src/css/reset.css">
-  <link rel="stylesheet" href="../../src/css/font.css">
-  <link rel="stylesheet" href="../../src/css/common.css">
-  <link rel="stylesheet" href="../../src/css/sub.css">
-
-  <script src="../../src/js/jquery/jquery-3.6.4.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-  <script src="../../src/plugin/swiper/swiper.min.js"></script>
-  <script src="../../src/plugin/select/select2.min.js"></script>
-  <script src="../../src/js/common.js"></script>
-  <script src="../../src/js/sub.js"></script>
-  <!-- <script src="../src/js/main.js"></script> -->
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPC</title>
+    <link rel="stylesheet" href="../../src/js/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../src/plugin/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../../src/plugin/select/select2.min.css">
+  
+    <link rel="stylesheet" href="../../src/css/reset.css">
+    <link rel="stylesheet" href="../../src/css/font.css">
+    <link rel="stylesheet" href="../../src/css/common.css">
+    <link rel="stylesheet" href="../../src/css/sub.css">
+  
+    <script src="../../src/js/jquery/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../src/plugin/gsap/gsap.min.js"></script>
+    <script type="text/javascript" src="../../src/plugin/gsap/ScrollTrigger.min.js"></script>
+    <script src="../../src/plugin/swiper/swiper.min.js"></script>
+    <script src="../../src/plugin/select/select2.min.js"></script>
+    <script src="../../src/js/common.js"></script>
+    <script src="../../src/js/sub.js"></script>
+    <!-- <script src="../src/js/main.js"></script> -->
+  </head>
 <body>
   <header id="header" class="header"></header>
   <div id="wrap" class="wrap lastSec">
@@ -41,11 +40,11 @@
       <div class="section section01">
         <div class="inner">
           <div class="form-wrap">
-            <div class="form-title">
+            <div class="form-title cont">
               <p>담당자 확인 후 <br>입력해주신 메일로 회신드리겠습니다.</p>
             </div>
 
-            <div class="form-group">
+            <div class="form-group cont">
               <div class="form-label">
                 <label>문의유형
                   <span class="bul-must"></span>
@@ -59,7 +58,7 @@
                 <option>5</option>
               </select>
             </div>
-            <div class="form-group">
+            <div class="form-group cont">
               <div class="form-label">
                 <label>이메일
                   <span class="bul-must"></span>
@@ -67,19 +66,19 @@
               </div>
               <input type="text" class="form-control" placeholder="이메일을 입력해 주세요" name="name">
             </div>
-            <div class="form-group">
+            <div class="form-group cont">
               <div class="form-label">
                 <label>성명</label>
               </div>
               <input type="text" class="form-control" placeholder="성명을 입력해 주세요" name="name">
             </div>
-            <div class="form-group">
+            <div class="form-group cont">
               <div class="form-label">
                 <label>연락처</label>
               </div>
               <input type="text" class="form-control" placeholder="연락처를 입력해 주세요" name="name">
             </div>
-            <div class="form-group">
+            <div class="form-group cont">
               <div class="form-label">
                 <label>제목
                   <span class="bul-must"></span>
@@ -87,7 +86,7 @@
               </div>
               <input type="text" class="form-control" placeholder="제목을 입력해 주세요" name="name">
             </div>
-            <div class="form-group">
+            <div class="form-group cont">
               <div class="form-label">
                 <label>제목
                   <span class="bul-must"></span>
@@ -95,7 +94,7 @@
               </div>
               <textarea class="form-control" placeholder="내용을 입력해 주세요" id="textarea" rows="5"></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group cont">
               <div class="form-label">
                 <label>첨부파일</label>
               </div>
@@ -106,7 +105,7 @@
               </div>
             </div>
 
-            <div class="privacy-agree-box">
+            <div class="privacy-agree-box cont">
               <div class="top">
                 <div>
                   <input type="checkbox" name="check-privacy" value="privacy" class="icheckbox" id="agree">
@@ -131,7 +130,7 @@
                 </ul>
               </div>
             </div>
-            <div class="btn-wrap">
+            <div class="btn-wrap cont">
               <button type="submit" class="submit-btn">등록</button>
             </div>
           </div>
