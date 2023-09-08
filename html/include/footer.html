@@ -89,8 +89,8 @@
     <div class="footer-bottom">
       <ul>
         <li><a href="../customer/customer_voice.html">고객의소리</a></li>
-        <li><a href="#none">개인정보처리방침</a></li>
-        <li><a href="#none">이메일 무단수집 거부</a></li>
+        <li><a href="#none" class="privacy">개인정보처리방침</a></li>
+        <li><a href="#none" class="email">이메일 무단수집 거부</a></li>
       </ul>
       <ul>
         <li><span>ADDRESS. </span>(45011) 울산 울주군 온산읍 당월로 216-51</li>
@@ -100,9 +100,36 @@
       <p class="copy">Copyright &copy; KPC All Right Reserved.</p>
     </div>
   </div>
-  
+  <div class="layer-dimm"></div>
+  <div class="privacy-policy">
+    <script> 
+        $('.privacy-policy').load('../../html/customer/privacy-policy.html')
+    </script>
+  </div>
+  <div class="email-notice">
+    <script> 
+        $('.email-notice').load('../../html/customer/email-notice.html')
+    </script>
+  </div>
   <script>
     $(document).ready(function(){
+      
+    function modal(){
+      $('.privacy-policy').hide();
+      $('.email-notice').hide();
+      $('.privacy').click(function(){
+        $('.layer-dimm').addClass('open');
+        $('.privacy-policy').show().addClass('open');
+        $('body').addClass('noScroll');
+      })
+      $('.email').click(function(){
+        $('.layer-dimm').addClass('open');
+        $('.email-notice').show().addClass('open');
+        $('body').addClass('noScroll');
+      })
+    }
+    modal();
+
       function familySelectHide() {
         $('.family-site').removeClass('active');
       }
@@ -126,7 +153,7 @@
       ScrollTrigger.create({
         trigger: ".lastSec",
         start: "bottom +=98%",
-        end: "+=50%",
+        end: "+=30%",
         animation: uncover,
         scrub: true,
         //markers: true

@@ -52,7 +52,7 @@ textarea, input, select {font-family: 'Pretendard';}
 .defalut-btn:hover{background: #51C8E7;}
 .defalut-btn.more:hover{background: #0fb5df;}
 .defalut-btn:hover a{color: #ffffff;}
-.defalut-btn a{padding: 5px 40px; display: block;}
+.defalut-btn a{padding: 5px 40px; display: block; line-height: 44px;}
 
 .onlyMo{display: none !important;}
 .onlyPc{display: block !important;}
@@ -64,9 +64,9 @@ textarea, input, select {font-family: 'Pretendard';}
 @media (max-width: 767px) {
   .onlyMo{display: block !important;}
   .onlyPc{display: none !important;}
-  .defalut-btn{width: 100%;}
+  /* .defalut-btn{width: 100%;} */
   .defalut-btn.more{margin-top: 16px;}
-  .defalut-btn a{font-size: 14px; padding: 10px 0; display: block;}
+  .defalut-btn a{padding: 10px 28px; display: block; line-height: unset;}
   .input-form input{min-width: auto; width: 100%; padding: 0 15px;}
   .input-form .fas{right: 15px;}
 }

@@ -28,22 +28,6 @@ $(document).ready(function(){
         }
       });
 
-      // var subVisualAni = gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: $subVisual,
-      //     start: "top+=" + _startPosition + " 99.9%",
-      //     // end: "+=1500",
-      //     end: "top+=200% bottom",
-      //     pin: true,
-      //     toggleActions:"restart none none reverse"
-      //   }
-      // })
-      // subVisualAni.to('.sub-visual .image-wrap',{width: '100%', height: '100vh', duration: 1})
-      //             .to('.title-wrap',{top: "53vh"})
-      //             .to('.subVisual .title-wrap .sub-title',{color: "#fff"},0)
-      //             .to('.subVisual .title-wrap .title',{color: "#fff"},0)
-
-
       
     }
     
@@ -80,6 +64,11 @@ $(document).ready(function(){
     $('.board li').click(function(){
       $('.layer-dimm').addClass('open');
       $('.board-view').show().addClass('open');
+      $('body').addClass('noScroll');
+    })
+    $('.privacy').click(function(){
+      $('.layer-dimm').addClass('open');
+      $('.privacy-policy').show().addClass('open');
       $('body').addClass('noScroll');
     })
   }
