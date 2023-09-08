@@ -118,19 +118,20 @@
 .customer .privacy-agree-box .top label{font-size: 16px; color: #444444; font-weight: 500;}
 .customer .btn-toggle { margin-top: 5px; display: inline-block; width: 55px; height: 55px; border-radius: 100%; font: 0/0 a; text-align: center;}
 .customer .btn-toggle.toggle-text { width: auto; height: auto; margin: 0 0 0 9px; padding-bottom: 3px; position: relative;}
-.customer .btn-toggle.toggle-text:before{position: absolute; content: ''; width: 20px; height: 20px; background: url(../../images/common/icon-agree-view.png) no-repeat center; top: 50%; transform: translateY(-50%);}
+.customer .btn-toggle.toggle-text:before{position: absolute; content: ''; width: 20px; height: 30px; background: url(../../images/common/icon-agree-view.png) no-repeat center top; top: 50%; transform: translateY(-50%);}
 .customer .btn-toggle.toggle-text:after { margin: 0 0 3px 25px; }
 .customer .btn-toggle.toggle-text:hover { background-color: transparent; }
-.customer .btn-toggle.toggle-text.on:before{position: absolute; content: ''; width: 20px; height: 20px; background: url(../../images/common/icon-agree-view-color.png) no-repeat center;}
+.customer .btn-toggle.toggle-text.on:before{position: absolute; content: ''; width: 20px; height: 30px; background: url(../../images/common/icon-agree-view-color.png) no-repeat center top;}
 .customer .btn-toggle.toggle-text.on:after { margin-bottom: 0; }
+.customer .privacy-agree-box .more-btn{display: inline-block;}
 .customer .privacy-agree > p{font-size: 20px; letter-spacing: -0.03em; color: #323232; margin-bottom: 14px;}
-.customer .privacy-agree{display: none; height: 100%; margin-top: 30px; background: #f8f8f8; border-radius: 8px; padding: 30px; box-sizing: border-box; overflow: auto; margin-bottom: 20px; transition: all 0.5s ease-in-out;}
+.customer .privacy-agree{display: none; height: 100%; margin-top: 30px; background: #f8f8f8; border-radius: 8px; padding: 30px; box-sizing: border-box; overflow: auto; transition: all 0.5s ease-in-out;}
 .customer .privacy-agree.on{display: block;}
 .customer .privacy-agree p{color: #000000; font-size: 14px;}
 .customer .privacy-agree li p:first-child{margin-bottom: 10px;}
 .customer .privacy-agree li p:nth-child(2){margin-bottom: 20px;}
 .customer .agree-btn-box{padding-left: 25px;}
-.customer .agree{color: #4e4e4e; letter-spacing: -0.03em; padding: 3px 0; padding-left: 36px;}
+.customer .agree{color: #4e4e4e; letter-spacing: -0.03em; padding-left: 36px; margin-bottom: 0;}
 .customer .icheckbox[type=checkbox]{display: none;}
 .customer .icheckbox[type=checkbox] + label {display: inline-block; background: url(../../images/common/icon-radio-check.png) no-repeat center left;}
 .customer .btn-box{width: 100%; text-align: center;}
@@ -140,3 +141,14 @@
 .customer .filebox .upload-name{display: block; height: 80px; width: 100%;}
 .customer .filebox label{display: block; color: #000000; background-color: #ffffff; border: 1px solid #b0b0b0; cursor: pointer; height: 54px; border-radius: 8px; text-align: center; line-height: 54px; margin-bottom: 34px;}
 .customer .filebox input[type="file"] {position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0;}
+.customer .btn-wrap{margin-top: 53px;}
+
+@media (max-width: 768px) {
+  .customer .form-wrap .form-title{font-size: 18px; line-height: 22px; margin-bottom: 30px;}
+  .customer .form-wrap label{font-size: 14px;}
+  .customer .form-wrap label span{margin-left: 11px;}
+  .customer .privacy-agree-box .more-btn{display: none;}
+  .customer .privacy-agree{display: block;}
+  .customer .icheckbox[type=checkbox] + label{line-height: 17px; font-size: 14px;}
+  .customer .submit-btn{font-size: 14px; padding: 11px 20px; line-height: unset;}
+}
