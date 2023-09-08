@@ -1,0 +1,178 @@
+
+  <div class="header-wrap">
+    <div class="logo-wrap">
+      <a href="main.html">
+        <h1><span class="hidden">kpc</span></h1>
+      </a>
+    </div>
+    <div class="gnb-wrap">
+      <ul class="gnb">
+        <li><a href="#none" class="depth1">기업소개</a>
+          <div class="depth2">
+            <ul>
+              <!--<li><a href="./company/company_01.html">회사소개</a></li>
+              <li><a href="./company/company_02.html">CEO인사말</a></li>-->
+              <li><a href="#none">회사소개</a></li>
+              <li><a href="#none">CEO인사말</a></li>
+              <li><a href="#none">비전</a></li>
+              <li><a href="#none">계열사 소개</a></li>
+              <li><a href="#none">오시는길</a></li>
+            </ul>
+          </div>
+  
+        </li>
+        <li><a href="#none" class="depth1">사업영역</a>
+          <div class="depth2">
+            <ul>
+              <li><a href="#none">전구체</a></li>
+              <li><a href="#none">Recycle</a></li>
+              <li><a href="#none">생산공정</a></li>
+              <li><a href="#none">사업소개</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#none" class="depth1">ESG경영</a>
+          <div class="depth2">
+            <ul>
+              <li><a href="#none">개요</a></li>
+              <li><a href="#none">친환경경영</a></li>
+              <li><a href="#none">안전경영</a></li>
+              <li><a href="#none">윤리경영</a></li>
+              <li><a href="#none">사회공헌</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#none" class="depth1">미디어</a>
+          <div class="depth2">
+            <ul>
+              <li><a href="#none">미디어</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#none" class="depth1">채용</a>
+          <div class="depth2">
+            <ul>
+              <li><a href="#none">채용</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="lang-select">
+      <a href="#none" class="current"></a>
+      <ul class="lang-list">
+        <li class="kor active"><a href="#none">KOR</a></li>
+        <li class="eng"><a href="#none">ENG</a></li>
+      </ul>
+    </div>
+    <a href="#none" class="only-mo btn-mo-menu-open"></a>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $.fn.dropdown = function () {
+        return this.each(function () {
+          var $header = $("header");
+          var $gnb = $(this);
+          var $menu = $gnb.find(".gnb > ul > li");
+          var $depth1 = $gnb.find(".depth1");
+          var $depth2 = $gnb.find(".depth2");
+          $gnb
+            .mouseenter(function () {
+              gnbOn();
+            })
+            .mouseleave(function () {
+              gnbOff();
+            })
+            .click(function(){
+              gnbOn();
+            })
+          $gnb
+            .find("a")
+            .focusin(function () {
+              gnbOn();
+            })
+            .focusout(function () {
+              gnbOff();
+            });
+          function gnbOn() {
+            $gnb.find($depth2).stop().animate({ height: "292" });
+            $header.stop().animate({ height: "400" });	
+            $header.addClass("on");
+          }
+          function gnbOff() {
+            $gnb.find($depth2).stop().animate({ height: "0" });
+            $header.stop().animate({ height: "80" });	
+            $header.removeClass("on");
+          }
+        });
+      };
+
+      function dropdownMo(){
+        $('.gnb .depth1').on('click',function(){
+          //e.preventDefault();
+          if($('.depth1').parent('li').hasClass('expend')){
+            $('.depth1').parent('li').removeClass('expend')
+          }else{
+            $(this).parent('li').addClass('expend')
+          }
+        })
+      }
+
+      if(matchMedia("screen and (min-width: 769px)").matches){
+        $(".gnb").dropdown();
+      } else{
+        dropdownMo();
+        $('.btn-mo-menu-open').click(function(){
+          if($('#header').hasClass('__open')){
+            $('#header').removeClass('__open');
+            $('#header .gnb-wrap').removeClass('__open');
+          }else{
+            $('#header').addClass('__open');
+            $('#header .gnb-wrap').addClass('__open');
+          }
+        })
+
+      }
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      var showAnim = gsap.from('#header', { 
+        yPercent: -100,
+        paused: true,
+        duration: 0.2
+      }).progress(1);
+
+      ScrollTrigger.create({
+        start: "top center",
+        end: 99999,
+        onUpdate: (self) => {
+          self.direction === -1 ? showAnim.play() : showAnim.reverse()
+        },
+        toggleClass: {className: 'header--scrolled', targets: '.header'}
+      });
+
+      function selectHide() {
+        $('.lang-select').removeClass('active');
+      }
+      var selectHideTimer = setTimeout(selectHide, 3000);
+      $('.lang-select .current').on("click", function (e) {
+          e.preventDefault();
+          clearTimeout(selectHideTimer);
+          if ($(this).parent('.lang-select').hasClass('active')) {
+              $(this).parent('.lang-select').removeClass('active');
+          } else {
+              $('.lang-select').removeClass('active');
+              $(this).parent('.lang-select').addClass('active');
+          }
+      });
+
+      $('.lang-select').on("mouseleave", function (e) {
+          selectHideTimer = setTimeout(selectHide, 2000);
+      });
+
+      $('.lang-select li a').on("click", function (e) {
+          selectHide();
+      });
+    })
+  </script>

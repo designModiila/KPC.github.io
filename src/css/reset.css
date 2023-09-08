@@ -1,0 +1,73 @@
+*,:after,:before,::after,::before{box-sizing:border-box;-webkit-text-size-adjust:100%;}
+html, body{width: 100%; height: 100%; font-size: 16px; line-height: 1.5;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure, figcaption, span{margin: 0; padding: 0; word-break: keep-all;}
+header,article,section,nav,footer{display:block}
+h1, h2, h3, h4, h5, h6{font-size: inherit; font-weight: inherit;}
+ol, ul{list-style: none;}
+caption, legend{overflow: hidden; font-size: 0; line-height: 0; height: 0; width: 0; text-indent: -9999px;}
+img{max-width: 100%; border: 0; vertical-align: top;}
+table{border-spacing: 0; border-collapse: collapse;}
+table, th, td{border: none; text-align: left;}
+th, label{font-weight: normal;}
+address{font-style: normal;}
+button, input{border: none; background: none; box-sizing: border-box; }
+button:focus, input:focus{outline: none;}
+button, a, input, label{cursor: pointer; text-decoration: none; outline: 0; padding: 0;}
+a {text-decoration: none; color: inherit;}
+
+input::-ms-clear{display: none;}/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+textarea:focus {
+  outline: none;
+}
+select {
+  border-radius: 0; /* 아이폰 사파리 보더 없애기 */
+  -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+  -moz-appearance: none; /* 화살표 없애기 for firefox*/
+  appearance: none; /* 화살표 없애기 공통*/
+}
+select:focus{
+  outline: none;
+}
+select::-ms-expand {
+  display: none; /* 화살표 없애기 for IE10, 11*/
+}
+textarea, input, select {font-family: 'Pretendard';}
+
+.input-form{position: relative;}
+.input-form input{border: 1px solid #cccccc; font-size: 20px; height: 62px; border-radius: 8px; padding: 0 20px; box-sizing: border-box; min-width: 373px;}
+.input-form input:hover{border: 1px solid #0fb5df}
+.input-form input:focus{border: 1px solid #000000}
+.input-form input:disabled{border: 1px solid #e4e4e4; background: #f6f6f6; color: #d4d4d4}
+.input-form input.error{border: 1px solid #ff3131}
+.input-form .fas{width: 24px; height: 24px; background-position: center; background-repeat: no-repeat; position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer}
+
+.input-form .fa-search{background-image: url(../../images/common/search_icon.png);}
+.input-form .fa-arrow{background-image: url(../../images/common/fe_arrow-botom.png);}
+
+.textBold{font-weight: 700;}
+
+.btn-wrap{text-align: center;}
+.defalut-btn{font-weight: 600; display: inline-block; font-size: 20px; color: #000000; /*line-height: 44px;*/ text-align: center; box-sizing: border-box; border-radius: 4px; transition: background 0.5s ease-in-out; background: #0fb5df; color: #fff}
+.defalut-btn.more{border: 1px solid #b0b0b0; margin-top: 60px; background: #fff; color: #000;}
+.defalut-btn:hover{background: #51C8E7;}
+.defalut-btn.more:hover{background: #0fb5df;}
+.defalut-btn:hover a{color: #ffffff;}
+.defalut-btn a{padding: 5px 40px; display: block;}
+
+.onlyMo{display: none !important;}
+.onlyPc{display: block !important;}
+
+@media (max-width: 1240px) {
+  .input-form input{height: 44px; font-size: 16px;}
+}
+
+@media (max-width: 767px) {
+  .onlyMo{display: block !important;}
+  .onlyPc{display: none !important;}
+  .defalut-btn{width: 100%;}
+  .defalut-btn.more{margin-top: 16px;}
+  .defalut-btn a{font-size: 14px; padding: 10px 0; display: block;}
+  .input-form input{min-width: auto; width: 100%; padding: 0 15px;}
+  .input-form .fas{right: 15px;}
+}
+
