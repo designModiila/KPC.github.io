@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPC</title>
+    <link rel="stylesheet" href="../../src/js/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../src/plugin/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../../src/plugin/select/select2.min.css">
+  
+    <link rel="stylesheet" href="../../src/css/reset.css">
+    <link rel="stylesheet" href="../../src/css/font.css">
+    <link rel="stylesheet" href="../../src/css/common.css">
+    <link rel="stylesheet" href="../../src/css/sub.css">
+  
+    <script src="../../src/js/jquery/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../src/plugin/gsap/gsap.min.js"></script>
+    <script type="text/javascript" src="../../src/plugin/gsap/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="../../src/plugin/swiper/swiper.min.js"></script>
+    <script src="../../src/plugin/select/select2.min.js"></script>
+    <script src="../../src/js/common.js"></script>
+    <script src="../../src/js/sub.js"></script>
+    <!-- <script src="../src/js/main.js"></script> -->
+  </head>
+<body>
+  <header id="header" class="header"></header>
+  <div id="wrap" class="wrap lastSec">
+    <div id="content" class="content company04">
+      <div class="subVisual">
+        <div class="title-wrap">
+          <div class="sub-title">국내 및 해외계열사</div>
+          <div class="title">세계 곳곳의 상생 네트워크를 통해 <br>글로벌 성장을 가속화하고 있습니다</div>
+        </div>
+        <div class="sub-visual">
+          <div class="image-wrap">
+            <img src="../../images/sub/company04_sub-visual.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="section section01">
+        <div class="inner">
+          <div class="top-menu">
+            <ul>
+              <li><a href="javascript:;" class="btn_layer" layer="1">국내</a></li>
+              <li><a href="javascript:;" class="btn_layer" layer="2">아시아</a></li>
+              <li><a href="javascript:;" class="btn_layer" layer="3">오세아니아</a></li>
+              <li><a href="javascript:;" class="btn_layer" layer="4">아메리카</a></li>
+            </ul>
+          </div>
+          <div class="world-map">
+            <div class="bg">
+              <img src="../../images/sub/company04_worldMap.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="layer-dimm"></div>
+  <div class="world-layer layer01" layer="1">
+    <div class="world-layer-wrap modal">
+      <div class="world-layer-close close-btn"></div>
+      <div class="inner">
+        <div class="layer-top">
+          <div class="layer-title">
+            <p>국내</p>
+            <div class="layer-controller">
+              <div class="prev layer-btn">아메리카</div>
+              <div class="next layer-btn">아시아</div>
+            </div>
+          </div>
+        </div>
+        <div class="layer-content">
+          <div class="box box01">
+            <div class="box-title">영풍정밀 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(06110) 서울특별시 강남구 강남대로 542 영풍빌딩</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>전화</dt>
+                <dd>02-519-3416</dd>
+                <dt>팩스</dt>
+                <dd>02-511-1095</dd>
+              </dl>
+              <dl>
+                <dt>본사</dt>
+                <dd>(15609) 경기도 안산시 단원구 해안로 97</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>031-491-5581</dd>
+                <dt>팩스</dt>
+                <dd>031-491-1594</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box02">
+            <div class="box-title">서린상사 주식회사</div>
+            <div class="box-con">
+              <dl class="mb12">
+                <dt>본사</dt>
+                <dd>(06110) 서울특별시 강남구 강남대로 542 영풍빌딩</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>02-519-3381</dd>
+                <dt>팩스</dt>
+                <dd>02-542-0013</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>부산사무소 </dt>
+                <dd>(49256) 부산광역시 서구 충무대로 215</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>051-243-5313</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>인천사무소</dt>
+                <dd>(22215) 인천광역시 미추홀구 인주대로 372</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box03">
+            <div class="box-title">서린정보기술 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(06110) 서울특별시 강남구 강남대로 542 영풍빌딩</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>02-519-3600</dd>
+                <dt>팩스</dt>
+                <dd>02-549-5069</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box04">
+            <div class="box-title">주식회사 케이지 엑스</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(44992) 울산광역시 울주군 온산읍 덕신로 461</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>052-231-6411</dd>
+                <dt>팩스</dt>
+                <dd>052-239-2213</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box05">
+            <div class="box-title">케이지 그린텍 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(44997) 울산광역시 울주군 온산읍 이진로 139</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>052-231-6601</dd>
+                <dt>팩스</dt>
+                <dd>052-231-6604</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box06">
+            <div class="box-title">코리아니켈 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(13229) 경기도 성남시 중원구 둔촌대로 400 (상대원동, 스타우드프라자)</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>031-737-0920</dd>
+                <dt>팩스</dt>
+                <dd>031-737-0930</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box07">
+            <div class="box-title">스틸싸이클 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(38034) 경상북도 경주시 천북면 천북산단로1길 8-65</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>054-778-7600</dd>
+                <dt>팩스</dt>
+                <dd>054-777-6761</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box08">
+            <div class="box-title">스틸싸이클에스씨 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사 및 공장</dt>
+                <dd>(58035) 전남 순천시 해룡면 율촌산단2로 23</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>061-740-2700</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box09">
+            <div class="box-title">켐코 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(06110) 서울특별시 강남구 강남대로 542 영풍빌딩</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>전화</dt>
+                <dd>02-519-3271</dd>
+                <dt>팩스</dt>
+                <dd>02-519-3279</dd>
+              </dl>
+              <dl>
+                <dt>공장</dt>
+                <dd>(45010) 울산광역시 울주군 온산읍 원봉로 27</dd>
+                <dt>전화</dt>
+                <dd>052-240-6895</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box10">
+            <div class="box-title">주식회사 알란텀</div>
+            <div class="box-con">
+              <dl class="mb12">
+                <dt>본사 및 공장</dt>
+                <dd>(44997) 울산광역시 울주군 온산읍 공단로 318</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>052-231-6484</dd>
+                <dt>팩스</dt>
+                <dd>052-231-6489</dd>
+              </dl>
+              <dl>
+                <dt>서울사무소 </dt>
+                <dd>(06110) 서울특별시 강남구 강남대로 542 영풍빌딩</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>02-519-3297</dd>
+                <dt>팩스</dt>
+                <dd>02-519-3290</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box11">
+            <div class="box-title">케이잼 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(45011) 울산광역시 울주군 온산읍 당월로 216-51</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>054-778-7600</dd>
+                <dt>팩스</dt>
+                <dd>054-777-6761</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box12">
+            <div class="box-title">에스아이앤엘 주식회사</div>
+            <div class="box-con">
+              <dl>
+                <dt>본사</dt>
+                <dd>(21990) 인천광역시 연수구 송도미래로 30 D동 1401호</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="world-layer modal layer02" layer="2">
+    <div class="world-layer-wrap modal">
+      <div class="world-layer-close close-btn"></div>
+      <div class="inner">
+        <div class="layer-top">
+          <div class="layer-title">
+            <p>아시아</p>
+            <div class="layer-controller">
+              <div class="prev layer-btn">국내</div>
+              <div class="next layer-btn">오세아니아</div>
+            </div>
+          </div>
+        </div>
+        <div class="layer-content">
+          <div class="box box01">
+            <div class="box-title">Zinc Oxide Corp. Thailand Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>75/51 Ocean Tower2 24th Floor, Soi Sukhumvit 19, Sukhumvit Road, Klongtoey Nua, Wattana, Bangkok 10110</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(66)(2) 204-1441~2</dd>
+                <dt>팩스</dt>
+                <dd>(66)(2) 204-1444</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box02">
+            <div class="box-title">Zinc Oxide Corp. Vietnam LLC</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>Lot C, Phu My 3 Specialized Industrial Park, Phuoc Hoa Village, Tan Thanh District, Ba Ria Vung Tau Province, Vietnam</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(84)-126-8954-016</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box03">
+            <div class="box-title">KZ Minerals Holdings Ltd</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>8 Cross Street, #11-00 PWC Building Singapore 048424</dd>
+              </dl>
+              <dl>
+                <dt>팩스</dt>
+                <dd>(66)(2) 204-1444</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="world-layer modal layer03" layer="3">
+    <div class="world-layer-wrap modal">
+      <div class="world-layer-close close-btn"></div>
+      <div class="inner">
+        <div class="layer-top">
+          <div class="layer-title">
+            <p>오세아니아</p>
+            <div class="layer-controller">
+              <div class="prev layer-btn">아시아</div>
+              <div class="next layer-btn">아메리카</div>
+            </div>
+          </div>
+        </div>
+        <div class="layer-content">
+          <div class="box box01">
+            <div class="box-title">Sun Metals Holdings</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>1 Zinc Avenue Stuart, Townsville, Queensland 4811, Australia</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(61)(7) 4726-6666</dd>
+                <dt>팩스</dt>
+                <dd>(61)(7) 4726-6300</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box02">
+            <div class="box-title">Townsville Logistics</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>1 Zinc Avenue Stuart, Townsville, Queensland 4811, Australia</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(61)(7) 4726-6666</dd>
+                <dt>팩스</dt>
+                <dd>(61)(7) 4726-6300</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box03">
+            <div class="box-title">Townsville Marine Logistics</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>1 Zinc Avenue Stuart, Townsville, Queensland 4811, Australia</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(61)(7) 4726-6666</dd>
+                <dt>팩스</dt>
+                <dd>(61)(7) 4726-6300</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box04">
+            <div class="box-title">Sun Metals Corporation</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>1 Zinc Avenue Stuart, Townsville, Queensland 4811, Australia</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(61)(7) 4726-6666</dd>
+                <dt>팩스</dt>
+                <dd>(61)(7) 4726-6300</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box05">
+            <div class="box-title">Ark Energy H2</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>Level 6,200 Adelaide Street,Brisbane QLD 4811, Australia</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(61)(7) 4726-6666</dd>
+                <dt>팩스</dt>
+                <dd>(61)(7) 4726-6300</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box06">
+            <div class="box-title">Ark Energy Corporation</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>Level 6,200 Adelaide Street,Brisbane QLD 4811, Australia</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(61)(7) 4726-6666</dd>
+                <dt>팩스</dt>
+                <dd>(61)(7) 4726-6300</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box07">
+            <div class="box-title">Ark Energy Macintrye</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>Level 6,200 Adelaide Street,Brisbane QLD 4811, Australia</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(61)(7) 4726-6666</dd>
+                <dt>팩스</dt>
+                <dd>(61)(7) 4726-6300</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box08">
+            <div class="box-title">Epuron Holdings P/L</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>LEVEL 11 75 MILLER STREET NORTH SYDNEY NSW 2060</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(61)(7) 8456-7400</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="world-layer modal layer04" layer="4">
+    <div class="world-layer-wrap modal">
+      <div class="world-layer-close close-btn"></div>
+      <div class="inner">
+        <div class="layer-top">
+          <div class="layer-title">
+            <p>아메리카</p>
+            <div class="layer-controller">
+              <div class="prev layer-btn">오세아니아</div>
+              <div class="next layer-btn">국내</div>
+            </div>
+          </div>
+        </div>
+        <div class="layer-content">
+          <div class="box box01">
+            <div class="box-title">Pan Pacific Metal Mining Corp.</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>Suite 4700, Toronto Dominion Bank Tower, Toronto, Ontario, Canada MSK 1E6</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(1)(416) 601-7910</dd>
+                <dt>팩스</dt>
+                <dd>(1)(416) 868-0673</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box02">
+            <div class="box-title">Pedalpoint Holdings, LLC</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>400 Spectrum Center Dr. Suite 1900, Irvine CA, 92618</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box03">
+            <div class="box-title">IGNEO Holdings, LLC</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>222 Bloomingdale Road Suite 402 White Plains NY 10605 USA</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(1)(914) 365-7600</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box04">
+            <div class="box-title">ICM Pachapaqui S.A.C</div>
+            <div class="box-con">
+              <dl>
+                <dt>주소</dt>
+                <dd>Calle Los Tulipanes 147, Oficina 701-A, Santiago de Surco, Lima, Peru. (우편번호 15023)</dd>
+              </dl>
+              <dl>
+                <dt>전화</dt>
+                <dd>(51)(1) 415-0530</dd>
+                <dt>팩스</dt>
+                <dd>(51)(1) 422-7774</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn"></a>
+              <a href="#none" class="map-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer"></footer>
+</body>
+</html>

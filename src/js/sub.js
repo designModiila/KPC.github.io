@@ -177,7 +177,7 @@ $(document).ready(function(){
     var $this = $(this);
     $this.addClass('swiper-slider-' + index);
     
-    var dragSize = $this.data('drag-size') ? $this.data('drag-size') : 99;
+    // var dragSize = $this.data('drag-size') ? $this.data('drag-size') : 99;
     var freeMode = $this.data('free-mode') ? $this.data('free-mode') : false;
     var loop = $this.data('loop') ? $this.data('loop') : false;
     var slidesDesktop = $this.data('slides-desktop') ? $this.data('slides-desktop') : 1;
@@ -215,10 +215,31 @@ $(document).ready(function(){
       scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
-        dragSize: dragSize
+        // dragSize: dragSize
       },
 
     });
+  });
+
+
+  //레이어팝업 open 상태 function 만들기
+  function layer_open(no){
+    $(".world-layer[layer="+no+"]").addClass("open");
+    $(".layer-dimm").addClass("open");
+    $('body').addClass('noScroll');
+  };
+  //레이어팝업 close 상태 function 만들기
+  function layer_close(){
+    $(".world-layer, .layer-dimm").removeClass("open");
+  };
+  //링크 클릭시 해당 레이어팝업 호출
+  $(".btn_layer").click(function () {
+    var no = $(this).attr("layer");
+    layer_open(no);
+  });
+  //닫기 버튼 클릭시 레이어 닫기
+  $(".close-btn").click(function () {
+    layer_close();
   });
 
 
@@ -236,6 +257,8 @@ $(document).ready(function(){
       }
     })
   })
+
+
 })
 
 
