@@ -515,6 +515,15 @@ letter-spacing: -0.52px;}
 .company04 .section01 .top-menu ul li:hover a{color: #ffffff;}
 .company04 .section01 .top-menu ul li.active {background: #0FB5DF;}
 .company04 .section01 .top-menu ul li.active a{color: #ffffff;}
+.company04 .section01 .world-map{position: relative;}
+.company04 .section01 .article{position: absolute; width: 54px; height: 54px; border-radius: 100%; border: 2px solid #2f2f2f; background: #fff; top: 50%; left: 50%; box-sizing: border-box; display: flex; align-items: center; justify-content: center; opacity: 1;}
+.company04 .section01 .article01{width: 83px; height: 83px; margin-left: 360px; margin-top: -115px;}
+.company04 .section01 .article02{margin-left: 280px; margin-top: -50px;}
+.company04 .section01 .article03{margin-left: 305px; margin-top: 65px;}
+.company04 .section01 .article04{width: 64px; height: 64px; margin-left: 400px; margin-top: 150px;}
+.company04 .section01 .article05{margin-left: -500px; margin-top: -150px;}
+.company04 .section01 .article06{margin-left: -420px; margin-top: -90px;}
+.company04 .section01 .article07{margin-left: -330px; margin-top: 110px;}
 
 .world-layer{position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 10; overflow: hidden; overflow: hidden;  z-index: 10000; transform: translateY(100%); transition: transform 0.5s ease-out;}
 .world-layer.open{transform: translateY(0);}
