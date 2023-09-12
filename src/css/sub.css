@@ -353,21 +353,23 @@ letter-spacing: -0.52px;}
 .company01 .section03 .title{margin-bottom: 36px; font-weight: 700; font-size: 40px; line-height: 52px;}
 .company01 .section03 .desc{font-weight: 500; line-height: 30px; font-size:  20px; letter-spacing: -0.015em; color: #333333}
 .company01 .section03 .slide-thumb{margin-bottom: 46px}
-.company01 .section03 .slide-desc-wrap{display: flex; gap: 50px}
 .company01 .section03 .slide-title{font-weight: 700; font-size: 28px; line-height: 33px;}
-.company01 .section03 .slide-desc{line-height: 30px; letter-spacing: -0.015em; font-size: 20px; color: #333333}
+.company01 .section03 .slide-desc{line-height: 30px; letter-spacing: -0.015em; font-size: 20px; color: #333333;}
+
 .company01 .section03 .slide-desc li{position: relative; padding-left: 15px; color: #444444; letter-spacing: -0.02em; line-height: 24px;}
 .company01 .section03 .slide-desc li:after{position: absolute; content: ''; width: 5px; height: 5px; background: #444444; left: 0; top: 10px; border-radius: 50%;}
 .project-slide .swiper-scrollbar {background: #d6d6d6;}
 .project-slide .swiper-button-prev, .project-slide .swiper-container-rtl .swiper-button-next{background-image: url(../../images/common/fe_arrow-leftB.png); left: 60px;}
 .project-slide .swiper-button-next, .project-slide .swiper-container-rtl .swiper-button-prev{background-image: url(../../images/common/fe_arrow-rightB.png); right: 0px;}
 .project-slide .swiper-button-prev,.project-slide .swiper-button-next{width: 24px; height: 24px; top: auto; bottom: 0;}
-.project-slide .swiper-container-horizontal .swiper-scrollbar {height: 2px; width: 338px; left: 104px; top: 50%; transform: translateY(-50%);}
+.project-slide.swiper-container-horizontal .swiper-scrollbar {height: 2px; width: 338px; left: 104px; top: 50%; transform: translateY(-50%);}
 .project-slide .swiper-controller{position: absolute; bottom: 24px; right: 0; width: 100%; max-width: 485px; height: 29px;}
 .project-slide .swiper-scrollbar-drag{background: #000000;}
 .project-slide .swiper-button-next:after,.project-slide .swiper-container-rtl .swiper-button-prev:after{content: none;}
 .project-slide .swiper-button-prev:after,.project-slide .swiper-container-rtl .swiper-button-next:after{content: none}
 .project-slide .swiper-pagination{width: 40px; bottom: 0; font-weight: 700;}
+.project-slide .slide-desc-wrap{display: flex; gap: 50px; opacity: 0; transform: translateY(25%); transition: opacity 0.3s ease-in, transform 0.3s ease-in; transition-delay: 0.3s;}
+.project-slide .swiper-slide-active .slide-desc-wrap{transform: translateY(0); opacity: 1;}
 
 @media (max-width: 1700px) {
   .company01 .section01 .inner{max-width: 1280px;}
@@ -465,3 +467,7 @@ letter-spacing: -0.52px;}
 .company03 .section01 .item-desc{min-width: 700px; max-width: 700px; font-weight: 700; font-size: 40px; line-height: 52px;}
 .company03 .section01 .item03{padding-bottom: 0; border-bottom: 0;}
 .company03 .section01 .item-slide{max-width: 1200px; min-width: 1200px; margin-top: 126px;}
+.company03 .section01 .slide-thumb{margin-bottom: 46px;}
+.company03 .section01 .slide-title{font-size: 28px; line-height: 33px; font-weight: 700;}
+.company03 .section01 .slide-desc{font-size: 20px; line-height: 30px; letter-spacing: -0.015em; line-height: 30px;}
+.company03 .section01 .swiper-controller{bottom: 0;}

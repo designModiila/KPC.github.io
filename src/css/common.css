@@ -2,7 +2,7 @@
 body{font-family: 'Pretendard'; font-size: 16px; overflow-x: hidden; position: relative;}
 body.noScroll{overflow: hidden;}
 #wrap{width: 100%; overflow: hidden; position: relative;}
-#header{position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 999; transition: all ease 0.4s; box-sizing: border-box;}
+#header{position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 999; transition: all ease 0.4s; box-sizing: border-box; background: #fff; border-bottom: 1px solid #e5e5e5;}
 #header .logo-wrap{min-width: 200px;}
 #header h1{background: url(../../images/common/kpc_logo.png) no-repeat center; width: 92px; height: 33px;}
 #header h1 span{display: none;}
@@ -16,7 +16,7 @@ body.noScroll{overflow: hidden;}
 #header .gnb .depth2 ul{padding: 26px 0 0px;}
 #header .gnb .depth2 ul > li > a{display: block; font-size: 16px; line-height: 45px; font-weight: 500; color: #252525; word-break: keep-all;}
 #header.on{box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.05);}
-#header.header--scrolled{background: #fff;}
+#header.__w{background: #fff;}
 
 #header .lang-select{position: relative; overflow: hidden;}
 #header .lang-select > a {display: block; width: 22px; height: 22px; background: url("../../images/common/lang_icon.png") no-repeat center;}
@@ -35,7 +35,7 @@ body.noScroll{overflow: hidden;}
 #header .btn-mo-menu-open{display: none;}
 
 
-.footer{background: #fafafa; overflow: hidden; border: 1px solid #e5e5e5; box-sizing: border-box;}
+.footer{background: #ffffff; overflow: hidden; border: 1px solid #e5e5e5; box-sizing: border-box;}
 /* .footer .footer-inner{max-width: 1240px; margin: 0 auto;} */
 .footer .footer-inner{padding-right: 10.417vw; padding-left: 10.417vw;  margin: 0 auto;}
 .footer .footer-top{padding: 60px 0 68px; display: flex; justify-content: space-between; position: relative;}
@@ -43,7 +43,7 @@ body.noScroll{overflow: hidden;}
 .footer-top .footer-nav{display: flex; gap: 65px;}
 .footer-top .footer-nav dt{margin-bottom: 20px; color: #151515; font-weight: 600; font-size: 18px; line-height: 21px;}
 .footer-top .footer-nav dd{color: #888888; font-weight: 500; font-size: 16px; line-height: 36px;}
-.footer .family-site{position: relative;}
+.footer .family-site{position: relative;}xh
 .footer .family-site .family-select{position: relative; width: 250px; line-height: 21px; font-size: 18px; font-weight: 600; border-bottom: 1px solid #cccccc; color: #151515; text-align: left; padding-bottom: 19px; display: flex; align-items: center;}
 .footer .family-site .family-select:after{position: absolute; content: ''; width: 14px; height: 14px; background: url('../../images/common/family-site.png') no-repeat center; right: 9px; transition: all 0.15s ease-in-out; line-height: 21px;}
 /* .footer .family-site .family-list{display: none; position: absolute; left: 0; right: 0; top: auto;; background-color: #f0f0f0; text-align: left; padding: 18px 0px; z-index: 1000; height: 100%; overflow: auto;} */
