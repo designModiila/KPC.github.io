@@ -236,11 +236,14 @@ $(document).ready(function(){
   $(".btn_layer").click(function () {
     var no = $(this).attr("layer");
     layer_open(no);
+    $('.article').removeClass('active');
+    $('.' + $(this).data('rel')).addClass('active');
   });
   //닫기 버튼 클릭시 레이어 닫기
   $(".close-btn").click(function () {
     layer_close();
   });
+
 
 
   const cont = gsap.utils.toArray('.cont')
