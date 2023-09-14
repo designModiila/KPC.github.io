@@ -126,21 +126,32 @@ body.noScroll{overflow: hidden;}
 .subVisual .title-wrap .title{color: #000000; letter-spacing: -0.02em; font-weight: 700; line-height: 80px; font-size: 64px; transition-duration: 1s;}
 .subVisual .sub-visual{width: 100%; height: 100vh; position: absolute; left: 0; bottom: 0;}
 .subVisual .sub-visual .image-wrap{position: absolute; left: 0; bottom: 0; width: 90%; height: 46vh; transition: width 1s ease-in-out, height 1s ease-in-out;}
-.subVisual .sub-visual .image-wrap img{width: 100%; height: 100vh; object-fit: cover;}
+.subVisual .sub-visual .image-wrap img{width: 100%; height: 100%; object-fit: cover; object-position: bottom;}
 
 .subVisual .title-wrap.on{top: 53vh;}
 .subVisual .title-wrap.on .sub-title{color: #ffffff;}
 .subVisual .title-wrap.on .title{color: #ffffff;}
 .subVisual .image-wrap.on{width: 100%; height: 100vh;}
 
+.txt-motion { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.txt-motion .img-wrap { position: absolute; width: 100%; min-height: 100vh; min-height: calc(var(--vh, 1vh) * 100); overflow: hidden; background-size: cover; background-position: center; background-repeat: no-repeat;}
+.txt-motion .title-wrap{color: #a1a1a1; opacity: 0; transform: translateY(25%); max-width: 1600px; margin: 270px auto 32px;}
+.txt-motion .title-wrap p{font-size: 40px; line-height: 52px; font-weight: 700;}
+.txt-motion .sub-title {opacity: 0; color: #a1a1a1; font-weight: 700; font-size: 24px; line-height: 36px; letter-spacing: -0.015em; transform: translateY(25%); max-width: 1600px; margin: 0 auto;}
+.txt-motion .sub-title span {display: block; word-break: keep-all;}
+.txt-motion { height: 100vh; height: calc(var(--vh, 1vh) * 100);}
+
+
 .inner{max-width: 1280px; width: 100%; height: 100%; margin: 0 auto; position: relative;}
-.inner_1600{max-width: 1600px; width: 100%; height: 100%; margin: 0 auto; position: relative;;}
+.inner_1600{max-width: 1600px; width: 100%; height: 100%; margin: 0 auto; position: relative;}
 
 .layer-dimm{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; display: none;}
 .layer-dimm.open{display: block;}
 
 @media (max-width: 1700px) {
   .inner_1600{width: 100%; padding: 0 5vw;}
+  .txt-motion .title-wrap{max-width: 1280px;}
+  .txt-motion .sub-title{max-width: 1280px;}
 }
 
 @media (max-width: 1300px) {
@@ -149,6 +160,9 @@ body.noScroll{overflow: hidden;}
   .subVisual .title-wrap{left: 5vw;}
   .subVisual .title-wrap .sub-title{font-size: 20px; line-height: 26px;}
   .subVisual .title-wrap .title{font-size: 44px; line-height: 60px;}
+
+  .txt-motion .title-wrap{width: 100%; padding: 0 5vw;}
+  .txt-motion .sub-title{width: 100%; padding: 0 5vw;}
 }
 
 @media (max-width: 767px) {
@@ -158,6 +172,9 @@ body.noScroll{overflow: hidden;}
   .subVisual .title-wrap.on{top: auto; bottom: 100px; left: 5vw;}
   .subVisual .title-wrap .sub-title{color: #fff; font-size: 16px; letter-spacing: -0.02em; line-height: 24px; margin-bottom: 11px;}
   .subVisual .title-wrap .title{color: #fff; font-size: 26px; line-height: 33px; letter-spacing: -0.02em;}
+
+  .txt-motion .title-wrap{color: #fffffF; margin: 122px auto 34px;}
+  .txt-motion .sub-title{color: #ffffff}
 }
 
 

@@ -161,6 +161,57 @@ $(document).ready(function(){
           scrub: 3,
         }
       })
+
+
+      var barAni = gsap.timeline({
+        scrollTrigger:{
+        trigger:".business01 .section03",
+        start:"top 50%",
+        end:"bottom top",
+        toggleActions:"restart none none reset"
+        }
+      })
+      .from(".business01.graph-title",{yPercent: 25, autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business01.graph",{yPercent: 25, autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business01.box",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business01.bar-grey",{height: 0, duration: 0.5, ease: Power4.easeOut})
+      .from(".business01.bar-blue",{height: 0, duration: 0.5, ease: Power4.easeOut})
+      .from(".business01.box > span",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+
+
+      var diagramAni = gsap.timeline({
+        scrollTrigger:{
+        trigger:".business02 .section01",
+        start:"top top",
+        pin: true,
+        scrub: 1,
+        end: "+=5000",
+        //toggleActions:"restart none none reset"
+        }
+      })
+      // .from(".business02 .diagram-wrapper",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
+      // .from(".business02 .diagram-center",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from(".business02 .diagram-center > p",{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
+      // .from(".business02 .diagram-side",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from(".business02 .arrowBg",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .to('.business02 .top-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from('.business02 .bot-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from('.business02 .bot-con .diagram-left',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from('.business02 .bot-con .diagram-left div ',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
+      // .from('.business02 .bot-con .diagram-right',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from('.business02 .bot-con .diagram-right div',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
+      diagramAni.from(".business02 .diagram-wrapper",{autoAlpha:0, ease: Power4.easeOut})
+      diagramAni.from(".business02 .diagram-center",{autoAlpha: 0, ease: Power4.easeOut})
+      diagramAni.from(".business02 .diagram-center > p",{autoAlpha: 0, stagger: 0.3, ease: Power4.easeOut})
+      diagramAni.from(".business02 .diagram-side",{autoAlpha: 0, ease: Power4.easeOut})
+      diagramAni.from(".business02 .arrowBg",{autoAlpha: 0, ease: Power4.easeOut})
+      diagramAni.to('.business02 .top-con',{autoAlpha: 0, ease: Power4.easeOut})
+      diagramAni.from('.business02 .bot-con',{autoAlpha: 0, ease: Power4.easeOut})
+      diagramAni.from('.business02 .bot-con .diagram-left',{autoAlpha: 0, ease: Power4.easeOut})
+      diagramAni.from('.business02 .bot-con .diagram-left div ',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
+      diagramAni.from('.business02 .bot-con .diagram-right',{autoAlpha: 0, ease: Power4.easeOut})
+      diagramAni.from('.business02 .bot-con .diagram-right div',{autoAlpha: 0, stagger: 0.3, ease: Power4.easeOut})
+
     },
 
     "(max-width: 767px)": function () {
@@ -244,6 +295,19 @@ $(document).ready(function(){
     layer_close();
   });
 
+  ScrollTrigger.matchMedia({
+
+    "(min-width: 768px)": function () {
+
+
+    },
+
+    "(max-width: 767px)": function () {
+
+
+    },
+  });
+
 
 
   const cont = gsap.utils.toArray('.cont')
@@ -264,60 +328,3 @@ $(document).ready(function(){
 
 })
 
-
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   // 'i' 변수가 명시되지 않았으므로 현재 문서를 기준으로 수정합니다.
-  //     const i = document.querySelector('.vision');
-  
-  //     const e = i.querySelector(".challenge"),
-  //         n = e.querySelector(".ment"),
-  //         r = [].slice.call(n.querySelectorAll("span")),
-  //         s = e.querySelector(".ment.mobile"),
-  //         a = [].slice.call(s.querySelectorAll("span"));
-  
-  //     let o;
-  //     const areaHeight = window.innerHeight || document.documentElement.clientHeight;  // areaHeight를 정의합니다.
-  
-  //     const l = gsap.timeline({  
-  //         paused: true
-  //     });
-  
-  //     r.forEach((c, h) => {
-  //         if (h > 0) {
-  //             l.to([c, a[h]], {
-  //             opacity: 1,
-  //             duration: 1,
-  //             ease: "power2.inOut"
-  //             }, "-=1");
-  //         }
-  
-  //         if (h !== r.length - 1) {
-  //             l.to([c, a[h]], {
-  //             opacity: 0.2,
-  //             duration: 1,
-  //             delay: h > 0 ? 0.1 : 0,
-  //             ease: "power2.inOut"
-  //             });
-  //         }
-  //     });
-  
-  //     const onScroll = () => {
-  //         const h = e.getBoundingClientRect();
-  //         if (h.top < areaHeight && h.bottom > 0) {
-  //             const d = -h.top / o;
-  //             l.progress(d);
-  //         }
-  //     };
-  
-  //     const onResize = () => {
-  //         o = e.offsetHeight - areaHeight;
-  //         areaHeight * 0.75 - (areaHeight * 0.45 - n.offsetHeight);
-  //     };
-  
-  //     // 'on'이라는 함수가 제공되지 않았으므로 표준 이벤트 리스너를 사용하여 이벤트를 연결합니다.
-  //     window.addEventListener("scroll", onScroll);
-  //     window.addEventListener("resize", onResize);
-  
-  //     // 초기화
-  //     onResize();
-  // });
