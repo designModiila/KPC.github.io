@@ -633,8 +633,8 @@
 
 /*사업소개 - recycle*/
 
-.business02 .section01{padding: 140px 0 250px; position: relative;}
-.business02 .section01 .top-con{max-width: 1280px; margin:  0 auto;}
+.business02 .section01{padding: 140px 0 250px; position: relative; height: 100vh; overflow: hidden;}
+.business02 .section01 .top-con{max-width: 1280px; margin:  0 auto; height: 100%;}
 .business02 .section01 .diagram-title{font-weight: 700; font-size: 40px; line-height: 52px; margin-bottom: 144px; text-align: center;}
 .business02 .section01 .top-con .diagram-wrapper{position: relative}
 .business02 .section01 .top-con .arrowBg{width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; z-index: -1;}
@@ -648,7 +648,7 @@
 .business02 .section01 .top-con .diagram-center .primary-color{background: #0fb5df; color: #fff; position: relative;}
 .business02 .section01 .top-con .diagram-center .primary-color:after{width: 319px; height: 94px; position: absolute; content: ''; top: -5px; left: -6px; border: 1px dashed #0fb5df; border-radius: 60px;}
 .business02 .section01 .top-con .diagram-center .primary-color:before{content: none;}
-.business02 .section01 .bot-con{width: 100%; max-width:1600px; margin: 0 auto; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+.business02 .section01 .bot-con{width: 100%; max-width:1600px; height: 100%; margin: 0 auto; position: absolute; top: 0; left: 0;}
 .business02 .section01 .bot-con .diagram-inner{display: flex; justify-content: space-between;}
 .business02 .section01 .bot-con .circle-title{font-weight: 600; font-size: 24px; margin-bottom: 44px; text-align: center;}
 .business02 .section01 .bot-con .circle-wrap{display: flex; height: 100%; align-items: center; gap: 6px}

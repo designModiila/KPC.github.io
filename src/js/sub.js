@@ -101,6 +101,34 @@ $(document).ready(function(){
 
   gsap.registerPlugin(ScrollTrigger);
 
+  ScrollTrigger.matchMedia({
+
+    "(min-width: 768px)": function () {
+
+      var diagramAni = gsap.timeline({
+        scrollTrigger:{
+        trigger:".business02 .section01",
+        start:"top top",
+        pin: true,
+        scrub: 1,
+        end: "+=5000",
+        //toggleActions:"restart none none reset"
+        }
+      })
+      .from(".business02 .diagram-wrapper",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business02 .diagram-center",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business02 .diagram-center > p",{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
+      .from(".business02 .diagram-side",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business02 .arrowBg",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .to('.business02 .top-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from('.business02 .bot-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from('.business02 .bot-con .diagram-left',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from('.business02 .bot-con .diagram-left div ',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
+      .from('.business02 .bot-con .diagram-right',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from('.business02 .bot-con .diagram-right div',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})   
+    }
+
+  });
 
   ScrollTrigger.matchMedia({
 
@@ -165,52 +193,18 @@ $(document).ready(function(){
 
       var barAni = gsap.timeline({
         scrollTrigger:{
-        trigger:".business01 .section03",
-        start:"top 50%",
-        end:"bottom top",
-        toggleActions:"restart none none reset"
+          trigger:".business01 .section03",
+          start:"top 50%",
+          end:"bottom top",
+          toggleActions:"restart none none reset"
         }
       })
-      .from(".business01.graph-title",{yPercent: 25, autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business01.graph",{yPercent: 25, autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business01.box",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business01.bar-grey",{height: 0, duration: 0.5, ease: Power4.easeOut})
-      .from(".business01.bar-blue",{height: 0, duration: 0.5, ease: Power4.easeOut})
-      .from(".business01.box > span",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-
-
-      var diagramAni = gsap.timeline({
-        scrollTrigger:{
-        trigger:".business02 .section01",
-        start:"top top",
-        pin: true,
-        scrub: 1,
-        end: "+=5000",
-        //toggleActions:"restart none none reset"
-        }
-      })
-      // .from(".business02 .diagram-wrapper",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
-      // .from(".business02 .diagram-center",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from(".business02 .diagram-center > p",{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
-      // .from(".business02 .diagram-side",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from(".business02 .arrowBg",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .to('.business02 .top-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from('.business02 .bot-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from('.business02 .bot-con .diagram-left',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from('.business02 .bot-con .diagram-left div ',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
-      // .from('.business02 .bot-con .diagram-right',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from('.business02 .bot-con .diagram-right div',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
-      diagramAni.from(".business02 .diagram-wrapper",{autoAlpha:0, ease: Power4.easeOut})
-      diagramAni.from(".business02 .diagram-center",{autoAlpha: 0, ease: Power4.easeOut})
-      diagramAni.from(".business02 .diagram-center > p",{autoAlpha: 0, stagger: 0.3, ease: Power4.easeOut})
-      diagramAni.from(".business02 .diagram-side",{autoAlpha: 0, ease: Power4.easeOut})
-      diagramAni.from(".business02 .arrowBg",{autoAlpha: 0, ease: Power4.easeOut})
-      diagramAni.to('.business02 .top-con',{autoAlpha: 0, ease: Power4.easeOut})
-      diagramAni.from('.business02 .bot-con',{autoAlpha: 0, ease: Power4.easeOut})
-      diagramAni.from('.business02 .bot-con .diagram-left',{autoAlpha: 0, ease: Power4.easeOut})
-      diagramAni.from('.business02 .bot-con .diagram-left div ',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
-      diagramAni.from('.business02 .bot-con .diagram-right',{autoAlpha: 0, ease: Power4.easeOut})
-      diagramAni.from('.business02 .bot-con .diagram-right div',{autoAlpha: 0, stagger: 0.3, ease: Power4.easeOut})
+      .from(".business01 .graph-title",{yPercent: 25, autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business01 .graph",{yPercent: 25, autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business01 .box",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business01 .bar-grey",{height: 0, duration: 0.5, ease: Power4.easeOut})
+      .from(".business01 .bar-blue",{height: 0, duration: 0.5, ease: Power4.easeOut})
+      .from(".business01 .box > span",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
 
     },
 
@@ -295,18 +289,6 @@ $(document).ready(function(){
     layer_close();
   });
 
-  ScrollTrigger.matchMedia({
-
-    "(min-width: 768px)": function () {
-
-
-    },
-
-    "(max-width: 767px)": function () {
-
-
-    },
-  });
 
 
 
