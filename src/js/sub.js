@@ -177,6 +177,15 @@ $(document).ready(function(){
           scrub: 0.7,
         }
       });
+      tl.to('.txt-motion .img-wrapBl', {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".txt-motion .img-wrap",
+          start: "top top",
+          end: "+=3000",
+          scrub: 0.7,
+        }
+      });
 
       
       tl.to(".highlight",{
