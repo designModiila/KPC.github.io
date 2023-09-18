@@ -275,6 +275,86 @@ $(document).ready(function(){
     });
   });
 
+  ScrollTrigger.matchMedia({
+
+    "(min-width: 768px)": function () {
+
+      var diagramAni2 = gsap.timeline({
+        scrollTrigger:{
+        trigger:".esg01 .section01",
+        start:"top 10%",
+        pin: true,
+        scrub: 1,
+        end: "+=2500",
+        //toggleActions:"restart none none reset"
+        }
+      })
+      .from(".esg01 .circle-wrap",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
+      .from(".esg01 .circle",{autoAlpha: 0, yPercent: -25, duration: 0.3, ease: Power4.easeOut, stagger: 0.3 })
+      .to(".esg01 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 0.3, ease: Power4.easeOut})
+      .to(".esg01 .last-circle",{autoAlpha: 1})
+      .to(".esg01 .circle",{autoAlpha: 0})
+
+    }
+
+  });
+
+  
+  ScrollTrigger.matchMedia({
+
+    "(min-width: 768px)": function () {
+
+
+        // function intro() {
+        //   var tl = gsap.timeline({
+        //     scrollTrigger: {
+        //       trigger: ".overview_sec .sub_tit_div",
+        //       start: "top-=450 top",
+        //       end: "+=80%",
+        //       scrub: 1,
+        //     },
+        //   });
+        //   tl.to(".overview_sec .sub_tit_div .sub_tit", {duration: 0.5, top: 0, opacity: 1});
+
+        //   return tl;
+        // }
+
+        function middle() {
+          var tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".overview_sec",
+              start: "top top",
+              end: "+=300%",
+              scrub: 1,
+              pin: true,
+            },
+          });
+
+          tl.to(".overview_sec .sub_tit_div", {duration: 1, y: "-100%", delay: 0.5})
+            .to(".overview_sec .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
+            .to(".overview_sec .sec01 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel-=1")
+            .to(".overview_sec .sec01 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel-=1")
+            .to(".overview_sec .sec02", {duration: 1, opacity: 1}, "myLabel")
+            .to(".overview_sec .sec01 .sub_txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
+            .to(".overview_sec .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
+            .to(".overview_sec .sec02 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel")
+            
+            .to(".overview_sec .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
+            .to(".overview_sec .sec02 .sub_txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
+            .to(".overview_sec .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
+            .to(".overview_sec .sec03 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel+=1")
+
+          return tl;
+        }
+
+        var overviewTl = gsap.timeline();
+        overviewTl.add(middle(), "+=1");
+
+
+    }
+
+  });
+
 
   //레이어팝업 open 상태 function 만들기
   function layer_open(no){
