@@ -116,16 +116,16 @@ $(document).ready(function(){
         }
       })
       .from(".business02 .diagram-wrapper",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business02 .diagram-center",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business02 .diagram-center > p",{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
-      .from(".business02 .diagram-side",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business02 .arrowBg",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from(".business02 .diagram-center",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from(".business02 .diagram-center > p",{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
+      // .from(".business02 .diagram-side",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from(".business02 .arrowBg",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
       .to('.business02 .top-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
       .from('.business02 .bot-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
       .from('.business02 .bot-con .diagram-left',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from('.business02 .bot-con .diagram-left div ',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
+      //.from('.business02 .bot-con .diagram-left div ',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
       .from('.business02 .bot-con .diagram-right',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from('.business02 .bot-con .diagram-right div',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})   
+      //.from('.business02 .bot-con .diagram-right div',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})   
     }
 
   });
@@ -284,8 +284,9 @@ $(document).ready(function(){
         trigger:".esg01 .section01",
         start:"top 10%",
         pin: true,
-        scrub: 1,
-        end: "+=2500",
+        scrub: 3,
+        end: "bottom+=50%"
+        //end: "+=2500",
         //toggleActions:"restart none none reset"
         }
       })
@@ -350,6 +351,31 @@ $(document).ready(function(){
         var overviewTl = gsap.timeline();
         overviewTl.add(middle(), "+=1");
 
+
+    }
+
+  });
+
+  ScrollTrigger.matchMedia({
+
+    "(min-width: 768px)": function () {
+
+      var diagramAni3 = gsap.timeline({
+        scrollTrigger:{
+        trigger:".esg02 .section01",
+        start:"top 10%",
+        pin: true,
+        scrub: 3,
+        end: "bottom+=50%"
+        //end: "+=2500",
+        //toggleActions:"restart none none reset"
+        }
+      })
+      .from(".esg02 .circle-wrap",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
+      .from(".esg02 .circle",{autoAlpha: 0, yPercent: -25, duration: 0.3, ease: Power4.easeOut, stagger: 0.3 })
+      .to(".esg02 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 0.3, ease: Power4.easeOut})
+      .to(".esg02 .last-circle",{autoAlpha: 1})
+      .to(".esg02 .circle",{autoAlpha: 0})
 
     }
 

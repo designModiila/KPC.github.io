@@ -795,3 +795,72 @@
 .overview_sec .img_txt_div .sub_txt .desc{font-size: 16px; line-height: 24px; letter-spacing: -0.015em;}
 .overview_sec .img_txt_div .sub_txt .desc li{position: relative; padding-left: 10px;}
 .overview_sec .img_txt_div .sub_txt .desc li:before{content: ""; position: absolute; top: 50%; left: 0; width: 3px; height: 3px; border-radius: 100%; background: #000000; transform: translateY(-50%);}
+
+
+
+/*ESG - 안전보건환경*/
+.esg02 .section01 .content-wrap{padding: 120px 0;}
+.esg02 .section01 .circle-wrap{max-width: 886px; width: 100%; height: 243px; margin: 0 auto; position: relative;}
+.esg02 .section01 .circle{width: 231px; height: 231px; border-radius: 100%; border: 1px dotted #000000; box-sizing: border-box; position: absolute; display: flex; align-items: center; justify-content: center;}
+.esg02 .section01 .circle:after{position: absolute; content: ''; width: 243px; height: 243px; border-radius: 100%; border: 1px dotted #939393; box-sizing: border-box; top: -7px; left: -7px;}
+.esg02 .section01 .circle p{font-size: 30px; color: #000000;}
+.esg02 .section01 .circle01{top: 50%; left: 0; transform: translateY(-50%);}
+.esg02 .section01 .circle02{top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.esg02 .section01 .circle03{top: 50%; right: 0%; transform: translateY(-50%);}
+.esg02 .section01 .last-circle{width: 240px; height: 240px; border-radius: 100%; background: #363636; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; opacity: 0;}
+.esg02 .section01 .last-circle p{font-size: 36px; color: #ffffff;}
+.esg02 .section02 {padding: 120px 0 300px}
+.esg02 .section02 .title-wrap{margin-bottom: 102px;}
+.esg02 .section02 .title{font-weight: 700; font-size: 32px; line-height: 46px; margin-bottom: 32px;}
+.esg02 .section02 .desc{font-weight: 500; font-size: 20px; line-height: 30px; letter-spacing: -0.015em; color: #333333;}
+.esg02 .section02 .slide-thumb{margin-bottom: 46px;}
+.esg02 .section02 .slide-title{font-weight: 700; font-size: 28px;}
+.esg02 .section02 .slide-desc li{font-size: 20px; letter-spacing: -0.015em; color: #333333; position: relative; padding-left: 10px; line-height: 30px;}
+.esg02 .section02 .slide-desc li:before{position: absolute; content: ''; width: 3px; height: 3px; border-radius: 100%; top: 50%; left: 0; transform: translateY(-50%); background: #333333;}
+.esg02 .project-slide .swiper-controller{bottom: 54px;}
+
+@media (max-width: 1300px) {
+  .esg02 .section02 .title{font-size: 28px; line-height: 42px;}
+}
+
+@media (max-width: 1024px) {
+  .esg02 .section02 .title{font-size: 24px; line-height: 38px;}
+  .esg02 .section02 .desc{font-size: 18px; line-height: 28px;}
+  .esg02 .section02 .slide-title{font-size: 22px;}
+  .esg02 .section02 .slide-desc li{font-size: 18px; line-height: 28px;}
+}
+
+@media (max-width: 900px) {
+  .esg02 .section01 .circle{width: 181px; height: 181px;}
+  .esg02 .section01 .circle:after{width: 193px; height: 193px;}
+}
+
+@media (max-width: 767px) {
+  .esg02 .section01 .content-wrap{padding: 60px 0 30px;}
+  .esg02 .section01 .circle{width: 141px; height: 141px;}
+  .esg02 .section01 .circle:after{width: 153px; height: 153px;}
+  .esg02 .section01 .circle p{font-size: 18px;}
+  .esg02 .section01 .last-circle{width: 141px; height: 141px; opacity: 1; position: relative; top: auto; bottom: 0; transform: translateX(-50%);}
+  .esg02 .section01 .last-circle p{font-size: 18px;}
+  .esg02 .section02{padding: 30px 0 180px}
+  .esg02 .section02 .title{font-size: 18px; line-height: 30px;}
+  .esg02 .section02 .slide-thumb{margin-bottom: 74px;}
+  .esg02 .project-slide .swiper-controller{bottom: 120px}
+  .esg02 .section02 .title-wrap{margin-bottom: 50px;}
+  .esg02 .section02 .title{margin-bottom: 16px;}
+  .esg02 .section02 .slide-desc li{font-size: 16px; line-height: 26px;}
+  .esg02 .section02 .desc br{display: none;}
+  .esg02 .section02 .slide-title{font-size: 18px;}
+}
+
+@media (max-width: 550px) {
+  .esg02 .section01 .circle-wrap{height: 143px;}
+  .esg02 .section01 .circle{width: 80px; height: 80px;}
+  .esg02 .section01 .circle:after{width: 90px; height: 90px; top: -6px; left: -6px;}
+  .esg02 .section01 .circle p{font-size: 12px;}
+  .esg02 .section01 .last-circle{width: 90px; height: 90px; font-size: 12px;}
+  .esg02 .section02 .title br{display: none;}
+}
+
+@media (max-width: 384px) {
+}
