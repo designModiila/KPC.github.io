@@ -285,14 +285,13 @@ $(document).ready(function(){
         start:"top 10%",
         pin: true,
         scrub: 3,
-        end: "bottom+=50%"
-        //end: "+=2500",
+        end: "+=2500",
         //toggleActions:"restart none none reset"
         }
       })
-      .from(".esg01 .circle-wrap",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
-      .from(".esg01 .circle",{autoAlpha: 0, yPercent: -25, duration: 0.3, ease: Power4.easeOut, stagger: 0.3 })
-      .to(".esg01 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 0.3, ease: Power4.easeOut})
+      .from(".esg01 .circle-wrap",{autoAlpha:0, duration: 1, ease: Power4.easeOut})
+      .from(".esg01 .circle",{autoAlpha: 0, yPercent: -25, duration: 1, ease: Power4.easeOut, stagger: 0.3 })
+      .to(".esg01 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 1, ease: Power4.easeOut})
       .to(".esg01 .last-circle",{autoAlpha: 1})
       .to(".esg01 .circle",{autoAlpha: 0})
 
@@ -366,8 +365,8 @@ $(document).ready(function(){
         start:"top 10%",
         pin: true,
         scrub: 3,
-        end: "bottom+=50%"
-        //end: "+=2500",
+        //end: "bottom+=50%"
+        end: "+=2500",
         //toggleActions:"restart none none reset"
         }
       })
