@@ -862,5 +862,70 @@
   .esg02 .section02 .title br{display: none;}
 }
 
-@media (max-width: 384px) {
+/*esg - 윤리경영*/
+.esg03 .section01{padding: 120px 0 100px;}
+.esg03 .section01 .title-wrap{margin-bottom: 120px;}
+.esg03 .section01 .title{font-weight: 700; font-size: 32px; line-height: 46px;}
+.esg03 .section01 .diagram-wrap{max-width: 1046px; margin: 0 auto}
+.esg03 .section01 .diagram-inner{border: 1px dotted #0FB5DF; padding: 12px; box-sizing: border-box; border-radius: 200px; display: flex; justify-content: center; gap:50px}
+/* .esg03 .section01 .diagram{ display: flex; gap: 50px} */
+.esg03 .section01 .diagram{display: flex; gap: 50px}
+.esg03 .section01 .diagram .circle{display: inline-block; width: 160px; height: 160px; border-radius: 100%; color: #fff; font-size: 24px; text-align: center; line-height: 160px;}
+.esg03 .section01 .diagram .circle-dark{background: #363636;}
+.esg03 .section01 .diagram .circle-primary{background: #0FB5DF;}
+.esg03 .section02{padding: 100px 0 300px}
+.esg03 .section02 .content-wrap{display: flex; justify-content: space-between;}
+.esg03 .section02 .title{font-weight: 700; font-size: 32px;}
+.esg03 .section02 .desc dl{padding-top: 44px; padding-bottom: 36px; border-bottom: 1px solid #cccccc;}
+.esg03 .section02 .desc dl:first-child{padding-top: 0px;}
+.esg03 .section02 .desc dl{padding-top: 44px; padding-bottom: 36px; border-bottom: 1px solid #cccccc;}
+.esg03 .section02 .desc dt{font-weight: 700; font-size: 28px; margin-bottom: 12px;}
+.esg03 .section02 .desc dd{font-weight: 500; font-size: 20px; letter-spacing: -0.015em; color: #333333}
+
+@media (max-width: 1300px) {
+  .esg03 .section01 .title{font-size: 28px; line-height: 44px;}
+  .esg03 .section01 .diagram-inner{gap: 30px;}
+  .esg03 .section01 .diagram{gap: 30px}
+  .esg03 .section02 .title{font-size: 28px;}
+  .esg03 .section02 .desc dt{font-size: 24px;}
+  .esg03 .section02 .desc dd{font-size: 18px;}
+}
+
+@media (max-width: 1024px) {
+  .esg03 .section01 .title{font-size: 24px; line-height: 40px;}
+  .esg03 .section01 .diagram-wrap{max-width: 100%;}
+  .esg03 .section01 .diagram-inner{gap: 10px;}
+  .esg03 .section01 .diagram{gap: 10px}
+  .esg03 .section01 .diagram .circle{font-size: 20px; width: 120px; height: 120px; line-height: 120px;}
+  .esg03 .section02 .content-wrap{gap: 50px;}
+  .esg03 .section02 .title{font-size: 24px;}
+  .esg03 .section02 .desc{flex: 1;}
+  .esg03 .section02 .desc dt{font-size: 20px;}
+  .esg03 .section02 .desc dd{font-size: 16px;}
+}
+
+@media (max-width: 767px) {
+  .esg03 .section01{padding: 60px 0 50px}
+  .esg03 .section01 .title-wrap{margin-bottom: 60px;}
+  .esg03 .section01 .title{font-size: 20px; line-height: 36px;}
+
+  .esg03 .section01 .diagram-inner{display: block; border: none; text-align: center;}
+  .esg03 .section01 .diagram{border: 1px dotted #0FB5DF; padding: 12px; border-radius: 200px; display: inline-block;}
+  .esg03 .section01 .diagram01{margin-bottom: 12px;}
+  .esg03 .section01 .diagram .circle{margin-right: 10px;}
+  .esg03 .section01 .diagram .circle03, .esg03 .section01 .diagram .circle05{margin-right: 0px;}
+
+  .esg03 .section02{padding: 50px 0 180px;}
+  .esg03 .section02 .content-wrap{flex-direction: column; gap: 20px}
+  .esg03 .section02 .title{font-size: 20px;}
+  .esg03 .section02 .desc dt{font-size: 16px; margin-bottom: 8px;}
+  .esg03 .section02 .desc dl{padding-top: 20px; padding-bottom: 20px; border: none;}
+}
+
+@media (max-width: 500px) {
+  .esg03 .section01 .title br{display: none;}
+  .esg03 .section01 .title{font-size: 18px; line-height: 34px;}
+  .esg03 .section01 .diagram .circle{width: 72px; height: 72px; line-height: 72px; font-size: 14px;}
+  .esg03 .section01 .diagram .circle{margin-right: 5px;}
+
 }
