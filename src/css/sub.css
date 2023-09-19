@@ -963,8 +963,10 @@
 }
 
 @media (max-width: 1024px) {
+  .esg04 .section01{padding: 80px 0 120px;}
   .esg04 .section01 .title-wrap{margin-bottom: 80px;}
   .esg04 .section01 .title{font-size: 24px; line-height: 38px;}
+  .esg04 .section02{padding: 120px 0 260px;}
   .esg04 .section02 .box-sub-title{font-size: 18px; line-height: 44px;}
   .esg04 .section02 .box-title{font-size: 32px; line-height: 38px;}
   .esg04 .section02 .box{gap: 100px}
