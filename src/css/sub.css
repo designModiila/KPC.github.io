@@ -969,7 +969,9 @@
   .esg04 .section02 .box-title{font-size: 32px; line-height: 38px;}
   .esg04 .section02 .box{gap: 100px}
 }
-
+@media (max-width: 986px) {
+  .esg04 .section02 .box-desc br{display: none;}
+}
 @media (max-width: 800px) {
   .esg04 .section01 .title br{display: none;}
   .esg04 .section01 .desc br{display: none;}
