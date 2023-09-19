@@ -927,5 +927,80 @@
   .esg03 .section01 .title{font-size: 18px; line-height: 34px;}
   .esg03 .section01 .diagram .circle{width: 72px; height: 72px; line-height: 72px; font-size: 14px;}
   .esg03 .section01 .diagram .circle{margin-right: 5px;}
+}
 
+/*ESG - 사회공헌*/
+.esg04 .section01 {padding: 120px 0 190px;}
+.esg04 .section01 .title-wrap{margin-bottom: 120px;}
+.esg04 .section01 .title{font-size: 32px; font-weight: 700; line-height: 46px; margin-bottom: 32px;}
+.esg04 .section01 .desc{font-weight: 500; font-size: 20px; line-height: 30px; letter-spacing: -0.015em; color: #333333;}
+.esg04 .section01 .diagram-wrap{max-width: 1046px; width: 100%; margin: 0 auto; position: relative; }
+/* .esg04 .section01 .diagram-inner{border: 1px dotted #0FB5DF; padding: 12px; box-sizing: border-box; border-radius: 200px; height: 185px;} */
+.esg04 .section01 .diagram-inner{border: 1px dotted #0FB5DF; padding: 12px; box-sizing: border-box; border-radius: 200px; height: 185px; display: flex; justify-content: space-between;}
+.esg04 .section01 .circle{width: 160px; height: 160px; border-radius: 100%; color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; /*position: absolute;*/}
+.esg04 .section01 .circle.circle-dark{background: #363636;}
+.esg04 .section01 .circle.circle-primary{background: #0fb5df;}
+/* .esg04 .section01 .circle02{left: 28%}
+.esg04 .section01 .circle03{left: 56%}
+.esg04 .section01 .circle04{left: 83.5%} */
+/* .esg04 .section01 .circle04{right: 12px} */
+.esg04 .section02{padding: 190px 0 300px}
+.esg04 .section02 .box{margin-bottom: 138px; display: flex; justify-content: space-between; gap: 200px;}
+.esg04 .section02 .box02{flex-direction: row-reverse;}
+.esg04 .section02 .box04{margin-bottom: 0px; flex-direction: row-reverse;}
+.esg04 .section02 .box-sub-title{font-weight: 700; font-size: 20px; line-height: 46px; color: #666666}
+.esg04 .section02 .box-title{font-weight: 700; font-size: 40px; line-height: 46px; margin-bottom: 44px;}
+.esg04 .section02 .box-desc{font-weight: 500; font-size: 20px; line-height: 30px; letter-spacing: -0.015em; color: #333333}
+.esg04 .section02 .box > div{flex: 1;}
+.esg04 .section02 .box-thumb{display: flex; justify-content: flex-end;}
+.esg04 .section02 .box:nth-child(even) .box-thumb{justify-content: flex-start;}
+
+
+@media (max-width: 1300px) {
+  .esg04 .section01 .title{font-size: 28px; line-height: 42px;}
+  .esg04 .section02 .box-title{font-size: 36px; line-height: 42px;}
+  .esg04 .section02 .box{gap: 160px}
+}
+
+@media (max-width: 1024px) {
+  .esg04 .section01 .title-wrap{margin-bottom: 80px;}
+  .esg04 .section01 .title{font-size: 24px; line-height: 38px;}
+  .esg04 .section02 .box-sub-title{font-size: 18px; line-height: 44px;}
+  .esg04 .section02 .box-title{font-size: 32px; line-height: 38px;}
+  .esg04 .section02 .box{gap: 100px}
+}
+
+@media (max-width: 800px) {
+  .esg04 .section01 .title br{display: none;}
+  .esg04 .section01 .desc br{display: none;}
+}
+
+@media (max-width: 767px) {
+  .esg04 .section01{padding: 48px 0 44px;}
+  .esg04 .section01 .title{font-size: 18px; line-height: 24px; margin-bottom: 8px;}
+  .esg04 .section01 .desc{font-size: 16px; color: #666666; line-height: 26px;}
+  .esg04 .section01 .title-wrap{margin-bottom: 40px;}
+  .esg04 .section01 .diagram-inner{height: 125px; padding: 6px 8px}
+  .esg04 .section01 .circle{/*position: absolute;*/ width: 112px; height: 112px; font-size: 14px;}
+
+  
+  .esg04 .section02{padding: 44px 0 180px;}
+  .esg04 .section02 .box{flex-direction: column; gap: 24px; margin-bottom: 60px;}
+  .esg04 .section02 .box04{margin-bottom: 0;}
+  .esg04 .section02 .box-sub-title{font-size: 14px; line-height: 17px; margin-bottom: 4px;}
+  .esg04 .section02 .box-title{font-size: 18px; line-height: 21px; margin-bottom: 8px;}
+  .esg04 .section02 .box-desc{font-size: 16px; line-height: 19px; color: #666666;}
+}
+@media (max-width: 500px) {
+  .esg04 .section01 .diagram-inner{height: 95px; padding: 6px 8px}
+  .esg04 .section01 .circle{position: absolute; width: 82px; height: 82px; font-size: 14px;}
+  .esg04 .section01 .circle.circle-primary{z-index: 1;}
+  .esg04 .section01 .circle02{left: 27%}
+  .esg04 .section01 .circle03{left: 52.5%;}
+  .esg04 .section01 .circle04{right: 8px;}
+  .esg04 .section02 .box-desc br{display: none;}
+}
+
+@media (max-width: 400px) {
+  .esg04 .section01 .circle03{left: 50%;}
 }
