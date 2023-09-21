@@ -781,10 +781,10 @@
 .esg01 .esg01-timeline .img-txt-div {opacity: 1;}
 .esg01 .esg01-timeline .fixed-img-div {position: fixed; left: 0; top: 0; width: 100%; height: 100%;}
 .esg01 .esg01-timeline .img-txt-div {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-.esg01 .esg01-timeline .img-txt-div .img {width: 100vw; height: 100vh; transform: scale(1.1); transform-origin: 50% 50%; overflow: hidden;}
+.esg01 .esg01-timeline .img-txt-div .img {width: 100vw; height: 100vh; transform: scale(1.1); transform-origin: 50% 50%;}
 .esg01 .esg01-timeline .img-txt-div .img img {width: 100%; height: 100%; object-fit: cover;}
-.esg01 .esg01-timeline .img-txt-div .sub-txt {position: absolute; left: 52%; top: 100%;}
-.esg01 .esg01-timeline .img-txt-div.sec02 .sub-txt {left: 70%;}
+.esg01 .esg01-timeline .img-txt-div .sub-txt {position: absolute; right: 30vw; top: 100%;}
+.esg01 .esg01-timeline .img-txt-div.sec02 .sub-txt {right: 8.3333vw;}
 .esg01 .esg01-timeline .img-txt-div .sub-txt{padding: 83px 53px 138px; max-width: 320px; width: 100%; border-radius: 8px; background: #fff;}
 .esg01 .esg01-timeline .img-txt-div .sub-txt .title{margin-bottom: 48px; font-size: 32px; line-height: 44px; font-weight: 700; color: #0fb5df;}
 .esg01 .esg01-timeline .img-txt-div .sub-txt .desc{font-size: 16px; line-height: 24px; letter-spacing: -0.015em;}
@@ -913,12 +913,22 @@
 }
 
 @media (max-width: 767px) {
-  .esg01 .section01 .content-wrap{padding: 60px 0 30px;}
-  .esg01 .section01 .circle{width: 141px; height: 141px;}
+  .esg01 .section01 .content-wrap{padding: 60px 0;}
+  .esg01 .section01 .circle{width: 141px; height: 141px; top: 0; transform: translateY(0);}
+  .esg01 .section01 .circle02{transform: translateX(-50%);}
   .esg01 .section01 .circle:after{width: 153px; height: 153px;}
   .esg01 .section01 .circle p{font-size: 18px;}
   .esg01 .section01 .last-circle{width: 141px; height: 141px; opacity: 1; position: relative; top: auto; bottom: 0; transform: translateX(-50%);}
   .esg01 .section01 .last-circle p{font-size: 18px;}
+}
+
+@media (max-width: 550px) {
+  .esg01 .section01 .circle-wrap{height: 143px;}
+  .esg01 .section01 .circle{width: 80px; height: 80px;}
+  .esg01 .section01 .circle:after{width: 90px; height: 90px; top: -6px; left: -6px;}
+  .esg01 .section01 .circle p{font-size: 12px;}
+  .esg01 .section01 .last-circle{width: 90px; height: 90px; font-size: 12px;}
+  .esg01 .section02 .title br{display: none;}
 }
 
 
