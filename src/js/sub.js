@@ -459,17 +459,28 @@ $(document).ready(function(){
     })
   })
 
-  ScrollTrigger.batch(".contD", {
-    start: 'top 70%',
-    onEnter: elements => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        y: 25,
-        stagger: 0.3
+
+  ScrollTrigger.matchMedia({
+
+    "(min-width: 768px)": function () {
+
+      ScrollTrigger.batch(".contD", {
+        start: 'top 70%',
+        onEnter: elements => {
+          gsap.from(elements, {
+            autoAlpha: 0,
+            y: 25,
+            stagger: 0.3
+          });
+        },
+    
       });
-    },
+
+    }
 
   });
+
+
 
 })
 
