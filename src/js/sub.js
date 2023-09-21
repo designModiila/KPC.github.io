@@ -304,21 +304,6 @@ $(document).ready(function(){
 
     "(min-width: 768px)": function () {
 
-
-        // function intro() {
-        //   var tl = gsap.timeline({
-        //     scrollTrigger: {
-        //       trigger: ".overview_sec .sub_tit_div",
-        //       start: "top-=450 top",
-        //       end: "+=80%",
-        //       scrub: 1,
-        //     },
-        //   });
-        //   tl.to(".overview_sec .sub_tit_div .sub_tit", {duration: 0.5, top: 0, opacity: 1});
-
-        //   return tl;
-        // }
-
         function middle() {
           var tl = gsap.timeline({
             scrollTrigger: {
@@ -404,7 +389,69 @@ $(document).ready(function(){
   });
 
 
+  // const sectionMissions = document.querySelector('.section--missions')
+  // const sectionMissionsContents = document.querySelector('.section--missions .missions')
+  // const missionBackground = gsap.timeline({
+  //   scrollTrigger:{
+  //     trigger: '.section--missions',
+  //     //scroller: this.__SCROLLER__,
+  //     scrub: true,
+  //     pin:'.missions__bg',
+  //     start: 'top top',
+  //     end: 'bottom bottom'
+  //   },
+  // })
 
+  // const missionSectionScroll = gsap.timeline({
+  //   scrollTrigger:{
+  //     trigger: '.section--missions',
+  //     //scroller: this.__SCROLLER__,
+  //     scrub: true,
+  //     start: 'top bottom',
+  //     end: 'top top',
+  //     onUpdate: (self) => {
+  //       const _degree = self.progress
+  //       //sectionMissions.style.width = ( 78 + _degree * 22 ) + '%'
+  //       //missionBg.querySelector('img').style.transform = `translate(-50%,-50%) scale(${1.5 - .5 * _degree})`
+  //       missionText.style.opacity = _degree 
+  //     }
+  //   },
+  // })
+  
+
+  // const missionText = document.querySelector('.missions__txt')
+  // const missionBg = document.querySelector('.missions__bg')
+  // const missionTextitems = missionText.querySelectorAll('.mission')
+  // gsap.timeline ({
+  //   scrollTrigger:{
+  //     trigger:missionText,
+  //     //scroller: this.__SCROLLER__,
+  //     scrub: true,
+  //     start: 'top bottom',
+  //     end: 'bottom bottom',
+  //     onUpdate: (self) => {
+  //       const _degree = self.progress * 10
+  //       const _idx = Math.floor(_degree / missionTextitems.length)
+  //       missionBg.dataset.idx = _idx
+  //       missionText.dataset.idx = _idx
+  //     }
+  //   },
+  // })
+  // gsap.timeline({
+  //   scrollTrigger:{
+  //     trigger:missionText,
+  //     //scroller: this.__SCROLLER__,
+  //     scrub: true,
+  //     start: 'bottom bottom',
+  //     end: 'bottom top',
+  //     onUpdate: (self) => {
+  //       const _degree = self.progress
+  //       sectionMissionsContents.style.opacity = 1 - _degree * 0.7
+  //       //sectionMissionsContents.style.transform = `translate(0,${_degree * 10}%)`
+  //     }
+  //   },
+  // })
+  
 
   const cont = gsap.utils.toArray('.cont')
   gsap.set(cont,{y: '25%', opacity: 0})

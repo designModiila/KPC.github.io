@@ -159,12 +159,16 @@
 
       if (st > lastScrollTop && st > navbarHeight){
         // 스크롤을 내렸을 때
-        $("header").slideUp("fast"); // header 숨기기
+        //$("header").slideUp("fast"); // header 숨기기
+        $("header").removeClass("down"); // header 보이기
+        $("header").addClass("up"); // header 보이기
       } else {
         // 스크롤을 올렸을 때
         if(st + $(window).height() < $(document).height()) {
-          $("header").slideDown("fast"); // header 보이기
+          //$("header").slideDown("fast"); // header 보이기
           $("header").addClass("__w"); // header 보이기
+          $("header").addClass("down"); // header 보이기
+          $("header").removeClass("up"); // header 보이기
         }
       }
 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPC</title>
+    <link rel="stylesheet" href="../../src/js/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../src/plugin/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../../src/plugin/select/select2.min.css">
+  
+    <link rel="stylesheet" href="../../src/css/reset.css">
+    <link rel="stylesheet" href="../../src/css/font.css">
+    <link rel="stylesheet" href="../../src/css/common.css">
+    <link rel="stylesheet" href="../../src/css/sub.css">
+  
+    <script src="../../src/js/jquery/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../src/plugin/gsap/gsap.min.js"></script>
+    <script type="text/javascript" src="../../src/plugin/gsap/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="../../src/plugin/swiper/swiper.min.js"></script>
+    <script src="../../src/plugin/select/select2.min.js"></script>
+    <script src="../../src/js/common.js"></script>
+    <script src="../../src/js/sub.js"></script>
+    <!-- <script src="../src/js/main.js"></script> -->
+  </head>
+<body>
+  <header id="header" class="header"></header>
+  <div id="wrap" class="wrap lastSec">
+    <div id="content" class="content esg01">
+      <div class="subVisual">
+        <div class="title-wrap">
+          <div class="sub-title">개요</div>
+          <div class="title">ESG 경영을 기반으로 <br>지속가능한 미래를 그려갑니다</div>
+        </div>
+        <div class="sub-visual">
+          <div class="image-wrap">
+            <img src="../../images/sub/esg01_sub-visual.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="section section01">
+        <div class="inner">
+          <div class="content-wrap">
+            <div class="circle-wrap">
+              <div class="circle01 circle circle-side">
+                <div class="circle-inner">
+                  <p>Environment</p>
+                </div>
+              </div>
+              <div class="circle02 circle">
+                <div class="circle-inner">
+                  <p>Social</p>
+                </div>
+              </div>
+              <div class="circle03 circle circle-side">
+                <div class="circle-inner">
+                  <p>Governance</p>
+                </div>
+              </div>
+              <div class="last-circle">
+                <div class="circle-inner">
+                  <p>ESG</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="overview_sec" >
+        <div class="fixed_img_div">
+          <div class="img_txt_div sec01">
+            <div class="full_box">
+              <p class="img">
+                <img src="../../images/sub/esg01_overviewBG01.png" alt="기업개요1">
+              </p>
+              <div class="sub_txt">
+                <div class="title">친환경 경영</div>
+                <div class="desc">
+                  <ul>
+                    <li>지원순환 사업(Recycle)</li>
+                    <li>환경방침 수립&middot;이행</li>
+                    <li>탄소중립 (Net Zero) 실천</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img_txt_div sec02" style="opacity: 0;">
+            <div class="full_box">
+              <p class="img">
+                <img src="../../images/sub/esg01_overviewBG02.png" alt="기업개요2">
+              </p>
+              <div class="sub_txt">
+                <div class="title">윤리경영</div>
+                <div class="desc">
+                  <ul>
+                    <li>안전보건환경(SHE) 활동 강화</li>
+                    <li>나눔&middot;상생 경영</li>
+                    <li>사회공헌 활동 참여</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img_txt_div sec03" style="opacity: 0;">
+            <div class="full_box">
+              <p class="img">
+                <img src="../../images/sub/esg01_overviewBG03.png" alt="기업개요2">
+              </p>
+              <div class="sub_txt">
+                <div class="title">투명경영</div>
+                <div class="desc">
+                  <ul>
+                    <li>선진형 지배구조</li>
+                    <li>내부 통제시스템 강화</li>
+                    <li>이사회 투명성 강화</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- <div class="section section--missions" id="missions">
+      <div class="missions">
+        <div class="missions__bg" data-idx="0">
+          <img src="../../images/sub/esg01_overviewBG01.png" alt="" class="mission__img mission0 mission1">
+          <img src="../../images/sub/esg01_overviewBG02.png" alt="" class="mission__img mission2">
+          <img src="../../images/sub/esg01_overviewBG03.png" alt="" class="mission__img mission3">
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-7 col-offset-7">
+                <div class="missions__txt-motion">
+                  <ul class="missions__txt" data-idx="0">
+                    <li class="mission mission1">
+                      <div class="mission__head">
+                        <div class="title">친환경 경영</div>
+                        <div class="desc">
+                          <ul>
+                            <li>지원순환 사업(Recycle)</li>
+                            <li>환경방침 수립&middot;이행</li>
+                            <li>탄소중립 (Net Zero) 실천</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mission mission2">
+                      <div class="mission__head">
+                        <div class="title">윤리경영</div>
+                        <div class="desc">
+                          <ul>
+                            <li>안전보건환경(SHE) 활동 강화</li>
+                            <li>나눔&middot;상생 경영</li>
+                            <li>사회공헌 활동 참여</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mission mission3">
+                      <div class="mission__head">
+                        <div class="title">투명경영</div>
+                        <div class="desc">
+                          <ul>
+                            <li>선진형 지배구조</li>
+                            <li>내부 통제시스템 강화</li>
+                            <li>이사회 투명성 강화</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+    </div>
+
+  </div>
+
+  <footer id="footer" class="footer"></footer>
+</body>
+</html>

@@ -3,6 +3,8 @@ body{font-family: 'Pretendard'; font-size: 16px; overflow-x: hidden; position: r
 body.noScroll{overflow: hidden;}
 #wrap{width: 100%; overflow: hidden; position: relative;}
 #header{position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 999; transition: all ease 0.4s; box-sizing: border-box; background: #fff; border-bottom: 1px solid #e5e5e5;}
+#header.up{transform: translateY(-100%);}
+#header.down{transform: translateY(0);}
 #header .logo-wrap{min-width: 200px;}
 #header h1{background: url(../../images/common/kpc_logo.png) no-repeat center; width: 92px; height: 33px;}
 #header h1 span{display: none;}
@@ -14,18 +16,19 @@ body.noScroll{overflow: hidden;}
 #header .gnb-wrap .gnb >li ul{position: relative; width: 100%;}
 #header .gnb > li .depth2{position: relative; width: 100%; height: 0; text-align: center; overflow: hidden;}
 #header .gnb .depth2 ul{padding: 26px 0 0px;}
-#header .gnb .depth2 ul > li > a{display: block; font-size: 16px; line-height: 45px; font-weight: 500; color: #252525; word-break: keep-all;}
+#header .gnb .depth2 ul > li > a{display: block; font-size: 16px; line-height: 45px; font-weight: 500; color: #252525; word-break: keep-all; transition: color .5s ease-in;}
+#header .gnb .depth2 ul > li:hover > a{color: #0fb5df;}
 #header.on{box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.05);}
 #header.__w{background: #fff;}
 
 #header .lang-select{position: relative; overflow: hidden;}
 #header .lang-select > a {display: block; width: 22px; height: 22px; background: url("../../images/common/lang_icon.png") no-repeat center;}
-#header .lang-select .current.active {color: #ff8b23;}
+#header .lang-select .current.active {color: #0fb5df;}
 #header .lang-select .lang-list {overflow: hidden; position: absolute; top: calc(100% - 1px); right: 0; z-index: -1; width: 68px; padding: 23px 0; background: #fff; border: 1px solid #eeeeee; border-radius: 10px; opacity: 0; transform-origin: 50% 0; transform: translateY(-21px); transition: all 0.2s ease, opacity 0.15s ease-out;}
 #header .lang-select .lang-list li{text-align: center;}
 #header .lang-select .lang-list li:first-child{margin-bottom: 19px;}
 #header .lang-select .lang-list li a{font-size: 15px; font-weight: 500; display: inline-block; color: #555555;}
-#header .lang-select .lang-list li.active a{color: #009cb3; position: relative;}
+#header .lang-select .lang-list li.active a{color: #0fb5df; position: relative;}
 #header .lang-select .lang-list li.active a:after{position: absolute; content: ''; bottom: -1px; left: 0px; width: 100%; height: 1px; background: #009cb3;}
 #header .lang-select::after {right: 12px; width: 7px; height: 7px; margin-top: -6px;}
 #header .lang-select.up .lang-list {top: auto; bottom: calc(100% - 1px); transform-origin: 0 100%; transform: translateY(21px); padding-bottom: 10px;}
@@ -84,6 +87,7 @@ body.noScroll{overflow: hidden;}
 @media (max-width: 767px) {
   #header .header-wrap{justify-content: unset; padding: 23px 5vw 24px}
   #header .logo-wrap{position: relative; z-index: 999;}
+  #header h1{background-size: 70% auto; background-position: left center;}
   #header .lang-select{position: absolute; right: 14vw; z-index: 999;}
   /* #header:hover .btn-mo-menu-open{background: #333;}
   #header:hover .btn-mo-menu-open:after{background: #333;}
