@@ -763,7 +763,7 @@
 }
 
 /*ESG - 개요*/
-.esg01 .section01 .content-wrap{padding: 120px 0 244px;}
+.esg01 .section01 .content-wrap{padding: 120px 0; position: relative;}
 .esg01 .section01 .circle-wrap{max-width: 886px; width: 100%; height: 243px; margin: 0 auto; position: relative;}
 .esg01 .section01 .circle{width: 231px; height: 231px; border-radius: 100%; border: 1px dotted #000000; box-sizing: border-box; position: absolute; display: flex; align-items: center; justify-content: center;}
 .esg01 .section01 .circle:after{position: absolute; content: ''; width: 243px; height: 243px; border-radius: 100%; border: 1px dotted #939393; box-sizing: border-box; top: -7px; left: -7px;}
@@ -777,12 +777,13 @@
 
 
 
-.overview_sec {position: relative; width: 100%; height: 100vh;}
+.overview_sec {position: relative; width: 100%; height: 100vh; overflow: hidden;}
+.overview_sec .overview-sec-title{font-weight: 700; font-size: 64px; line-height: 76px; position: absolute; top: 50%; left: 16.6667vw; transform: translateY(-50%); color: #fff; z-index: 10;}
 .overview_sec .full_box {position: absolute; left: 0; top: 0; width: 100%; height: 100vh;}
 .overview_sec .img_txt_div {opacity: 1;}
 .overview_sec .fixed_img_div {position: fixed; left: 0; top: 0; width: 100%; height: 100%;}
 .overview_sec .img_txt_div {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-.overview_sec .img_txt_div .img {width: 100vw; height: 100vh; transform: scale(1.1); transform-origin: 50% 50%;}
+.overview_sec .img_txt_div .img {width: 100vw; height: 100vh; transform: scale(1.1); transform-origin: 50% 50%; overflow: hidden;}
 .overview_sec .img_txt_div .img img {width: 100%; height: 100%; object-fit: cover;}
 .overview_sec .img_txt_div .sub_txt {position: absolute; left: 52%; top: 100%;}
 .overview_sec .img_txt_div.sec02 .sub_txt {left: 70%;}
@@ -886,7 +887,7 @@
 }
 .content .section--missions .missions .mission__head .desc{font-size: 16px; line-height: 24px; letter-spacing: -0.015em;}
 .content .section--missions .missions .mission__head .desc li{position: relative; padding-left: 10px;}
-.content .section--missions .missions .mission__head .desc li:before{content: ""; position: absolute; top: 50%; left: 0; width: 3px; height: 3px; border-radius: 100%; background: #000000; transform: translateY(-50%);} */
+.content .section--missions .missions .mission__head .desc li:before{content: ""; position: absolute; top: 50%; left: 0; width: 3px; height: 3px; border-radius: 100%; background: #000000; transform: translateY(-50%);}
 
 .container{position: relative; margin: 0 auto; padding-left: 5vw; padding-right: 5vw;}
 
@@ -907,6 +908,21 @@
 .col-offset-7 {
   margin-left: calc(100% / 14 * 7)
 } */
+
+@media (max-width: 900px) {
+  .esg01 .section01 .circle{width: 181px; height: 181px;}
+  .esg01 .section01 .circle:after{width: 193px; height: 193px;}
+}
+
+@media (max-width: 767px) {
+  .esg01 .section01 .content-wrap{padding: 60px 0 30px;}
+  .esg01 .section01 .circle{width: 141px; height: 141px;}
+  .esg01 .section01 .circle:after{width: 153px; height: 153px;}
+  .esg01 .section01 .circle p{font-size: 18px;}
+  .esg01 .section01 .last-circle{width: 141px; height: 141px; opacity: 1; position: relative; top: auto; bottom: 0; transform: translateX(-50%);}
+  .esg01 .section01 .last-circle p{font-size: 18px;}
+}
+
 
 
 /*ESG - 안전보건환경*/

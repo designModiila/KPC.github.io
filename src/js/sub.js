@@ -299,46 +299,37 @@ $(document).ready(function(){
 
   });
 
-  
-  ScrollTrigger.matchMedia({
+  function esg01Timeline() {
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".overview_sec",
+        start: "top top",
+        end: "+=300%",
+        scrub: 1,
+        pin: true,
+      },
+    });
 
-    "(min-width: 768px)": function () {
+    tl.to(".overview_sec .sub_tit_div", {duration: 1, y: "-100%", delay: 0.5})
+      .to(".overview_sec .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
+      .to(".overview_sec .sec01 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel-=1")
+      .to(".overview_sec .sec01 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel-=1")
+      .to(".overview_sec .sec02", {duration: 1, opacity: 1}, "myLabel")
+      .to(".overview_sec .sec01 .sub_txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
+      .to(".overview_sec .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
+      .to(".overview_sec .sec02 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel")
+      
+      .to(".overview_sec .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
+      .to(".overview_sec .sec02 .sub_txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
+      .to(".overview_sec .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
+      .to(".overview_sec .sec03 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel+=1")
 
-        function middle() {
-          var tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: ".overview_sec",
-              start: "top top",
-              end: "+=300%",
-              scrub: 1,
-              pin: true,
-            },
-          });
+    return tl;
+  }
 
-          tl.to(".overview_sec .sub_tit_div", {duration: 1, y: "-100%", delay: 0.5})
-            .to(".overview_sec .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
-            .to(".overview_sec .sec01 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel-=1")
-            .to(".overview_sec .sec01 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel-=1")
-            .to(".overview_sec .sec02", {duration: 1, opacity: 1}, "myLabel")
-            .to(".overview_sec .sec01 .sub_txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
-            .to(".overview_sec .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
-            .to(".overview_sec .sec02 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel")
-            
-            .to(".overview_sec .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
-            .to(".overview_sec .sec02 .sub_txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
-            .to(".overview_sec .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
-            .to(".overview_sec .sec03 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel+=1")
+  var overviewTl = gsap.timeline();
+  overviewTl.add(esg01Timeline(), "+=1");
 
-          return tl;
-        }
-
-        var overviewTl = gsap.timeline();
-        overviewTl.add(middle(), "+=1");
-
-
-    }
-
-  });
 
   ScrollTrigger.matchMedia({
 
