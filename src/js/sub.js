@@ -302,7 +302,7 @@ $(document).ready(function(){
   function esg01Timeline() {
     var tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".overview_sec",
+        trigger: ".overview-sec",
         start: "top top",
         end: "+=300%",
         scrub: 1,
@@ -310,19 +310,19 @@ $(document).ready(function(){
       },
     });
 
-    tl.to(".overview_sec .sub_tit_div", {duration: 1, y: "-100%", delay: 0.5})
-      .to(".overview_sec .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
-      .to(".overview_sec .sec01 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel-=1")
-      .to(".overview_sec .sec01 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel-=1")
-      .to(".overview_sec .sec02", {duration: 1, opacity: 1}, "myLabel")
-      .to(".overview_sec .sec01 .sub_txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
-      .to(".overview_sec .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
-      .to(".overview_sec .sec02 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel")
+    tl.to(".overview-sec .sub-tit-div", {duration: 1, y: "-100%", delay: 0.5})
+      .to(".overview-sec .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
+      .to(".overview-sec .sec01 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel-=1")
+      .to(".overview-sec .sec01 .sub-txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel-=1")
+      .to(".overview-sec .sec02", {duration: 1, opacity: 1}, "myLabel")
+      .to(".overview-sec .sec01 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
+      .to(".overview-sec .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
+      .to(".overview-sec .sec02 .sub-txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel")
       
-      .to(".overview_sec .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
-      .to(".overview_sec .sec02 .sub_txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
-      .to(".overview_sec .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
-      .to(".overview_sec .sec03 .sub_txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel+=1")
+      .to(".overview-sec .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
+      .to(".overview-sec .sec02 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
+      .to(".overview-sec .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
+      .to(".overview-sec .sec03 .sub-txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel+=1")
 
     return tl;
   }
