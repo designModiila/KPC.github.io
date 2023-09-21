@@ -457,10 +457,10 @@ $(document).ready(function(){
   gsap.set(cont,{y: '25%', opacity: 0})
   cont.forEach(cont => {
     gsap.to(cont,{
-    y: 0,
-    opacity: 1,
-    duration: 0.5,
-    scrollTrigger: {
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      scrollTrigger: {
         trigger: cont,
         start: 'top 70%',
         toggleActions:"restart none none reverse"
@@ -468,6 +468,17 @@ $(document).ready(function(){
     })
   })
 
+  ScrollTrigger.batch(".contD", {
+    start: 'top 70%',
+    onEnter: elements => {
+      gsap.from(elements, {
+        autoAlpha: 0,
+        y: 25,
+        stagger: 0.3
+      });
+    },
+
+  });
 
 })
 
