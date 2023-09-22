@@ -537,7 +537,6 @@ xh .footer .family-site .family-select {
   z-index: 1;
   transition: 0.5s top ease-in-out, 1s color ease-out;
   transition-duration: 1s;
-
 }
 .subVisual .title-wrap .sub-title {
   color: #4a4a4a;
@@ -548,8 +547,6 @@ xh .footer .family-site .family-select {
   margin-bottom: 18px;
   position: relative;
   display: inline-block;
-  opacity: 0;
-  animation: text-active-animation1 1s cubic-bezier(0.4, 0, 0.2, 1) both;
   transition-duration: 1s;
 }
 .subVisual .title-wrap .sub-title:after {
@@ -568,20 +565,7 @@ xh .footer .family-site .family-select {
   line-height: 80px;
   font-size: 64px;
   transition-duration: 1s;
-  opacity: 0;
-  animation: text-active-animation1 1s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
-
-.subVisual .title-wrap .title span{
-  display: block;
-  animation: text-active-animation2 1s cubic-bezier(0.4, 0, 0.2, 1) both;
-  animation-delay: 0.3s;
-  opacity: 0;
-}
-.subVisual .title-wrap .title span:nth-child(2){
-  animation-delay: 0.6s;
-}
-
 .subVisual .sub-visual {
   width: 100%;
   height: 100vh;
@@ -617,28 +601,6 @@ xh .footer .family-site .family-select {
   width: 100%;
   height: 100vh;
 }
-
-@keyframes text-active-animation1 {
-	from {
-		opacity:0;
-		transform: translateY(80px); 
-	}
-	to {
-		opacity:1.0;
-		transform: translateY(0); 
-	}
-}
-@keyframes text-active-animation2 {
-	from {
-		opacity:0;
-		transform: translateY(80px); 
-	}
-	to {
-		opacity:1.0;
-		transform: translateY(0); 
-	}
-}
-
 
 .txt-motion {
   position: relative;
