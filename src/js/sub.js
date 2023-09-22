@@ -112,20 +112,13 @@ $(document).ready(function(){
         pin: true,
         scrub: 1,
         end: "+=5000",
-        //toggleActions:"restart none none reset"
         }
       })
       .from(".business02 .diagram-wrapper",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
-      // .from(".business02 .diagram-center",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from(".business02 .diagram-center > p",{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
-      // .from(".business02 .diagram-side",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from(".business02 .arrowBg",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
       .to('.business02 .top-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
       .from('.business02 .bot-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
       .from('.business02 .bot-con .diagram-left',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      //.from('.business02 .bot-con .diagram-left div ',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})
-      .from('.business02 .bot-con .diagram-right',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      //.from('.business02 .bot-con .diagram-right div',{autoAlpha: 0, stagger: 0.3, duration: 0.3, ease: Power4.easeOut})   
+      .from('.business02 .bot-con .diagram-right',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut}) 
     }
 
   });
@@ -134,70 +127,70 @@ $(document).ready(function(){
 
     "(min-width: 768px)": function () {
 
-      ScrollTrigger.create({
-        trigger: ".txt-motion",
-        pin: ".txt-motion",
-        start: "top top",
-        end: "+=2500",
-      });
+      // ScrollTrigger.create({
+      //   trigger: ".txt-motion",
+      //   pin: ".txt-motion",
+      //   start: "top top",
+      //   end: "+=2500",
+      // });
     
-      var tl = new gsap.timeline();
+      // var tl = new gsap.timeline();
 
-      tl.to(".txt-motion .title-wrap", {
-        y: 0,
-        color: "#ffffff",
-        autoAlpha: 1,
-        scrollTrigger: {
-          trigger: ".txt-motion",
-          start: "top top",
-          end: "+=1000",
-          scrub: 0.7,
-        }
-      });
+      // tl.to(".txt-motion .title-wrap", {
+      //   y: 0,
+      //   color: "#ffffff",
+      //   autoAlpha: 1,
+      //   scrollTrigger: {
+      //     trigger: ".txt-motion",
+      //     start: "top top",
+      //     end: "+=1000",
+      //     scrub: 0.7,
+      //   }
+      // });
 
 
-      tl.to(".txt-motion .sub-title", {
-        y: 0,
-        autoAlpha: 1,
-        scrollTrigger: {
-          trigger: ".txt-motion .title-wrap",
-          start: "top top",
-          end: "+=1000",
-          scrub: 0.7,
-        }
-      });
+      // tl.to(".txt-motion .sub-title", {
+      //   y: 0,
+      //   autoAlpha: 1,
+      //   scrollTrigger: {
+      //     trigger: ".txt-motion .title-wrap",
+      //     start: "top top",
+      //     end: "+=1000",
+      //     scrub: 0.7,
+      //   }
+      // });
 
-      //배경 커짐
-      tl.to('.txt-motion .img-wrap', {
-        scale: 1.1,
-        scrollTrigger: {
-          trigger: ".txt-motion .img-wrap",
-          start: "top top",
-          end: "+=3000",
-          scrub: 0.7,
-        }
-      });
-      tl.to('.txt-motion .img-wrapBl', {
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".txt-motion .img-wrap",
-          start: "top top",
-          end: "+=3000",
-          scrub: 0.7,
-        }
-      });
+      // //배경 커짐
+      // tl.to('.txt-motion .img-wrap', {
+      //   scale: 1.1,
+      //   scrollTrigger: {
+      //     trigger: ".txt-motion .img-wrap",
+      //     start: "top top",
+      //     end: "+=3000",
+      //     scrub: 0.7,
+      //   }
+      // });
+      // tl.to('.txt-motion .img-wrapBl', {
+      //   opacity: 1,
+      //   scrollTrigger: {
+      //     trigger: ".txt-motion .img-wrap",
+      //     start: "top top",
+      //     end: "+=3000",
+      //     scrub: 0.7,
+      //   }
+      // });
 
       
-      tl.to(".highlight",{
-        color: "#ffffff",
-        stagger: 1,
-        scrollTrigger: {
-          trigger: ".txt-motion .sub-title",
-          start: 'top top',
-          end: '+=1000',
-          scrub: 3,
-        }
-      })
+      // tl.to(".highlight",{
+      //   color: "#ffffff",
+      //   stagger: 1,
+      //   scrollTrigger: {
+      //     trigger: ".txt-motion .sub-title",
+      //     start: 'top top',
+      //     end: '+=1000',
+      //     scrub: 3,
+      //   }
+      // })
 
 
       var barAni = gsap.timeline({
@@ -214,6 +207,7 @@ $(document).ready(function(){
       .from(".business01 .bar-grey",{height: 0, duration: 0.5, ease: Power4.easeOut})
       .from(".business01 .bar-blue",{height: 0, duration: 0.5, ease: Power4.easeOut})
       .from(".business01 .box > span",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business01 .graph-text",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
 
     },
 
@@ -281,12 +275,12 @@ $(document).ready(function(){
 
       var diagramAni2 = gsap.timeline({
         scrollTrigger:{
-        trigger:".esg01 .section01",
-        start:"top 10%",
-        pin: true,
-        scrub: 3,
-        end: "+=2500",
-        //toggleActions:"restart none none reset"
+          trigger:".esg01 .section01",
+          start:"top 10%",
+          pin: true,
+          scrub: 3,
+          end: "+=2500",
+          //toggleActions:"restart none none reset"
         }
       })
       .from(".esg01 .circle-wrap",{autoAlpha:0, duration: 1, ease: Power4.easeOut})
@@ -337,13 +331,13 @@ $(document).ready(function(){
 
       var diagramAni3 = gsap.timeline({
         scrollTrigger:{
-        trigger:".esg02 .section01",
-        start:"top 10%",
-        pin: true,
-        scrub: 3,
-        //end: "bottom+=50%"
-        end: "+=2500",
-        //toggleActions:"restart none none reset"
+          trigger:".esg02 .section01",
+          start:"top 10%",
+          pin: true,
+          scrub: 3,
+          //end: "bottom+=50%"
+          end: "+=2500",
+          //toggleActions:"restart none none reset"
         }
       })
       .from(".esg02 .circle-wrap",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
@@ -368,7 +362,7 @@ $(document).ready(function(){
     $(".world-layer, .layer-dimm").removeClass("open");
   };
   //링크 클릭시 해당 레이어팝업 호출
-  $(".btn_layer").click(function () {
+  $(".company04 .btn_layer,.company04 .article").click(function () {
     var no = $(this).attr("layer");
     layer_open(no);
     $('.article').removeClass('active');
@@ -379,70 +373,6 @@ $(document).ready(function(){
     layer_close();
   });
 
-
-  // const sectionMissions = document.querySelector('.section--missions')
-  // const sectionMissionsContents = document.querySelector('.section--missions .missions')
-  // const missionBackground = gsap.timeline({
-  //   scrollTrigger:{
-  //     trigger: '.section--missions',
-  //     //scroller: this.__SCROLLER__,
-  //     scrub: true,
-  //     pin:'.missions__bg',
-  //     start: 'top top',
-  //     end: 'bottom bottom'
-  //   },
-  // })
-
-  // const missionSectionScroll = gsap.timeline({
-  //   scrollTrigger:{
-  //     trigger: '.section--missions',
-  //     //scroller: this.__SCROLLER__,
-  //     scrub: true,
-  //     start: 'top bottom',
-  //     end: 'top top',
-  //     onUpdate: (self) => {
-  //       const _degree = self.progress
-  //       //sectionMissions.style.width = ( 78 + _degree * 22 ) + '%'
-  //       //missionBg.querySelector('img').style.transform = `translate(-50%,-50%) scale(${1.5 - .5 * _degree})`
-  //       missionText.style.opacity = _degree 
-  //     }
-  //   },
-  // })
-  
-
-  // const missionText = document.querySelector('.missions__txt')
-  // const missionBg = document.querySelector('.missions__bg')
-  // const missionTextitems = missionText.querySelectorAll('.mission')
-  // gsap.timeline ({
-  //   scrollTrigger:{
-  //     trigger:missionText,
-  //     //scroller: this.__SCROLLER__,
-  //     scrub: true,
-  //     start: 'top bottom',
-  //     end: 'bottom bottom',
-  //     onUpdate: (self) => {
-  //       const _degree = self.progress * 10
-  //       const _idx = Math.floor(_degree / missionTextitems.length)
-  //       missionBg.dataset.idx = _idx
-  //       missionText.dataset.idx = _idx
-  //     }
-  //   },
-  // })
-  // gsap.timeline({
-  //   scrollTrigger:{
-  //     trigger:missionText,
-  //     //scroller: this.__SCROLLER__,
-  //     scrub: true,
-  //     start: 'bottom bottom',
-  //     end: 'bottom top',
-  //     onUpdate: (self) => {
-  //       const _degree = self.progress
-  //       sectionMissionsContents.style.opacity = 1 - _degree * 0.7
-  //       //sectionMissionsContents.style.transform = `translate(0,${_degree * 10}%)`
-  //     }
-  //   },
-  // })
-  
 
   const cont = gsap.utils.toArray('.cont')
   gsap.set(cont,{y: '25%', opacity: 0})
@@ -461,26 +391,81 @@ $(document).ready(function(){
 
 
   ScrollTrigger.matchMedia({
-
     "(min-width: 768px)": function () {
 
-      ScrollTrigger.batch(".contD", {
-        start: 'top 70%',
-        onEnter: elements => {
-          gsap.from(elements, {
-            autoAlpha: 0,
-            y: 25,
-            stagger: 0.3
-          });
-        },
-    
-      });
+
+
+
+
+      // const contD = gsap.utils.toArray('.contD')
+      // contD = gsap.timeline({
+      //   stagger: 0.3,
+      //   scrollTrigger:{
+      //     trigger: contD,
+      //     start:"top 70%",
+      //     toggleActions:"restart none none reverse"
+      //   }
+      // })
+      // .from('.contD > div:first-child',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
+      // .from('.contD > div:nth-child(2)',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
+
 
     }
-
   });
-
-
-
 })
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const i = document.querySelector('.txt-motion2');
+  const e = i.querySelector(".challenge"),
+        n = e.querySelector(".ment"),
+        r = [].slice.call(n.querySelectorAll("span"));
+
+  let o;  
+
+  const areaHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  const l = gsap.timeline({ paused: true });
+
+  r.forEach((c, h) => {
+      l.to(c, {
+          opacity: 1,
+          duration: .5,
+          ease: "power2.inOut"
+      });
+
+      if (h !== r.length - 1) {
+          l.to(r[h + 1], {
+              opacity: 0.4,
+              duration: .5,
+              delay: 0.1,
+              ease: "power2.inOut"
+          }, "-=0.4");
+      }
+  });
+
+  const onScroll = () => {
+      const h = e.getBoundingClientRect();
+      const overlay = document.querySelector(".bg-darken");
+      const overlayScale = document.querySelector(".bg");
+
+      if (h.top < areaHeight && h.bottom > 0) {
+          const d = -h.top/o;
+          l.progress(Math.min(d, 1));
+
+          const overlayOpacity = Math.min(d * 0.65, 0.65); 
+          overlay.style.backgroundColor = `rgba(0, 0, 0, ${overlayOpacity})`;
+          overlayScale.style.transform = `scale(${1 + overlayOpacity * 0.85})`;
+      }
+  };
+
+  const onResize = () => {
+      o = e.offsetHeight - areaHeight;
+  };
+
+  window.addEventListener("scroll", onScroll);
+  window.addEventListener("resize", onResize);
+
+  // 초기화
+  onResize();  // 여기에서 onResize를 호출하여 o의 초기 값을 설정합니다.
+});
