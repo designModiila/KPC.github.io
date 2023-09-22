@@ -1,4 +1,4 @@
-$(document).ready(function(){
+window.onload = function() {
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -482,5 +482,5 @@ $(document).ready(function(){
 
 
 
-})
+}
 
