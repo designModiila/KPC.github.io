@@ -396,18 +396,46 @@ $(document).ready(function(){
     "(min-width: 768px)": function () {
 
 
-      // contD = gsap.timeline({
-      //   stagger: 0.3,
-      //   scrollTrigger:{
-      //     trigger: contD,
-      //     start:"top 70%",
-      //     toggleActions:"restart none none reverse"
-      //   }
-      // })
-      // .from('.first',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
-      // .from('.second',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
+      const blocks = document.querySelectorAll(".contD");
 
+      blocks.forEach(block => {
+        const blockTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: block,
+            start:"top 70%",
+            toggleActions:"restart none none reverse"
+          }
+        })
+        // Animate the header items
+        .from(block.querySelectorAll(".contD > div"), {
+          autoAlpha:0, 
+          y: 100, 
+          duration: 0.3, 
+          ease: Power4.easeOut,
+          stagger: 0.3
+        })
 
+      });
+
+    },
+
+    "(max-width: 767px)": function () {
+
+      const contD = gsap.utils.toArray('.contD')
+      gsap.set(contD,{y: '25%', opacity: 0})
+      contD.forEach(contD => {
+        gsap.to(contD,{
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: contD,
+            start: 'top 70%',
+            toggleActions:"restart none none reverse"
+          }
+        })
+      })
     }
   });
 })
