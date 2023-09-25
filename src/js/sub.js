@@ -279,12 +279,13 @@ $(document).ready(function(){
           start:"top 10%",
           pin: true,
           scrub: 3,
-          end: "+=2500",
+          end: "bottom +30%"
+          //end: "+=2500",
           //toggleActions:"restart none none reset"
         }
       })
-      .from(".esg01 .circle-wrap",{autoAlpha:0, duration: 1, ease: Power4.easeOut})
-      .from(".esg01 .circle",{autoAlpha: 0, yPercent: -25, duration: 1, ease: Power4.easeOut, stagger: 0.3 })
+      // .from(".esg01 .circle-wrap",{autoAlpha:0, duration: 1, ease: Power4.easeOut})
+      // .from(".esg01 .circle",{autoAlpha: 0, yPercent: -25, duration: 1, ease: Power4.easeOut, stagger: 0.3 })
       .to(".esg01 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 1, ease: Power4.easeOut})
       .to(".esg01 .last-circle",{autoAlpha: 1})
       .to(".esg01 .circle",{autoAlpha: 0})
@@ -306,7 +307,7 @@ $(document).ready(function(){
 
     tl.to(".esg01-timeline", {duration: 1, delay: 0.5})
       .to(".esg01-timeline .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
-      .to(".esg01-timeline .sec01 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel-=1")
+      .to(".esg01-timeline .sec01 .img", {duration: 1}, "myLabel-=1")
       .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel-=1")
       .to(".esg01-timeline .sec02", {duration: 1, opacity: 1}, "myLabel")
       .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
@@ -335,16 +336,16 @@ $(document).ready(function(){
           start:"top 10%",
           pin: true,
           scrub: 3,
-          //end: "bottom+=50%"
-          end: "+=2500",
+          end: "bottom +30%"
+          //end: "+=2500",
           //toggleActions:"restart none none reset"
         }
       })
-      .from(".esg02 .circle-wrap",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
-      .from(".esg02 .circle",{autoAlpha: 0, yPercent: -25, duration: 0.3, ease: Power4.easeOut, stagger: 0.3 })
-      .to(".esg02 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 0.3, ease: Power4.easeOut})
-      .to(".esg02 .last-circle",{autoAlpha: 1})
-      .to(".esg02 .circle",{autoAlpha: 0})
+      // .from(".esg02 .circle-wrap",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
+      // .from(".esg02 .circle",{autoAlpha: 0, yPercent: -25, duration: 0.3, ease: Power4.easeOut, stagger: 0.3 })
+      .to(".esg02 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 1, ease: Power4.easeOut})
+      .to(".esg02 .last-circle",{autoAlpha: 1, duration: 1})
+      .to(".esg02 .circle",{autoAlpha: 0, duration: 1})
 
     }
 

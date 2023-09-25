@@ -91,6 +91,59 @@
         <li><a href="../customer/customer_voice.html">고객의소리</a></li>
         <li><a href="#none" class="privacy">개인정보처리방침</a></li>
         <li><a href="#none" class="email">이메일 무단수집 거부</a></li>
+        <li class="family-site  onlyMo">
+          <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
+          <ul class="family-list">
+            <li>
+              <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
+            </li>
+            <li>
+              <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
+            </li>
+            <li>
+              <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
+            </li>
+            <li>
+              <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
+            </li>
+            <li>
+              <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
+            </li>
+            <li>
+              <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
+            </li>
+            <li>
+              <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
+            </li>
+            <li>
+              <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
+            </li>
+            <li>
+              <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
+            </li>
+          </ul>
+        </li>
       </ul>
       <ul>
         <li><span>ADDRESS. </span>(45011) 울산 울주군 온산읍 당월로 216-51</li>
@@ -147,18 +200,28 @@
         familySelect = setTimeout(familySelectHide, 2000);
       });
 
-      gsap.set(".footer-inner", { yPercent: -50 });
-      const uncover = gsap.timeline({ paused: true });
-      uncover.to(".footer-inner", { yPercent: 0, ease: "none" });
-      ScrollTrigger.create({
-        trigger: ".lastSec",
-        start: "bottom +=98%",
-        end: "+=30%",
-        animation: uncover,
-        scrub: true,
-        //markers: true
+
+      ScrollTrigger.matchMedia({
+
+        "(min-width: 768px)": function () {
+
+          gsap.set(".footer-inner", { yPercent: -50 });
+          const uncover = gsap.timeline({ paused: true });
+          uncover.to(".footer-inner", { yPercent: 0, ease: "none" });
+          ScrollTrigger.create({
+            trigger: ".lastSec",
+            start: "bottom +=98%",
+            end: "+=30%",
+            animation: uncover,
+            scrub: true,
+            //markers: true
+          });
+          ScrollTrigger.refresh();
+
+        }
+
       });
-      ScrollTrigger.refresh();
+
 
       window.addEventListener("resize", ScrollTrigger.update);
     })
