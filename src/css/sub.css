@@ -654,7 +654,7 @@
 .business02 .section01 .bot-con .diagram-inner{display: flex; justify-content: space-between;}
 .business02 .section01 .bot-con .circle-title{font-weight: 600; font-size: 24px; margin-bottom: 44px; text-align: center;}
 .business02 .section01 .bot-con .circle-wrap{display: flex; height: 100%; align-items: center; gap: 6px}
-.business02 .section01 .bot-con .circle{width: 160px; height: 160px; border-radius: 100%; display: flex; justify-content: center; align-items: center; border: 1px dotted #000000; box-sizing: border-box; text-align: center; position: relative; font-size: 24px;}
+.business02 .section01 .bot-con .circle{width: 160px; height: 160px; border-radius: 100%; display: flex; justify-content: center; align-items: center; border: 3px dashed #000000; box-sizing: border-box; text-align: center; position: relative; font-size: 24px;}
 .business02 .section01 .bot-con .circle-big{width: 231px; height: 231px;}
 .business02 .section01 .bot-con .circle.dark-circle{background: #363636; color: #fff; border: none;}
 .business02 .section01 .bot-con .circle.primary-color{background: #0fb5df; color: #fff; border: none;}
@@ -735,7 +735,7 @@
   .business02 .section01 .top-con{gap: 30px}
   .business02 .section01 .bot-con .diagram-inner{gap: 30px}
   .business02 .section01 .bot-con .circle-title{font-size: 18px; margin-top: 30px}
-  .business02 .section01 .bot-con .circle{width: 80px; height: 80px; font-size: 16px;}
+  .business02 .section01 .bot-con .circle{width: 80px; height: 80px; font-size: 14px;  border: 2px dashed #000000}
   .business02 .section01 .bot-con .circle-big{width: 130px; height: 130px;}
   .business02 .section01 .diagram-arrow-mo{text-align: center; margin: 50px auto}
   .business02 .section01 .diagram-right .arrow{display: flex; align-items: center;}

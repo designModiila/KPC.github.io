@@ -824,7 +824,8 @@ body.noScroll {
 @media (max-width: 500px) {
   .txt-motion2 .challenge .ment{top: 20vh}
   .company01 .txt-motion2 .challenge .bg{background-position: 67%;}
-  .txt-motion2 .challenge .ment span.bigDesc{font-size: 18px; line-height: 30px;}
+  .txt-motion2 .challenge .ment span.bigDesc{font-size: 18px; line-height: 30px; display: inline;}
+  .txt-motion2 .challenge .ment span.bigDesc.mb32{display: block;}
 }
 
 .form-control {
