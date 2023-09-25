@@ -382,6 +382,7 @@ $(document).ready(function(){
       y: 0,
       opacity: 1,
       duration: 0.5,
+      stagger: 0.3,
       scrollTrigger: {
         trigger: cont,
         start: 'top 70%',
@@ -394,17 +395,17 @@ $(document).ready(function(){
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": function () {
 
-      const contD = gsap.utils.toArray('.contD')
-      contD = gsap.timeline({
-        stagger: 0.3,
-        scrollTrigger:{
-          trigger: contD,
-          start:"top 70%",
-          toggleActions:"restart none none reverse"
-        }
-      })
-      .from('.first',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
-      .from('.second',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
+
+      // contD = gsap.timeline({
+      //   stagger: 0.3,
+      //   scrollTrigger:{
+      //     trigger: contD,
+      //     start:"top 70%",
+      //     toggleActions:"restart none none reverse"
+      //   }
+      // })
+      // .from('.first',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
+      // .from('.second',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
 
 
     }
