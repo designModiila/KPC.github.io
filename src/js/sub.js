@@ -111,13 +111,13 @@ $(document).ready(function(){
         start:"top top",
         pin: true,
         scrub: 1,
-        end: "+=5000",
+        end: "+=3000",
         }
       })
-      .from(".business02 .diagram-wrapper",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
+      .from(".business02 .top-con",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
       .to('.business02 .top-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
       .from('.business02 .bot-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from('.business02 .bot-con .diagram-left',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
+      // .from('.business02 .bot-con .diagram-left',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
       .from('.business02 .bot-con .diagram-right',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut}) 
     }
 
