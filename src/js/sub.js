@@ -308,16 +308,16 @@ $(document).ready(function(){
     tl.to(".esg01-timeline", {duration: 1, delay: 0.5})
       .to(".esg01-timeline .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
       .to(".esg01-timeline .sec01 .img", {duration: 1}, "myLabel-=1")
-      .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel-=1")
+      .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel-=1")
       .to(".esg01-timeline .sec02", {duration: 1, opacity: 1}, "myLabel")
       .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
       .to(".esg01-timeline .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
-      .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel")
+      .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel")
       
       .to(".esg01-timeline .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
       .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
       .to(".esg01-timeline .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
-      .to(".esg01-timeline .sec03 .sub-txt", {duration: 1, top: "50%", y: "-50%"}, "myLabel+=1")
+      .to(".esg01-timeline .sec03 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel+=1")
 
     return tl;
   }
