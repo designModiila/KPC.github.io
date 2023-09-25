@@ -735,7 +735,7 @@
   .business02 .section01 .top-con{gap: 30px}
   .business02 .section01 .bot-con .diagram-inner{gap: 30px}
   .business02 .section01 .bot-con .circle-title{font-size: 18px; margin-top: 30px}
-  .business02 .section01 .bot-con .circle{width: 80px; height: 80px; font-size: 14px;  border: 2px dashed #000000}
+  .business02 .section01 .bot-con .circle{width: 80px; height: 80px; font-size: 13px;  border: 2px dashed #000000}
   .business02 .section01 .bot-con .circle-big{width: 130px; height: 130px;}
   .business02 .section01 .diagram-arrow-mo{text-align: center; margin: 50px auto}
   .business02 .section01 .diagram-right .arrow{display: flex; align-items: center;}

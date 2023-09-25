@@ -764,6 +764,10 @@ body.noScroll {
     padding: 0 5vw;
   } */
 }
+@media (max-width: 1024px) {
+  .txt-motion2 .challenge .ment span.bigDesc{font-size: 28px; line-height: 38px;}
+}
+
 
 @media (max-width: 767px) {
   .inner {
@@ -809,7 +813,7 @@ body.noScroll {
   }
   .txt-motion2 .challenge .ment{left: 0vw; padding: 0 5vw}
   .txt-motion2 .challenge .ment span.desc{display: inline;}
-  .txt-motion2 .challenge .ment span.bigDesc{font-size: 32px; line-height: 44px;}
+  .txt-motion2 .challenge .ment span.bigDesc{font-size: 24px; line-height: 34px; display: inline;}
   .txt-motion2 .challenge .ment span.desc{font-size: 16px; line-height: 28px;}
 
   /* .txt-motion .title-wrap {
@@ -825,7 +829,6 @@ body.noScroll {
   .txt-motion2 .challenge .ment{top: 20vh}
   .company01 .txt-motion2 .challenge .bg{background-position: 67%;}
   .txt-motion2 .challenge .ment span.bigDesc{font-size: 18px; line-height: 30px; display: inline;}
-  .txt-motion2 .challenge .ment span.bigDesc.mb32{display: block;}
 }
 
 .form-control {
