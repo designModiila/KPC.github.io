@@ -394,21 +394,17 @@ $(document).ready(function(){
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": function () {
 
-
-
-
-
-      // const contD = gsap.utils.toArray('.contD')
-      // contD = gsap.timeline({
-      //   stagger: 0.3,
-      //   scrollTrigger:{
-      //     trigger: contD,
-      //     start:"top 70%",
-      //     toggleActions:"restart none none reverse"
-      //   }
-      // })
-      // .from('.contD > div:first-child',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
-      // .from('.contD > div:nth-child(2)',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
+      const contD = gsap.utils.toArray('.contD')
+      contD = gsap.timeline({
+        stagger: 0.3,
+        scrollTrigger:{
+          trigger: contD,
+          start:"top 70%",
+          toggleActions:"restart none none reverse"
+        }
+      })
+      .from('.first',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
+      .from('.second',{autoAlpha:0, y: 100, duration: 0.3, ease: Power4.easeOut})
 
 
     }

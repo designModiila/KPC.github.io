@@ -1100,7 +1100,7 @@
 .esg04 .section01 .desc{font-weight: 500; font-size: 20px; line-height: 30px; letter-spacing: -0.015em; color: #333333;}
 .esg04 .section01 .diagram-wrap{max-width: 1046px; width: 100%; margin: 0 auto; position: relative; }
 /* .esg04 .section01 .diagram-inner{border: 1px dotted #0FB5DF; padding: 12px; box-sizing: border-box; border-radius: 200px; height: 185px;} */
-.esg04 .section01 .diagram-inner{border: 1px dotted #0FB5DF; padding: 12px; box-sizing: border-box; border-radius: 200px; height: 185px; display: flex; justify-content: space-between;}
+.esg04 .section01 .diagram-inner{border: 3px dashed #0FB5DF; padding: 12px; box-sizing: border-box; border-radius: 200px; height: 185px; display: flex; justify-content: space-between;}
 .esg04 .section01 .circle{width: 160px; height: 160px; border-radius: 100%; color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; /*position: absolute;*/}
 .esg04 .section01 .circle.circle-dark{background: #363636;}
 .esg04 .section01 .circle.circle-primary{background: #0fb5df;}
@@ -1148,7 +1148,7 @@
   .esg04 .section01 .title{font-size: 18px; line-height: 24px; margin-bottom: 8px;}
   .esg04 .section01 .desc{font-size: 16px; color: #666666; line-height: 26px;}
   .esg04 .section01 .title-wrap{margin-bottom: 40px;}
-  .esg04 .section01 .diagram-inner{height: 125px; padding: 6px 8px}
+  .esg04 .section01 .diagram-inner{height: 125px; padding: 6px 8px; border: 2px dashed #0fb5df}
   .esg04 .section01 .circle{/*position: absolute;*/ width: 112px; height: 112px; font-size: 14px;}
 
   
@@ -1160,12 +1160,9 @@
   .esg04 .section02 .box-desc{font-size: 16px; line-height: 19px; color: #666666;}
 }
 @media (max-width: 500px) {
-  .esg04 .section01 .diagram-inner{height: 95px; padding: 6px 8px}
-  .esg04 .section01 .circle{position: absolute; width: 82px; height: 82px; font-size: 14px;}
+  .esg04 .section01 .diagram-inner{height: 95px; padding: 6px 8px;}
+  .esg04 .section01 .circle{ width: 72px; height: 72px; font-size: 14px;}
   .esg04 .section01 .circle.circle-primary{z-index: 1;}
-  .esg04 .section01 .circle02{left: 27%}
-  .esg04 .section01 .circle03{left: 52.5%;}
-  .esg04 .section01 .circle04{right: 8px;}
   .esg04 .section02 .box-desc br{display: none;}
 }
 
