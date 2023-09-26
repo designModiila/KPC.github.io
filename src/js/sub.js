@@ -380,7 +380,7 @@ $(document).ready(function(){
   cont.forEach(cont => {
     gsap.to(cont,{
       y: 0,
-      opacity: 1,
+      autoAlpha: 1,
       duration: 0.5,
       stagger: 0.3,
       scrollTrigger: {
@@ -396,22 +396,20 @@ $(document).ready(function(){
     "(min-width: 768px)": function () {
 
 
-      const blocks = document.querySelectorAll(".contD");
-
-      blocks.forEach(block => {
+      const contD = document.querySelectorAll(".contD");
+      gsap.set(".contD > div",{y: "25%", opacity: 0})
+      contD.forEach(contD => {
         const blockTimeline = gsap.timeline({
           scrollTrigger: {
-            trigger: block,
+            trigger: contD,
             start:"top 70%",
             toggleActions:"restart none none reverse"
           }
         })
-        // Animate the header items
-        .from(block.querySelectorAll(".contD > div"), {
-          autoAlpha:0, 
-          y: 100, 
-          duration: 0.3, 
-          ease: Power4.easeOut,
+        .to(contD.querySelectorAll(".contD > div"), {
+          autoAlpha:1, 
+          y: 0, 
+          duration: 0.5, 
           stagger: 0.3
         })
 
@@ -426,7 +424,7 @@ $(document).ready(function(){
       contD.forEach(contD => {
         gsap.to(contD,{
           y: 0,
-          opacity: 1,
+          autoAlpha: 1,
           duration: 0.5,
           stagger: 0.3,
           scrollTrigger: {
