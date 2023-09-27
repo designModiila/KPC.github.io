@@ -624,7 +624,7 @@ body.noScroll {
 .txt-motion2 .challenge .ment span{color: #fff; font-family: Noto Sans CJK KR; font-size: 32px; font-style: normal; font-weight: 700; letter-spacing: -0.52px;}
 /* .font-hh {color: #48cbc9; font-style: normal;}
 .font-vv {color: #8f00e7; font-style: normal;} */
-.txt-motion2 .challenge .ment span:not(:first-child) {opacity: 0.4;}
+.txt-motion2 .challenge .ment span:not(:first-child) {opacity: 0.2;}
 .txt-motion2 .challenge .ment span{display: block;}
 .txt-motion2 .challenge .ment span.bigDesc{color: #ffffff; font-size: 40px; font-weight: 700; line-height: 52px; margin-bottom: 0;}
 .txt-motion2 .challenge .ment span.bigDesc.mb32{margin-bottom: 32px;}
