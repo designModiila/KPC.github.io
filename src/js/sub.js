@@ -27,7 +27,7 @@ $(document).ready(function(){
           },
         }
       });
-
+      gsap.from(".subVisual .title > p",{autoAlpha: 0, y: '25%', duration: 0.5, stagger: 0.5, delay: 0.5})
       
     }
     
