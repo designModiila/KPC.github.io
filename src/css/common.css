@@ -453,7 +453,7 @@ body.noScroll {
   #header .gnb-wrap .gnb {
     max-width: 100%;
     text-align: left;
-    padding-top: 116px;
+    padding-top: 90px;
     display: flex;
     flex-direction: column;
     gap: 12px;
