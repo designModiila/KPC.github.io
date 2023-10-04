@@ -117,6 +117,7 @@ body.noScroll {
   width: 22px;
   height: 22px;
   background: url("../../images/common/lang_icon.png") no-repeat center;
+  background-size: 100%;
 }
 #header .lang-select .current.active {
   color: #0fb5df;
