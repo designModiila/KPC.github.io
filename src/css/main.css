@@ -1,1 +1,48 @@
 @charset "utf-8";
+
+.main .sub-title{font-weight: 500; font-size: 24px; line-height: 30px; letter-spacing: -0.015em; margin-bottom: 24px;}
+.main .main-title{font-weight: 700; font-size: 64px; line-height: 80px; letter-spacing: -0.015em;}
+.main .defalut-btn{margin-top: 40px; font-size: 15px;}
+.main .defalut-btn a{line-height: 17px; padding: 16px 20px;}
+
+#header{background: transparent; border-bottom: none;}
+#header h1{background: url(../../images/common/kpc_logo_w.png) no-repeat center;}
+#header .lang-select > a{background: url("../../images/common/lang_icon_w.png") no-repeat center; background-size: 100%;}
+#header .gnb-wrap .gnb > li .depth1{color: #fff;}
+#header.on{background: #fff; border-bottom: none;}
+#header.on h1{background: url(../../images/common/kpc_logo.png) no-repeat center;}
+#header.on .lang-select > a{background: url("../../images/common/lang_icon.png") no-repeat center; background-size: 100%;}
+#header.on .gnb-wrap .gnb > li .depth1{color: #2b2b2b;}
+#header.__w .gnb-wrap .gnb > li .depth1{color: #2b2b2b;}
+#header.__w h1{background: url(../../images/common/kpc_logo.png) no-repeat center;}
+#header.__w .lang-select > a{background: url("../../images/common/lang_icon.png") no-repeat center; background-size: 100%;}
+
+/*메인비주얼*/
+#mainVisual.bg-swiper-container{overflow: hidden; width: 100%; height: 100vh; position: relative;}
+#mainVisual .swiper-slide-duplicate, #visual .swiper-slide{background-position: center center; background-size: cover; font-size: 18px; display: flex; flex-flow: column nowrap; justify-content: center; /*padding-left: 328px; padding-left: 12.375rem*/}
+#mainVisual .swiper-slide{width: 100%; height: 100vh;}
+#mainVisual .bg-wrap{width: 100%; height: 100%; overflow: hidden; position: relative;}
+#mainVisual .bg-wrap:after{position: absolute; top: 0; left: 0; content: ''; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3);}
+#mainVisual .bg-wrap .video-wrap{position:relative}
+#mainVisual .bg-wrap .video-wrap video{position:absolute; top: 0; left: 0; width: 100%; height: 100vh; object-fit: cover;}
+#mainVisual .visual03 .bg-wrap .video-wrap{transform: rotate(180deg);}
+#mainVisual .visual-bg{width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 1;}
+#mainVisual .title{height: 100%; display: flex; flex-direction: column; justify-content: flex-end; font-size: 48px; color: #fff; letter-spacing: -0.03em; line-height: 60px; text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); padding-bottom: 191px; align-items: center; text-transform: uppercase;}
+#mainVisual .title p:first-child{font-weight: 600;}
+#mainVisual .title p:nth-child(2){font-weight: 700;}
+#mainVisual .title{animation: textAni 1s ease both; animation-delay: 0.5s;}
+#mainVisual .swiper-progress-bar{position: absolute; width: 100%; display: block; z-index: 1;}
+#mainVisual .swiper-progress-bar .slide_progress-bar{position: absolute; height: 1px; background: rgba(255, 255, 255, 0.3); width: auto; clear: both; opacity: 0; left: 0; right: 0;}
+#mainVisual .swiper-progress-bar .slide_progress-bar:after{position: absolute; top: 0; left: 0; background: #fff; height: 100%; width: 0; content: ""; transition: 0.1s width linear;}
+#mainVisual .swiper-progress-bar.active .slide_progress-bar{opacity: 1;}
+#mainVisual .swiper-progress-bar.animate .slide_progress-bar:after{transition: width linear; transition-delay: unset; width: 100%; transition-duration: 6s;}
+#mainVisual .swiper-controller {position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); width: 97px; display: flex; align-items: center; justify-content: space-between; z-index: 10;}
+#mainVisual .swiper-progress-bar {position: relative; width: 40px; height: 2px; display: block; z-index: 1; margin: 0 auto;}
+#mainVisual .swiper-notification{display: none;}
+.swiper-pagination-fraction{position: absolute; top: 50%; transform: translateY(-50%); bottom: auto; display: flex; align-items: center;}
+#mainVisual .swiper-pagination span{color: #fff; font-size: 14px; font-weight: 200; letter-spacing: 0.1em;}
+#mainVisual .swiper-pagination .swiper-pagination-current{position: absolute; left: 0px; font-weight: 700;}
+#mainVisual .swiper-pagination-total{position: absolute; right: 0px; }
+#mainVisual .swiper-pagination-bullets.pagination-text{bottom: 41px;}
+#mainVisual .swiper-pagination-bullets.pagination-text .swiper-pagination-bullet{width: 50px; height: 8px; border-radius: 100px; background-color: rgba(255,255,255,0.7);}
+#mainVisual .swiper-pagination-bullets.pagination-text .swiper-pagination-bullet-active{background-color: rgba(255,255,255,1);}
