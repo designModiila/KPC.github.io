@@ -80,6 +80,23 @@ $(document).ready(function(){
   numSwiper.controller.control = bgSwiper;
   bgSwiper.controller.control = numSwiper;
 
+  
+
+  const elmHeight = document.querySelector('.flow-box-wrap').offsetHeight;
+  gsap.to(".leftSec", {
+    scrollTrigger: {
+      trigger: ".flow-box-wrap",
+      scrub: true,
+      pin: ".main .section03",
+      start: 'top top',
+      end: `+=${window.innerHeight * 3}`,
+      //end: 'bottom center',
+      //markers: true,
+    },
+    yPercent: -120,
+    ease: 'none',
+  })
+
 
 
   const cont = gsap.utils.toArray('.cont')
@@ -143,5 +160,5 @@ $(document).ready(function(){
       })
     }
   });
-
+  ScrollTrigger.refresh();
 });

@@ -4,6 +4,16 @@
 .main .main-title{font-weight: 700; font-size: 64px; line-height: 80px; letter-spacing: -0.015em;}
 .main .defalut-btn{margin-top: 40px; font-size: 15px;}
 .main .defalut-btn a{line-height: 17px; padding: 16px 20px;}
+.main .btn-wrap{text-align: left; display: flex; gap: 74px}
+.main .btn-wrap .arrow-btn{font-weight: 700; font-size: 18px; color: #444444; display: flex; gap: 10px; align-items: center;}
+.main .btn-wrap .arrow-btn .arrow{width: 12px; height: 1px; background: #fff; position: relative; transition: width 0.3s ease;}
+.main .btn-wrap .arrow-btn .arrow span{display: block; width: 7px; height: 1px; position: absolute; right: -1px; top: -2px; transform: rotate(45deg); background: #fff;}
+.main .btn-wrap .arrow-btn .arrow span:nth-child(2){top: auto; bottom: -3px; transform: rotate(-45deg);}
+.main .btn-wrap .arrow-btn .arrow:before{position: absolute; content: ''; width: 24px; height: 24px; background: #0fb5df; border-radius: 100%; top: 50%; right: -6px; transform: translateY(-50%); z-index: -1;}
+.main .btn-wrap .arrow-btn:hover .arrow{width: 30px; background: #efefef;}
+.main .btn-wrap .arrow-btn:hover .arrow span{background: #efefef;}
+
+
 
 #header{background: transparent; border-bottom: none;}
 #header h1{background: url(../../images/common/kpc_logo_w.png) no-repeat center;}
@@ -46,3 +56,32 @@
 #mainVisual .swiper-pagination-bullets.pagination-text{bottom: 41px;}
 #mainVisual .swiper-pagination-bullets.pagination-text .swiper-pagination-bullet{width: 50px; height: 8px; border-radius: 100px; background-color: rgba(255,255,255,0.7);}
 #mainVisual .swiper-pagination-bullets.pagination-text .swiper-pagination-bullet-active{background-color: rgba(255,255,255,1);}
+
+.main .section02{padding: 200px 0 100px}
+.main .section02 .title-wrap{width: 50%;}
+.main .section02 .title-wrap .main-desc{padding: 38px 0 24px; font-size: 20px; line-height: 32px; color: #444444;}
+
+.main .bg-overview{background: url(../../images/main/main-sec02-bg.png) no-repeat center center; height: 663px; background-attachment: fixed; background-size: cover; position: relative; display: flex; align-items: center;}
+.main .bg-overview p{min-width: 1600px; margin: 0 auto; font-weight: 700; font-size: 48px; line-height: 52px; color: #ffffff;}
+
+.main .section03 .flow-box-wrap{height: 100vh; display: flex; flex-direction: row; overflow: hidden; padding: 200px 0 0 8.333vw; justify-content: space-between;}
+.main .section03 .rightSec{height: 100vh;}
+.main .section03 .leftSec{height: 100vh; padding-top: 100px;}
+.main .section03 .leftimg{margin-bottom: 100px; margin-left: auto; margin-right: auto; position: relative;}
+.main .section03 .leftimg .img-title{font-size: 32px; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 4px;}
+.main .section03 .leftimg .img-desc{font-size: 20px; line-height: 28px; letter-spacing: -0.02em; color: #444444; margin-bottom: 36px;}
+
+.main .section04{height: 100vh; background: url(../../images/main/main-sec04-bg.png) no-repeat center; background-size: cover; position: relative;}
+.main .section04 .title-wrap{padding-top: 173px;}
+.main .section04 .sub-title{color: #fff;}
+.main .section04 .main-title{color: #fff;}
+.main .section04 .diagram-wrap{position: absolute; right: 12.188vw; bottom: 158px;}
+
+.main .section05{padding: 215px 0 290px;}
+.main .section05 .content-wrap{display: flex; gap: 152px}
+.main .section05 .thumb-wrap{flex: 1;  display: flex; justify-content: space-between; margin-top: 50px;}
+.main .section05 .thumb-info{max-width: 478px;}
+.main .section05 .thumb-title{font-size: 32px; line-height: 44px; margin-bottom: 12px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
+.main .section05 .thumb-desc{font-size: 20px; line-height: 28px; color: #444444; margin-bottom: 54px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;}
+.main .section05 .thumb-date{font-size: 16px; line-height: 28px; color: #b1b1b1;}
+.main .section05 .thumb{flex: 1; text-align: right;}
