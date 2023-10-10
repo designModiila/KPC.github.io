@@ -64,7 +64,7 @@
 .main .bg-overview{background: url(../../images/main/main-sec02-bg.png) no-repeat center center; height: 663px; background-attachment: fixed; background-size: cover; position: relative; display: flex; align-items: center;}
 .main .bg-overview p{min-width: 1600px; margin: 0 auto; font-weight: 700; font-size: 48px; line-height: 52px; color: #ffffff;}
 
-.main .section03 .flow-box-wrap{height: 100vh; display: flex; flex-direction: row; overflow: hidden; padding: 200px 0 0 8.333vw; justify-content: space-between;}
+.main .section03 .flow-box-wrap{height: 100vh; display: flex; flex-direction: row; padding: 200px 0 0 8.333vw; justify-content: space-between;}
 .main .section03 .rightSec{height: 100vh;}
 .main .section03 .leftSec{height: 100vh; padding-top: 100px;}
 .main .section03 .leftimg{margin-bottom: 100px; margin-left: auto; margin-right: auto; position: relative;}
