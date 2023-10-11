@@ -7,6 +7,7 @@ $(document).ready(function(){
       delay: 6000,
       disableOnInteraction: false
     },
+    //autoplay: false,
     pagination: {
       el: '#mainVisual .pagination-text',
       clickable: true,
