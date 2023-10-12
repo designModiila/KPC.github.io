@@ -27,7 +27,7 @@ $(document).ready(function(){
           },
         }
       });
-      gsap.from(".subVisual .title > p",{autoAlpha: 0, y: '25%', duration: 0.3, stagger: 0.3, delay: 0.3})
+      gsap.from(".subVisual .title > p",{autoAlpha: 0, y: '25%', duration: 0.3, stagger: 0.3, delay: 0.1, ease: Power1.easeIn})
       
     }
     
@@ -126,73 +126,6 @@ $(document).ready(function(){
   ScrollTrigger.matchMedia({
 
     "(min-width: 768px)": function () {
-
-      // ScrollTrigger.create({
-      //   trigger: ".txt-motion",
-      //   pin: ".txt-motion",
-      //   start: "top top",
-      //   end: "+=2500",
-      // });
-    
-      // var tl = new gsap.timeline();
-
-      // tl.to(".txt-motion .title-wrap", {
-      //   y: 0,
-      //   color: "#ffffff",
-      //   autoAlpha: 1,
-      //   scrollTrigger: {
-      //     trigger: ".txt-motion",
-      //     start: "top top",
-      //     end: "+=1000",
-      //     scrub: 0.7,
-      //   }
-      // });
-
-
-      // tl.to(".txt-motion .sub-title", {
-      //   y: 0,
-      //   autoAlpha: 1,
-      //   scrollTrigger: {
-      //     trigger: ".txt-motion .title-wrap",
-      //     start: "top top",
-      //     end: "+=1000",
-      //     scrub: 0.7,
-      //   }
-      // });
-
-      // //배경 커짐
-      // tl.to('.txt-motion .img-wrap', {
-      //   scale: 1.1,
-      //   scrollTrigger: {
-      //     trigger: ".txt-motion .img-wrap",
-      //     start: "top top",
-      //     end: "+=3000",
-      //     scrub: 0.7,
-      //   }
-      // });
-      // tl.to('.txt-motion .img-wrapBl', {
-      //   opacity: 1,
-      //   scrollTrigger: {
-      //     trigger: ".txt-motion .img-wrap",
-      //     start: "top top",
-      //     end: "+=3000",
-      //     scrub: 0.7,
-      //   }
-      // });
-
-      
-      // tl.to(".highlight",{
-      //   color: "#ffffff",
-      //   stagger: 1,
-      //   scrollTrigger: {
-      //     trigger: ".txt-motion .sub-title",
-      //     start: 'top top',
-      //     end: '+=1000',
-      //     scrub: 3,
-      //   }
-      // })
-
-
       var barAni = gsap.timeline({
         scrollTrigger:{
           trigger:".business01 .section03",
