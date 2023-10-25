@@ -81,22 +81,6 @@ $(document).ready(function(){
   numSwiper.controller.control = bgSwiper;
   bgSwiper.controller.control = numSwiper;
 
-  
-
-  const elmHeight = document.querySelector('.flow-box-wrap').offsetHeight;
-  gsap.to(".leftSec", {
-    scrollTrigger: {
-      trigger: ".flow-box-wrap",
-      scrub: true,
-      pin: ".main .section03",
-      start: 'top top',
-      end: `+=${window.innerHeight * 3}`,
-      //end: 'bottom center',
-      //markers: true,
-    },
-    yPercent: -120,
-    ease: 'none',
-  })
 
 
 
@@ -120,6 +104,22 @@ $(document).ready(function(){
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": function () {
 
+      
+  const elmHeight = document.querySelector('.flow-box-wrap').offsetHeight;
+  gsap.to(".leftSec", {
+    scrollTrigger: {
+      trigger: ".flow-box-wrap",
+      scrub: true,
+      pin: ".main .section03",
+      start: 'top top',
+      //end: elmHeight + "bottom",
+      end: `+=${window.innerHeight * 3}`,
+      //end: 'bottom center',
+      //markers: true,
+    },
+    yPercent: -120,
+    ease: 'none',
+  })
 
       const contD = document.querySelectorAll(".contD");
       gsap.set(".contD > div",{y: "25%", opacity: 0})

@@ -27,7 +27,7 @@ $(document).ready(function(){
           },
         }
       });
-      gsap.from(".subVisual .title > p",{autoAlpha: 0, y: '25%', duration: 0.3, stagger: 0.3, delay: 0.1, ease: Power1.easeIn})
+      gsap.from(".subVisual .title > p",{autoAlpha: 0, y: '25%', duration: 0.3, stagger: 0.3, delay: 0.1, ease: "power1.inOut"})
       
     }
     
@@ -99,56 +99,38 @@ $(document).ready(function(){
       document.documentElement.style.setProperty('--vh', vh + 'px');
   });
 
-  gsap.registerPlugin(ScrollTrigger);
 
+  
   ScrollTrigger.matchMedia({
 
     "(min-width: 768px)": function () {
 
-      var diagramAni = gsap.timeline({
+      var businessDiagram = gsap.timeline({
         scrollTrigger:{
-        trigger:".business02 .section01",
-        start:"top top",
-        pin: true,
-        scrub: 1,
-        end: "+=3000",
+          trigger:".business02 .section01",
+          start:"top 10%",
+          pin: true,
+          // scrub: 3,
+          // end: "bottom +30%"
+          //end: "+=2500",
+          //toggleActions:"restart none none reset"
         }
       })
-      .from(".business02 .top-con",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
-      .to('.business02 .top-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from('.business02 .bot-con',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      // .from('.business02 .bot-con .diagram-left',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from('.business02 .bot-con .diagram-right',{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut}) 
+      .from(".circle",{autoAlpha: 0, stagger: 0.2})
+      .from(".diagram-bg",{autoAlpha: 0})
     }
 
   });
 
-  ScrollTrigger.matchMedia({
-
-    "(min-width: 768px)": function () {
-      var barAni = gsap.timeline({
-        scrollTrigger:{
-          trigger:".business01 .section03",
-          start:"top 50%",
-          end:"bottom top",
-          toggleActions:"restart none none reset"
-        }
-      })
-      .from(".business01 .graph-title",{yPercent: 25, autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business01 .graph",{yPercent: 25, autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business01 .box",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business01 .bar-grey",{height: 0, duration: 0.5, ease: Power4.easeOut})
-      .from(".business01 .bar-blue",{height: 0, duration: 0.5, ease: Power4.easeOut})
-      .from(".business01 .box > span",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-      .from(".business01 .graph-text",{autoAlpha: 0, duration: 0.3, ease: Power4.easeOut})
-
-    },
-
-    "(max-width: 767px)": function () {
-
-
-    },
-  });
+  $(function(){
+    $('.tabcontent > div').hide();
+    $('.tabnav a').click(function () {
+      $('.tabcontent > div').hide().filter(this.hash).fadeIn();
+      $('.tabnav a').removeClass('active');
+      $(this).addClass('active');
+      return false;
+    }).filter(':eq(0)').click();
+    });
 
 
 

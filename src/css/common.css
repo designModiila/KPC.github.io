@@ -10,8 +10,10 @@ body.noScroll {
 }
 #wrap {
   width: 100%;
-  /*overflow: hidden;*/
   position: relative;
+}
+#wrap.main {
+  overflow: hidden;
 }
 #header {
   position: fixed;
