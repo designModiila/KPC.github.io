@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $('.privacy-policy').load('../html/customer/privacy-policy.html')
+  $('.email-notice').load('../html/customer/email-notice.html')
+
+
   $.fn.dropdown = function () {
     return this.each(function () {
       var $header = $("header");
@@ -375,8 +379,7 @@ function hasScrolled() {
     });
 
 
-    $('.privacy-policy').load('../../html/customer/privacy-policy.html')
-    $('.email-notice').load('../../html/customer/email-notice.html')
+
     window.addEventListener("resize", ScrollTrigger.update);
     ScrollTrigger.refresh();
 });

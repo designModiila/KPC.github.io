@@ -1072,3 +1072,51 @@ select.form-control:focus {
     min-height: 46px;
   }
 }
+
+/*개인정보 처리방침*/
+.privacy-policy{position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 10; overflow: hidden; overflow: hidden;  z-index: 10000; transform: translateY(100%); transition: transform 0.5s ease-out;}
+.privacy-policy.open{transform: translateY(0);}
+.privacy-policy-wrap{width: 100%; height: calc(100vh - 10vh); position: absolute; top: 10vh; left: 0; background: #fff; overflow: hidden; overflow-y: scroll;}
+.modal .close-btn{position: fixed; width: 60px; height: 60px; top: calc(10vh + 15px); right: 28px; box-sizing: border-box; background: url(../../images/common/close_icon.png) no-repeat center; cursor: pointer; z-index: 1;}
+.privacy-policy-inner{max-width: 800px; margin: 0 auto; padding: 114px 0 200px;}
+.privacy-policy-inner .item + .item{margin-top: 80px;}
+.privacy-policy-inner > .title{margin-bottom: 84px; font-weight: 700; font-size: 32px; text-align: center;}
+.privacy-policy-inner .item .top-title{font-weight: 700; font-size: 20px; line-height: 28px; margin-bottom: 24px;}
+.privacy-policy-inner .item .top-desc{font-weight: 500; line-height: 28px;}
+.privacy-policy-inner .item .title{margin-bottom: 20px;  font-size: 20px; font-weight: 700;}
+.privacy-policy-inner .item .desc{color: #444444; line-height: 28px;}
+.privacy-policy-inner .item .box{margin-top: 28px; background: #f9f9f9; padding: 36px 40px; box-sizing: border-box; line-height: 28px;}
+.privacy-policy-inner .item .dot_list li{position: relative; padding-left: 15px}
+.privacy-policy-inner .item .dot_list li:after{content: ''; position: absolute; width: 5px; height: 5px; background: #444444; border-radius: 100%; left: 0; top: 0px; margin-top: 12px}
+
+@media (max-width: 767px) {
+  .privacy-policy-wrap{height: 100vh; top: 0;}
+  .privacy-policy-inner{max-width: 100%; padding: 74px 5vw 100px;}
+  .privacy-policy-inner > .title{font-size: 22px; margin-bottom: 44px;}
+  .privacy-policy-inner .item .top-title{font-size: 18px; line-height: 26px; margin-bottom: 20px;}
+  .privacy-policy-inner .item .title{font-size: 16px; margin-bottom: 10px;}
+  .privacy-policy-inner .item .box{padding: 18px 20px;}
+  .privacy-policy-inner .item + .item{margin-top: 50px}
+}
+
+/*이메일 무단수집 거부*/
+.email-notice{position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 10; overflow: hidden; overflow: hidden;  z-index: 10000; transform: translateY(100%); transition: transform 0.5s ease-out;}
+.email-notice.open{transform: translateY(0);}
+.email-notice-wrap{width: 100%; height: calc(100vh - 10vh); position: absolute; top: 10vh; left: 0; background: #fff; overflow: hidden; overflow-y: scroll;}
+.email-notice-inner{max-width: 800px; margin: 0 auto; padding: 114px 0 200px;}
+.email-notice-inner > .title{margin-bottom: 84px; font-weight: 700; font-size: 32px; text-align: center;}
+.email-notice-inner > .desc{font-weight: 500; font-size: 16px; line-height: 28px; margin-bottom: 80px;}
+.email-notice-inner > .sub-title{font-weight: 700; font-size: 22px; margin-bottom: 44px;}
+.email-notice-inner .item + .item{margin-top: 80px;}
+.email-notice-inner .item .item-title{font-weight: 700; font-size: 20px; margin-bottom: 28px;}
+.email-notice-inner .item .box{background: #f9f9f9; padding: 36px 40px; box-sizing: border-box; line-height: 28px;}
+
+@media (max-width: 767px) {
+  .email-notice-wrap{height: 100vh; top: 0;}
+  .email-notice-inner{max-width: 100%; padding: 74px 5vw 100px;}
+  .email-notice-inner > .title{font-size: 22px; margin-bottom: 44px;}
+  .email-notice-inner > .sub-title{font-size: 18px;}
+  .email-notice-inner .item .item-title{font-size: 16px; margin-bottom: 10px;}
+  .email-notice-inner .item .box{padding: 18px 20px;}
+  .email-notice-inner .item + .item{margin-top: 50px}
+}
