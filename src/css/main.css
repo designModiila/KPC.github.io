@@ -186,7 +186,7 @@
     .main .section03 .leftimg .img-desc {font-size: 16px; line-height: 21px; margin-bottom: 16px;}
     .main .section04 {background: url(../../images/main/main-sec04-bg.png) no-repeat 25% center / cover;}
     .main .section04 .title-wrap {padding-top: 93px;}
-    .main .section04 .diagram-wrap {width: 100%; right: auto; left: 50%; transform: translateX(-50%); bottom: 100px;}
+    .main .section04 .diagram-wrap {width: 100%; right: auto; left: 50%; transform: translateX(-50%); bottom: 14.3vh;}
     .main .section04 .diagram-wrap .diagram-pc {display: none;}
     .main .section04 .diagram-wrap .diagram-mo {display: block; margin: 0 auto; width: 70%;}
     .main .section05 {padding: 60px 0 115px;}
