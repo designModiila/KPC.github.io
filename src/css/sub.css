@@ -733,21 +733,22 @@
   .business02 .diagram-wrap .diagram-inner{zoom: .6}
 }
 
-.business03 .tab .tabnav{padding: 120px 0; max-width: 1600px; margin: 0 auto; display: flex; gap: 77px;}
-.business03 .tab .tabnav a{display: inline-block; color: #a7a7a7; font-weight: 500; font-size: 32px; line-height: 46px; position: relative;}
-.business03 .tab .tabnav a.active{color: #000; font-weight: 700;}
-.business03 .tab .tabnav a.active:after{position: absolute; content: ''; width: 100%; height: 4px; background: #000; left: 0; bottom: -6px;}
-.business03 #tab01{background: url(../../images/sub/business03_tab01_bg.png) no-repeat center; background-size: cover; width: 100%; padding: 124px 0 228px}
-.business03 #tab02{background: url(../../images/sub/business03_tab02_bg.png) no-repeat center; background-size: cover; width: 100%; padding: 124px 0 228px}
-.business03 .tabcontent .content-wrap{display: flex; flex-wrap: wrap; gap: 76px 104px}
-.business03 .tabcontent .box{max-width: 29%; min-height: 400px; background: #fff; padding: 52px 32px 37px 44px; display: flex; flex-direction: column; justify-content: space-between; position: relative}
-.business03 .tabcontent .box-tit{font-weight: 700; font-size: 24px;}
-.business03 .tabcontent .box-desc{color: #333333; letter-spacing: -0.015em; line-height: 30px; font-size: 20px; font-weight: 500;}
-.business03 .tabcontent .box-icon{position: absolute; right: 32px; top: 52px;}
+.business03 .section01 .video-wrap{padding-top: 120px;}
+.business03 .section02 .tab .tabnav{padding: 80px 0; max-width: 1600px; margin: 0 auto; display: flex; gap: 77px;}
+.business03 .section02 .tab .tabnav a{display: inline-block; color: #a7a7a7; font-weight: 500; font-size: 32px; line-height: 46px; position: relative;}
+.business03 .section02 .tab .tabnav a.active{color: #000; font-weight: 700;}
+.business03 .section02 .tab .tabnav a.active:after{position: absolute; content: ''; width: 100%; height: 4px; background: #000; left: 0; bottom: -6px;}
+.business03 .section02 #tab01{background: url(../../images/sub/business03_tab01_bg.png) no-repeat center; background-size: cover; width: 100%; padding: 124px 0 228px}
+.business03 .section02 #tab02{background: url(../../images/sub/business03_tab02_bg.png) no-repeat center; background-size: cover; width: 100%; padding: 124px 0 228px}
+.business03 .section02 .tabcontent .content-wrap{display: flex; flex-wrap: wrap; gap: 76px 104px}
+.business03 .section02 .tabcontent .box{max-width: 29%; min-height: 400px; background: #fff; padding: 52px 32px 37px 44px; display: flex; flex-direction: column; justify-content: space-between; position: relative}
+.business03 .section02 .tabcontent .box-tit{font-weight: 700; font-size: 24px;}
+.business03 .section02 .tabcontent .box-desc{color: #333333; letter-spacing: -0.015em; line-height: 30px; font-size: 20px; font-weight: 500;}
+.business03 .section02 .tabcontent .box-icon{position: absolute; right: 32px; top: 52px;}
 
 
 @media (max-width: 1700px) {
-  .business03 .tab .tabnav{width: 100%; padding: 120px 5vw;}
+  .business03 .section02 .tab .tabnav{width: 100%; padding: 120px 5vw;}
 }
 
 /*ESG - 개요*/
