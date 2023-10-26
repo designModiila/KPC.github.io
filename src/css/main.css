@@ -90,11 +90,11 @@
 
   /* 반응형 */
 
-  @media (max-width: 1700px) {
-    .main .bg-overview p {padding: 0 85px;}
+@media (max-width: 1700px) {
+    .main .bg-overview p {padding: 0 5vw;}
     .main .section04 .diagram-wrap{right: 5vw;}
 }
-  
+
 @media (max-width: 1600px) {
     .main .section03 .flow-box-wrap {gap: 50px;}
 }
