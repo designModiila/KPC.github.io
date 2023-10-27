@@ -410,7 +410,7 @@ body.noScroll {
     position: absolute;
     width: 20px;
     height: 2px;
-    background: #2b2b2b;
+    background: #ffffff;
     top: 50%;
     transform: translateY(-50%);
     z-index: 999;
@@ -423,7 +423,7 @@ body.noScroll {
     left: 0;
     width: 20px;
     height: 2px;
-    background: #2b2b2b;
+    background: #ffffff;
     top: -7px;
   }
   #header .btn-mo-menu-open:before {
@@ -433,14 +433,23 @@ body.noScroll {
     left: 0;
     width: 20px;
     height: 2px;
-    background: #2b2b2b;
+    background: #ffffff;
     top: 7px;
+  }
+    #header.__w .btn-mo-menu-open {
+    background: #2b2b2b;
+  }
+  #header.__w .btn-mo-menu-open:after {
+    background: #2b2b2b;
+  }
+  #header.__w .btn-mo-menu-open:before {
+    background: #2b2b2b;
   }
   #header .gnb-wrap {
     position: fixed;
     left: 100%;
     top: 0;
-    width: 100%;
+    width: 100%;rgb(63, 57, 57)rgb(63, 57, 57)
     height: 100%;
     z-index: 10;
     background-color: #fff;
