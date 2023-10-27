@@ -659,6 +659,7 @@
 
 @media (max-width: 767px) {
   .business02 .diagram-wrap .diagram-inner{width: 100%; zoom: .85}
+  .business02 .diagram-inner .circle p{font-size: 16px;}
   /* .business02 .diagram-inner .circle{width: 130px; height: 130px; font-size: 16px;}
   .business02 .diagram-inner .circle.big{width: 155px; height: 155px;}
   .business02 .diagram-inner .circle02{top: 5%;}
