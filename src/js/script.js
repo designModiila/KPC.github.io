@@ -239,6 +239,10 @@ $(document).ready(function () {
   });
 
 
+
+
+
+
   var newsSwiper = new Swiper(".newsSwiper", {
     spaceBetween: 30,
     centeredSlides: true,
