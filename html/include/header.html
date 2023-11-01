@@ -107,6 +107,12 @@
         });
       };
 
+      if($('body').hasClass('subPage')){
+        $('#header').addClass('__w');
+      }else{
+        $('#header').removeClass('__w');
+      }
+
       function dropdownMo(){
         $('.gnb .depth1').on('click',function(){
           //e.preventDefault();
