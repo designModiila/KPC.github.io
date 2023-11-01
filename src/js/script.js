@@ -1,95 +1,96 @@
-$(document).ready(function(){
 
-  var interleaveOffset = 0.5;
-  var numSwiper = new Swiper("#mainVisual.bg-swiper-container", {
-    loop: true,
-    speed: 1000,
-    autoplay: {
-      delay: 6000,
-      disableOnInteraction: false
-    },
-    //autoplay: false,
-    pagination: {
-      el: '#mainVisual .pagination-text',
-      clickable: true,
-    }
-  });
 
-  var bgSwiper = new Swiper("#mainVisual.bg-swiper-container", {
-    loop: true,
-    parallax: true,
-    pagination: {
-      el: '#mainVisual .pagination-num',
-      type: 'fraction',
-      formatFractionCurrent: function (number) {
-        return ('0' + number).slice(-2);
+$(document).ready(function () {
+  if (!$('body').hasClass('subPage')) {
+    var interleaveOffset = 0.5;
+    var numSwiper = new Swiper("#mainVisual.bg-swiper-container", {
+      loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false
       },
-      formatFractionTotal: function (number) {
-        return ('0' + number).slice(-2);
-      },
-      renderFraction: function (currentClass, totalClass) {
-        return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
-      },
-    },
-    navigation: {
-      nextEl: "#mainVisual .swiper-button-next",
-      prevEl: "#mainVisual .swiper-button-prev"
-    },
-    on: {
-      init: function () {
-        $(".swiper-progress-bar").removeClass("animate");
-        $(".swiper-progress-bar").removeClass("active");
-        $(".swiper-progress-bar").eq(0).addClass("animate");
-        $(".swiper-progress-bar").eq(0).addClass("active");
-      },
-      slideChangeTransitionStart: function () {
-        $(".swiper-progress-bar").removeClass("animate");
-        $(".swiper-progress-bar").removeClass("active");
-        $(".swiper-progress-bar").eq(0).addClass("active");
-      },
-      slideChangeTransitionEnd: function () {
-        $(".swiper-progress-bar").eq(0).addClass("animate");
-      },
-      progress: function () {
-        var swiper = this;
-        for (var i = 0; i < swiper.slides.length; i++) {
-          var slideProgress = swiper.slides[i].progress;
-          var innerOffset = swiper.width * interleaveOffset;
-          var innerTranslate = slideProgress * innerOffset;
-          swiper.slides[i].querySelector(".video-wrap").style.transform =
-            "translate3d(" + innerTranslate + "px, 0, 0)";
-        }
-      },
+      pagination: {
+        el: '#mainVisual .pagination-text',
+        clickable: true,
+      }
+    });
 
-      touchStart: function () {
-        var swiper = this;
-        for (var i = 0; i < swiper.slides.length; i++) {
-          swiper.slides[i].style.transition = "";
-        }
+    var bgSwiper = new Swiper("#mainVisual.bg-swiper-container", {
+      loop: true,
+      parallax: true,
+      pagination: {
+        el: '#mainVisual .pagination-num',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+          return ('0' + number).slice(-2);
+        },
+        formatFractionTotal: function (number) {
+          return ('0' + number).slice(-2);
+        },
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
+        },
       },
+      navigation: {
+        nextEl: "#mainVisual .swiper-button-next",
+        prevEl: "#mainVisual .swiper-button-prev"
+      },
+      on: {
+        init: function () {
+          $(".swiper-progress-bar").removeClass("animate");
+          $(".swiper-progress-bar").removeClass("active");
+          $(".swiper-progress-bar").eq(0).addClass("animate");
+          $(".swiper-progress-bar").eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function () {
+          $(".swiper-progress-bar").removeClass("animate");
+          $(".swiper-progress-bar").removeClass("active");
+          $(".swiper-progress-bar").eq(0).addClass("active");
+        },
+        slideChangeTransitionEnd: function () {
+          $(".swiper-progress-bar").eq(0).addClass("animate");
+        },
+        progress: function () {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            var slideProgress = swiper.slides[i].progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            swiper.slides[i].querySelector(".video-wrap").style.transform =
+              "translate3d(" + innerTranslate + "px, 0, 0)";
+          }
+        },
 
-      setTransition: function (speed) {
-        var swiper = this;
-        for (var i = 0; i < swiper.slides.length; i++) {
-          swiper.slides[i].style.transition = speed + "ms";
-          swiper.slides[i].querySelector(".video-wrap").style.transition =
-            speed + "ms";
+        touchStart: function () {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = "";
+          }
+        },
+
+        setTransition: function (speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".video-wrap").style.transition =
+              speed + "ms";
+          }
         }
       }
-    }
-  });
+    });
 
-  numSwiper.controller.control = bgSwiper;
-  bgSwiper.controller.control = numSwiper;
+    numSwiper.controller.control = bgSwiper;
+    bgSwiper.controller.control = numSwiper;
+  }
+  
 
-
+  
 
   gsap.registerPlugin(ScrollTrigger);
 
-
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": function () {
-
       const elmHeight = document.querySelectorAll('.flow-box-wrap').offsetHeight;
       gsap.to(".leftSec", {
         scrollTrigger: {
@@ -106,16 +107,6 @@ $(document).ready(function(){
         ease: 'none',
       })
 
-    },
-
-    "(max-width: 767px)": function () {
-
-    }
-  });
-
-
-  ScrollTrigger.matchMedia({
-    "(min-width: 768px)": function () {
       _startPosition = window.innerHeight + 0 + "px";
       var $subVisual = document.querySelector('.subVisual')
       gsap.timeline({
@@ -139,10 +130,114 @@ $(document).ready(function(){
         }
       });
       gsap.from(".subVisual .title > p",{autoAlpha: 0, y: '25%', duration: 0.3, stagger: 0.3, delay: 0.1, ease: "power1.inOut"})
+
+
+      var businessDiagram = gsap.timeline({
+        scrollTrigger:{
+          trigger:".business02 .section01",
+          start:"top 10%",
+          pin: true,
+          // scrub: 3,
+          // end: "bottom +30%"
+          //end: "+=2500",
+          //toggleActions:"restart none none reset"
+        }
+      })
+      .from(".circle",{autoAlpha: 0, stagger: 0.2})
+      .from(".diagram-bg",{autoAlpha: 0})
+
+
+      var diagramAni2 = gsap.timeline({
+        scrollTrigger:{
+          trigger:".esg01 .section01",
+          start:"top 10%",
+          pin: true,
+          scrub: 3,
+          end: "bottom +30%"
+          //end: "+=2500",
+          //toggleActions:"restart none none reset"
+        }
+      })
+      // .from(".esg01 .circle-wrap",{autoAlpha:0, duration: 1, ease: Power4.easeOut})
+      // .from(".esg01 .circle",{autoAlpha: 0, yPercent: -25, duration: 1, ease: Power4.easeOut, stagger: 0.3 })
+      .to(".esg01 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 1, ease: Power4.easeOut})
+      .to(".esg01 .last-circle",{autoAlpha: 1})
+      .to(".esg01 .circle",{autoAlpha: 0})
+
+
+      var diagramAni3 = gsap.timeline({
+        scrollTrigger:{
+          trigger:".esg02 .section01",
+          start:"top 10%",
+          pin: true,
+          scrub: 3,
+          end: "bottom +30%"
+          //end: "+=2500",
+          //toggleActions:"restart none none reset"
+        }
+      })
+      // .from(".esg02 .circle-wrap",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
+      // .from(".esg02 .circle",{autoAlpha: 0, yPercent: -25, duration: 0.3, ease: Power4.easeOut, stagger: 0.3 })
+      .to(".esg02 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 1, ease: Power4.easeOut})
+      .to(".esg02 .last-circle",{autoAlpha: 1, duration: 1})
+      .to(".esg02 .circle",{autoAlpha: 0, duration: 1})
+
+
+      const contD = document.querySelectorAll(".contD");
+      gsap.set(".contD > div",{y: "25%", opacity: 0})
+      contD.forEach(contD => {
+        const blockTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: contD,
+            start:"top 70%",
+            toggleActions:"restart none none reverse"
+          }
+        })
+        .to(contD.querySelectorAll(".contD > div"), {
+          autoAlpha:1, 
+          y: 0, 
+          duration: 0.5, 
+          stagger: 0.3
+        })
+
+      });
+
+      gsap.set(".footer-inner", { yPercent: -50 });
+      const uncover = gsap.timeline({ paused: true });
+      uncover.to(".footer-inner", { yPercent: 0, ease: "none" });
+      ScrollTrigger.create({
+        trigger: ".lastSec",
+        start: "bottom +=98%",
+        end: "+=30%",
+        animation: uncover,
+        scrub: true,
+        //markers: true
+      });
+      ScrollTrigger.refresh();
+
+
+
+    },
+    "(max-width: 767px)": function () {
+      const contD = gsap.utils.toArray('.contD')
+      gsap.set(contD,{y: '25%', opacity: 0})
+      contD.forEach(contD => {
+        gsap.to(contD,{
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.5,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: contD,
+            start: 'top 70%',
+            toggleActions:"restart none none reverse"
+          }
+        })
+      })
       
     }
-    
   });
+
 
   var newsSwiper = new Swiper(".newsSwiper", {
     spaceBetween: 30,
@@ -184,14 +279,11 @@ $(document).ready(function(){
     })
   }
   modalView();
-  
   //voc 개인정보처리방침
   $('.privacy-agree-box .btn-toggle').click(function(){
     $(this).toggleClass('on');
     $('.privacy-agree').toggleClass('on');
   });
-
-
 
   $(window).on('resize', function () {
     windW = $(window).width();
@@ -201,37 +293,15 @@ $(document).ready(function(){
         _bgSelector.css({ "background-image": "url(" + _visualBg + ")" });
     }
   })
-
-  //모바일 툴바 높이 제어
-  var vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', vh + 'px');
-  window.addEventListener('resize', function () {
-      var vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', vh + 'px');
-  });
-
-
-  
-  ScrollTrigger.matchMedia({
-
-    "(min-width: 768px)": function () {
-
-      var businessDiagram = gsap.timeline({
-        scrollTrigger:{
-          trigger:".business02 .section01",
-          start:"top 10%",
-          pin: true,
-          // scrub: 3,
-          // end: "bottom +30%"
-          //end: "+=2500",
-          //toggleActions:"restart none none reset"
-        }
-      })
-      .from(".circle",{autoAlpha: 0, stagger: 0.2})
-      .from(".diagram-bg",{autoAlpha: 0})
+  $(window).on('resize', function () {
+    windW = $(window).width();
+    var _bgSelector = $('.txt-motion');
+    if (_bgSelector.length > 0) {
+        var _visualBg = _bgSelector.data('bg');
+        _bgSelector.css({ "background-image": "url(" + _visualBg + ")" });
     }
+  })
 
-  });
 
   $(function(){
     $('.tabcontent > div').hide();
@@ -244,142 +314,94 @@ $(document).ready(function(){
     });
 
 
-
-  var $swiperSelector = $('.project-slide');
-
-  $swiperSelector.each(function(index) {
-    var $this = $(this);
-    $this.addClass('swiper-slider-' + index);
-    
-    // var dragSize = $this.data('drag-size') ? $this.data('drag-size') : 99;
-    var freeMode = $this.data('free-mode') ? $this.data('free-mode') : false;
-    var loop = $this.data('loop') ? $this.data('loop') : false;
-    var slidesDesktop = $this.data('slides-desktop') ? $this.data('slides-desktop') : 1;
-    var slidesTablet = $this.data('slides-tablet') ? $this.data('slides-tablet') : 1;
-    var slidesMobile = $this.data('slides-mobile') ? $this.data('slides-mobile') : 1;
-    var spaceBetween = $this.data('space-between') ? $this.data('space-between'): 20;
-
-    var swiper = new Swiper('.swiper-slider-' + index, {
-      direction: 'horizontal',
-      loop: loop,
-      freeMode: freeMode,
-      spaceBetween: spaceBetween,
-      breakpoints: {
-        1920: {
-          slidesPerView: slidesDesktop
+    var $swiperSelector = $('.project-slide');
+    $swiperSelector.each(function(index) {
+      var $this = $(this);
+      $this.addClass('swiper-slider-' + index);
+      
+      // var dragSize = $this.data('drag-size') ? $this.data('drag-size') : 99;
+      var freeMode = $this.data('free-mode') ? $this.data('free-mode') : false;
+      var loop = $this.data('loop') ? $this.data('loop') : false;
+      var slidesDesktop = $this.data('slides-desktop') ? $this.data('slides-desktop') : 1;
+      var slidesTablet = $this.data('slides-tablet') ? $this.data('slides-tablet') : 1;
+      var slidesMobile = $this.data('slides-mobile') ? $this.data('slides-mobile') : 1;
+      var spaceBetween = $this.data('space-between') ? $this.data('space-between'): 20;
+  
+      var swiper = new Swiper('.swiper-slider-' + index, {
+        direction: 'horizontal',
+        loop: loop,
+        freeMode: freeMode,
+        spaceBetween: spaceBetween,
+        breakpoints: {
+          1920: {
+            slidesPerView: slidesDesktop
+          },
+          1085: {
+            slidesPerView: slidesTablet
+          },
+          768: {
+            slidesPerView: slidesMobile
+          }
         },
-        1085: {
-          slidesPerView: slidesTablet
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+          formatFractionCurrent: function (number) {
+              return + number;
+          }
         },
-        768: {
-          slidesPerView: slidesMobile
-        }
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-        formatFractionCurrent: function (number) {
-            return + number;
-        }
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-        // dragSize: dragSize
-      },
-
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+          // dragSize: dragSize
+        },
+  
+      });
     });
-  });
 
-  ScrollTrigger.matchMedia({
 
-    "(min-width: 768px)": function () {
+ 
 
-      var diagramAni2 = gsap.timeline({
-        scrollTrigger:{
-          trigger:".esg01 .section01",
-          start:"top 10%",
+
+    function esg01Timeline() {
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".esg01-timeline",
+          start: "top top",
+          end: "+=300%",
+          scrub: 1,
           pin: true,
-          scrub: 3,
-          end: "bottom +30%"
-          //end: "+=2500",
-          //toggleActions:"restart none none reset"
-        }
-      })
-      // .from(".esg01 .circle-wrap",{autoAlpha:0, duration: 1, ease: Power4.easeOut})
-      // .from(".esg01 .circle",{autoAlpha: 0, yPercent: -25, duration: 1, ease: Power4.easeOut, stagger: 0.3 })
-      .to(".esg01 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 1, ease: Power4.easeOut})
-      .to(".esg01 .last-circle",{autoAlpha: 1})
-      .to(".esg01 .circle",{autoAlpha: 0})
-
+        },
+      });
+  
+      tl.to(".esg01-timeline", {duration: 1, delay: 0.5})
+        .to(".esg01-timeline .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
+        .to(".esg01-timeline .sec01 .img", {duration: 1}, "myLabel-=1")
+        .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel-=1")
+        .to(".esg01-timeline .sec02", {duration: 1, opacity: 1}, "myLabel")
+        .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
+        .to(".esg01-timeline .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
+        .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel")
+        
+        .to(".esg01-timeline .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
+        .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
+        .to(".esg01-timeline .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
+        .to(".esg01-timeline .sec03 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel+=1")
+  
+      return tl;
     }
 
-  });
-
-  function esg01Timeline() {
-    var tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".esg01-timeline",
-        start: "top top",
-        end: "+=300%",
-        scrub: 1,
-        pin: true,
-      },
-    });
-
-    tl.to(".esg01-timeline", {duration: 1, delay: 0.5})
-      .to(".esg01-timeline .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
-      .to(".esg01-timeline .sec01 .img", {duration: 1}, "myLabel-=1")
-      .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel-=1")
-      .to(".esg01-timeline .sec02", {duration: 1, opacity: 1}, "myLabel")
-      .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
-      .to(".esg01-timeline .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
-      .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel")
-      
-      .to(".esg01-timeline .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
-      .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
-      .to(".esg01-timeline .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
-      .to(".esg01-timeline .sec03 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel+=1")
-
-    return tl;
-  }
-
-  var overviewTl = gsap.timeline();
+    var overviewTl = gsap.timeline();
   overviewTl.add(esg01Timeline(), "+=1");
 
 
-  ScrollTrigger.matchMedia({
 
-    "(min-width: 768px)": function () {
-
-      var diagramAni3 = gsap.timeline({
-        scrollTrigger:{
-          trigger:".esg02 .section01",
-          start:"top 10%",
-          pin: true,
-          scrub: 3,
-          end: "bottom +30%"
-          //end: "+=2500",
-          //toggleActions:"restart none none reset"
-        }
-      })
-      // .from(".esg02 .circle-wrap",{autoAlpha:0, duration: 0.3, ease: Power4.easeOut})
-      // .from(".esg02 .circle",{autoAlpha: 0, yPercent: -25, duration: 0.3, ease: Power4.easeOut, stagger: 0.3 })
-      .to(".esg02 .circle-side",{left: "50%",transform:"translate(-50%, -50%)", duration: 1, ease: Power4.easeOut})
-      .to(".esg02 .last-circle",{autoAlpha: 1, duration: 1})
-      .to(".esg02 .circle",{autoAlpha: 0, duration: 1})
-
-    }
-
-  });
-
-
-  //레이어팝업 open 상태 function 만들기
-  function layer_open(no){
+   //레이어팝업 open 상태 function 만들기
+   function layer_open(no){
     $(".world-layer[layer="+no+"]").addClass("open");
     $(".layer-dimm").addClass("open");
     $('body').addClass('noScroll');
@@ -400,6 +422,7 @@ $(document).ready(function(){
     layer_close();
   });
 
+
   const cont = gsap.utils.toArray('.cont')
   gsap.set(cont,{y: '25%', opacity: 0})
   cont.forEach(cont => {
@@ -416,129 +439,87 @@ $(document).ready(function(){
     })
   })
 
-  ScrollTrigger.matchMedia({
-    "(min-width: 768px)": function () {
-
-      const contD = document.querySelectorAll(".contD");
-      gsap.set(".contD > div",{y: "25%", opacity: 0})
-      contD.forEach(contD => {
-        const blockTimeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: contD,
-            start:"top 70%",
-            toggleActions:"restart none none reverse"
-          }
-        })
-        .to(contD.querySelectorAll(".contD > div"), {
-          autoAlpha:1, 
-          y: 0, 
-          duration: 0.5, 
-          stagger: 0.3
-        })
-
-      });
-
-    },
-
-    "(max-width: 767px)": function () {
-
-      const contD = gsap.utils.toArray('.contD')
-      gsap.set(contD,{y: '25%', opacity: 0})
-      contD.forEach(contD => {
-        gsap.to(contD,{
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.5,
-          stagger: 0.3,
-          scrollTrigger: {
-            trigger: contD,
-            start: 'top 70%',
-            toggleActions:"restart none none reverse"
-          }
-        })
-      })
-    }
-  });
-
-
-  
-  ScrollTrigger.matchMedia({
-
-    "(min-width: 768px)": function () {
-
-      gsap.set(".footer-inner", { yPercent: -50 });
-      const uncover = gsap.timeline({ paused: true });
-      uncover.to(".footer-inner", { yPercent: 0, ease: "none" });
-      ScrollTrigger.create({
-        trigger: ".lastSec",
-        start: "bottom +=98%",
-        end: "+=30%",
-        animation: uncover,
-        scrub: true,
-        //markers: true
-      });
-      ScrollTrigger.refresh();
-
-    }
-
-  });
+ 
 
   ScrollTrigger.refresh();
   window.addEventListener("resize", ScrollTrigger.update);
   ScrollTrigger.refresh();
+
+
+
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const i = document.querySelector('.txt-motion2');
-  const e = i.querySelector(".challenge"),
-        n = e.querySelector(".ment"),
-        r = [].slice.call(n.querySelectorAll("span"));
 
-  let o;  
 
-  const areaHeight = window.innerHeight || document.documentElement.clientHeight;
 
-  const l = gsap.timeline({ paused: true });
 
-  r.forEach((c, h) => {
-      l.to(c, {
-          opacity: 1,
-          duration: .5,
-          ease: "power2.inOut"
-      });
+document.addEventListener("DOMContentLoaded", function () {
+  var e = document.querySelector('.txt-motion2 .challenge'); // 전역 변수에 값 할당
+  if (e) {
+    var n = e.querySelector(".ment");
+    var r = [].slice.call(n.querySelectorAll("span"));
+    
 
-      if (h !== r.length - 1) {
-          l.to(r[h + 1], {
-              opacity: 0.4,
-              duration: .5,
-              delay: 0.1,
-              ease: "power2.inOut"
-          }, "-=0.4");
-      }
-  });
+    let o;  
 
-  const onScroll = () => {
-      const h = e.getBoundingClientRect();
-      const overlay = document.querySelector(".bg-darken");
-      const overlayScale = document.querySelector(".bg");
+    const areaHeight = window.innerHeight || document.documentElement.clientHeight;
+  
+    const l = gsap.timeline({ paused: true });
+  
+    r.forEach((c, h) => {
+        l.to(c, {
+            opacity: 1,
+            duration: .5,
+            ease: "power2.inOut"
+        });
+  
+        if (h !== r.length - 1) {
+            l.to(r[h + 1], {
+                opacity: 0.4,
+                duration: .5,
+                delay: 0.1,
+                ease: "power2.inOut"
+            }, "-=0.4");
+        }
+    });
+  
+    const onScroll = () => {
+        const h = e.getBoundingClientRect();
+        const overlay = document.querySelector(".bg-darken");
+        const overlayScale = document.querySelector(".bg");
+  
+        if (h.top < areaHeight && h.bottom > 0) {
+            const d = -h.top/o;
+            l.progress(Math.min(d, 1));
+  
+            const overlayOpacity = Math.min(d * 0.65, 0.65); 
+            overlay.style.backgroundColor = `rgba(0, 0, 0, ${overlayOpacity})`;
+            overlayScale.style.transform = `scale(${1 + overlayOpacity * 0.85})`;
+        }
+    };
+  
+    const onResize = () => {
+        o = e.offsetHeight - areaHeight;
+    };
+  
+    window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onResize);
+  
+    // 초기화
+    onResize();  // 여기에서 onResize를 호출하여 o의 초기 값을 설정합니다.
+  
+  
+  }
 
-      if (h.top < areaHeight && h.bottom > 0) {
-          const d = -h.top/o;
-          l.progress(Math.min(d, 1));
+  
+ 
 
-          const overlayOpacity = Math.min(d * 0.65, 0.65); 
-          overlay.style.backgroundColor = `rgba(0, 0, 0, ${overlayOpacity})`;
-          overlayScale.style.transform = `scale(${1 + overlayOpacity * 0.85})`;
-      }
-  };
+ 
 
-  const onResize = () => {
-      o = e.offsetHeight - areaHeight;
-  };
-
-  window.addEventListener("scroll", onScroll);
-  window.addEventListener("resize", onResize);
-
-  // 초기화
-  onResize();  // 여기에서 onResize를 호출하여 o의 초기 값을 설정합니다.
+    
+ 
 });
+
+
+
+
