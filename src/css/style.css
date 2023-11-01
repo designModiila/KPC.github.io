@@ -213,6 +213,7 @@
 .cont-wrapper:after{position: absolute; content: ''; position: absolute; width: 100vw; height: 100%; top: 34px; left: 50%; transform: translateX(-50%); background: #f6f6f6;}
 .news .swiper{width: 100%; height: 100%; overflow: hidden;}
 .news .swiper-slide a{display: block; width: 100%; font-size: 18px; display: flex; gap: 81px; align-items: flex-end;}
+.news .swiper-slide .swiper-thumb{min-height: 350px; width: 470px;}
 .news .swiper-slide img{display: block; width: 100%; height: 100%; object-fit: cover;}
 .news .swiper-slide .swiper-con{flex: 1; display: flex; flex-direction: column; gap: 75px;}
 .news .swiper-con .con-title{font-size: 32px; font-weight: 400; line-height: 32px; margin-bottom: 12px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
@@ -232,6 +233,8 @@
 .news .board-wrap .board li{border-bottom: 1px solid #cccccc; padding: 36px 0 28px;}
 .news .board-wrap .board a{display: block; display: flex; justify-content: space-between; gap: 50px;}
 .news .board-wrap .board .thumb-desc{flex: 1; max-width: 745px; display: flex; flex-direction: column; justify-content: space-between;}
+.news .board-wrap .board .thumb-image{width: 345px; height: 260px;}
+.news .board-wrap .board .thumb-image img{display: block; width: 100%; height: 100%; object-fit: cover;}
 .news .board-wrap .title{font-size: 32px; line-height: 44px; color: #000000; font-weight: 400; margin-bottom: 12px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
 .news .board-wrap .desc{font-size: 20px; line-height: 28px; color: #444444; font-weight: 400; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4;}
 .news .board-wrap .date{font-size: 16px; line-height: 28px; color: #b1b1b1; font-weight: 400;}
@@ -1042,7 +1045,7 @@
 .esg02 .section02 .slide-title{font-weight: 700; font-size: 28px;}
 .esg02 .section02 .slide-desc li{font-size: 20px; letter-spacing: -0.015em; color: #333333; position: relative; padding-left: 10px; line-height: 30px;}
 .esg02 .section02 .slide-desc li:before{position: absolute; content: ''; width: 3px; height: 3px; border-radius: 100%; top: 50%; left: 0; transform: translateY(-50%); background: #333333;}
-.esg02 .project-slide .swiper-controller{bottom: 54px;}
+.esg02 .project-slide .swiper-controller{bottom: 54px; z-index: 10;}
 
 @media (max-width: 1300px) {
   .esg02 .section02 .title{font-size: 28px; line-height: 42px;}

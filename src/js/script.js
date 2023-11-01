@@ -376,6 +376,29 @@ $(document).ready(function(){
     }
   });
 
+
+  
+  ScrollTrigger.matchMedia({
+
+    "(min-width: 768px)": function () {
+
+      gsap.set(".footer-inner", { yPercent: -50 });
+      const uncover = gsap.timeline({ paused: true });
+      uncover.to(".footer-inner", { yPercent: 0, ease: "none" });
+      ScrollTrigger.create({
+        trigger: ".lastSec",
+        start: "bottom +=98%",
+        end: "+=30%",
+        animation: uncover,
+        scrub: true,
+        //markers: true
+      });
+      ScrollTrigger.refresh();
+
+    }
+
+  });
+
   ScrollTrigger.refresh();
   window.addEventListener("resize", ScrollTrigger.update);
   ScrollTrigger.refresh();
