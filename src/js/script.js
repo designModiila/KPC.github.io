@@ -89,6 +89,26 @@ $(document).ready(function () {
 
   gsap.registerPlugin(ScrollTrigger);
 
+  function initializeContDAnimation() {
+    const contD = document.querySelectorAll(".contD");
+    gsap.set(".contD > div", { y: "25%", opacity: 0 });
+    contD.forEach((contD) => {
+      const blockTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: contD,
+          start: "top 70%",
+          toggleActions: "restart none none reverse",
+        },
+      }).to(contD.querySelectorAll(".contD > div"), {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.3,
+      });
+    });
+  }
+
+
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": function () {
       const elmHeight = document.querySelectorAll('.flow-box-wrap').offsetHeight;
@@ -182,25 +202,26 @@ $(document).ready(function () {
       .to(".esg02 .last-circle",{autoAlpha: 1, duration: 1})
       .to(".esg02 .circle",{autoAlpha: 0, duration: 1})
 
+      initializeContDAnimation()
 
-      const contD = document.querySelectorAll(".contD");
-      gsap.set(".contD > div",{y: "25%", opacity: 0})
-      contD.forEach(contD => {
-        const blockTimeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: contD,
-            start:"top 70%",
-            toggleActions:"restart none none reverse"
-          }
-        })
-        .to(contD.querySelectorAll(".contD > div"), {
-          autoAlpha:1, 
-          y: 0, 
-          duration: 0.5, 
-          stagger: 0.3
-        })
+      // const contD = document.querySelectorAll(".contD");
+      // gsap.set(".contD > div",{y: "25%", opacity: 0})
+      // contD.forEach(contD => {
+      //   const blockTimeline = gsap.timeline({
+      //     scrollTrigger: {
+      //       trigger: contD,
+      //       start:"top 70%",
+      //       toggleActions:"restart none none reverse"
+      //     }
+      //   })
+      //   .to(contD.querySelectorAll(".contD > div"), {
+      //     autoAlpha:1, 
+      //     y: 0, 
+      //     duration: 0.5, 
+      //     stagger: 0.3
+      //   })
 
-      });
+      // });
 
       gsap.set(".footer-inner", { yPercent: -50 });
       const uncover = gsap.timeline({ paused: true });
@@ -307,15 +328,36 @@ $(document).ready(function () {
   })
 
 
-  $(function(){
+  // $(function(){
+  //   $('.tabcontent > div').hide();
+  //   $('.tabnav a').click(function () {
+  //     $('.tabcontent > div').hide().filter(this.hash).fadeIn();
+  //     $('.tabnav a').removeClass('active');
+  //     $(this).addClass('active');
+  //     return false;
+  //   }).filter(':eq(0)').click();
+  //   });
+
+
+
+  
+ 
     $('.tabcontent > div').hide();
     $('.tabnav a').click(function () {
       $('.tabcontent > div').hide().filter(this.hash).fadeIn();
       $('.tabnav a').removeClass('active');
       $(this).addClass('active');
+      
+      // 탭을 클릭할 때마다 contD 애니메이션 초기화 및 실행
+      initializeContDAnimation();
+      
       return false;
     }).filter(':eq(0)').click();
-    });
+  
+    
+    initializeContDAnimation();
+    
+
 
 
     var $swiperSelector = $('.project-slide');
