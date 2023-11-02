@@ -399,8 +399,8 @@ body.noScroll {
   #header .btn-mo-menu-wrapper {
     display: block;
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     right: 5vw;
     z-index: 999;
     transition: all 0.3s ease-in-out;
@@ -412,7 +412,8 @@ body.noScroll {
     height: 2px;
     background: #ffffff;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 999;
     transition: all 0.3s ease-in-out;
   }
@@ -499,7 +500,7 @@ body.noScroll {
     padding: 0;
   }
   #header.__open .btn-mo-menu-open {
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
   }
   #header.__open .btn-mo-menu-open:before {
     transform: rotate(90deg);
@@ -511,6 +512,11 @@ body.noScroll {
   #header.__open .lang-select {
     display: none;
   }
+
+  #header.__open .gnb-wrap .gnb > li .depth1{color: #2b2b2b}
+  #header.__open h1{background: url(../../images/common/kpc_logo.png) no-repeat center;}
+  #header.__open .btn-mo-menu-open{background: #2b2b2b;}
+  #header.__open .btn-mo-menu-open:before{background: #2b2b2b;}
 
   .footer .footer-inner {
     padding: 0 5vw;

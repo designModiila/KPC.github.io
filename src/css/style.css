@@ -27,6 +27,9 @@
 #header.__w h1{background: url(../../images/common/kpc_logo.png) no-repeat center;}
 #header.__w .lang-select > a{background: url("../../images/common/lang_icon.png") no-repeat center; background-size: 100%;}
 
+
+
+
 /*메인비주얼*/
 #mainVisual.bg-swiper-container{overflow: hidden; width: 100%; height: 100vh; position: relative;}
 #mainVisual .swiper-slide-duplicate, #visual .swiper-slide{background-position: center center; background-size: cover; font-size: 18px; display: flex; flex-flow: column nowrap; justify-content: center; /*padding-left: 328px; padding-left: 12.375rem*/}
