@@ -950,8 +950,8 @@
   .business03 .section02 .tabcontent .content-wrap{gap: 52px 0;}
   .business03 .section02 .tabcontent .box{width: 47%; margin-right: 6%; gap: 20px; padding: 10px; min-height: 300px;}
   .business03 .section02 .tabcontent .box:nth-child(even){margin-right: 0;}
-  .business03 .section02 .tabcontent .box-icon{width: 40px; top: 10px; right: 10px;}
-  .business03 .section02 .tabcontent .box-tit{font-size: 16px;}
+  .business03 .section02 .tabcontent .box-icon{width: 40px; top: 5px; right: 5px;}
+  .business03 .section02 .tabcontent .box-tit{font-size: 16px; letter-spacing: -0.05em;}
   .business03 .section02 .tabcontent .box-desc{min-height: 200px;}
   .business03 .section02 .tabcontent .box06 .box-tit{font-size: 16px;}
   .business03 .section02 .tabcontent .box06 .box-desc{min-height: auto;}
