@@ -905,11 +905,14 @@
 .business03 .section02 #tab02{background: url(../../images/sub/business03_tab02_bg.png) no-repeat center; background-size: cover; width: 100%; padding: 124px 0 228px}
 .business03 .section02 .tabcontent .content-wrap{display: flex; flex-wrap: wrap; gap: 104px 0px;}
 .business03 .section02 .tabcontent .box{width: calc(100% / 3 - 4.69%); margin-right: 7%; min-height: 400px; background: #fff; padding: 52px 32px 37px 44px; display: flex; flex-direction: column; justify-content: space-between; position: relative}
-.business03 .section02 .tabcontent .box03{margin-right: 0}
-.business03 .section02 .tabcontent .box05{margin-right: 0}
 .business03 .section02 .tabcontent .box-tit{font-weight: 700; font-size: 24px;}
 .business03 .section02 .tabcontent .box-desc{color: #333333; min-height: 150px; letter-spacing: -0.015em; line-height: 30px; font-size: 20px; font-weight: 500; word-break: break-all;}
 .business03 .section02 .tabcontent .box-icon{position: absolute; right: 32px; top: 40px;}
+.business03 .section02 .tabcontent .box03{margin-right: 0}
+.business03 .section02 .tabcontent .box06{margin-right: 0; background: #0FB5Df; justify-content: center; gap: 74px; cursor: pointer; transition: background 0.3s;}
+.business03 .section02 .tabcontent .box06:hover{background: #0b87a7;}
+.business03 .section02 .tabcontent .box06 .box-tit{font-size: 32px; color: #ffffff; font-weight: 700;}
+.business03 .section02 .tabcontent .box06 .box-desc{font-weight: 500; letter-spacing: 0.015em; font-size: 20px; color: #ffffff;}
 
 
 @media (max-width: 1700px) {
@@ -922,9 +925,11 @@
   .business03 .section02 .tab .tabnav a{font-size: 28px;}
   .business03 .section02 .tabcontent .box{width: calc(100% / 3 - 3.34%); margin-right: 5%}
   .business03 .section02 .tabcontent .box03{margin-right: 0}
-  .business03 .section02 .tabcontent .box05{margin-right: 0}
+  .business03 .section02 .tabcontent .box06{margin-right: 0}
   .business03 .section02 .tabcontent .box-tit{font-size: 20px;}
   .business03 .section02 .tabcontent .box-desc{font-size: 16px; line-height: 26px;}
+  .business03 .section02 .tabcontent .box06 .box-tit{font-size: 20px;}
+  .business03 .section02 .tabcontent .box06 .box-desc{font-size: 16px;}
 }
 
 @media (max-width: 1024px) {
@@ -933,6 +938,7 @@
   .business03 .section02 .tab .tabnav a{font-size: 24px;}
   .business03 .section02 .tabcontent .box{min-height: 330px; padding: 25px 15px;}
   .business03 .section02 .tabcontent .box-icon{width: 60px; top: 25px; right: 15px;}
+  .business03 .section02 .tabcontent .box06 .box-desc br{display: none;}
 }
 
 @media (max-width: 767px) {
@@ -947,6 +953,8 @@
   .business03 .section02 .tabcontent .box-icon{width: 40px; top: 10px; right: 10px;}
   .business03 .section02 .tabcontent .box-tit{font-size: 16px;}
   .business03 .section02 .tabcontent .box-desc{min-height: 200px;}
+  .business03 .section02 .tabcontent .box06 .box-tit{font-size: 16px;}
+  .business03 .section02 .tabcontent .box06 .box-desc{min-height: auto;}
 }
 @media (max-width: 350px) {
   .business03 .section02 .tabcontent .box{width: 100%; margin-right: 0; min-height: auto;}

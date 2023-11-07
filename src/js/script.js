@@ -166,6 +166,41 @@ $(document).ready(function () {
       .from(".circle",{autoAlpha: 0, stagger: 0.2})
       .from(".diagram-bg",{autoAlpha: 0})
 
+      function businessModal(){
+        $('#layer-dimm').hide();
+        $('.modal').hide();
+    
+        $('.precursorModalBtn').click(function(){
+          $('#layer-dimm').show();
+          $('#precursorModal').show();
+          $('body').addClass('noScroll')
+        })
+
+        $('.recycleModalBtn').click(function(){
+          $('#layer-dimm').show();
+          $('#recycleModal').show();
+          $('body').addClass('noScroll')
+        })
+    
+
+        $('.modal-close').click(function(){
+          $('#layer-dimm').hide();
+          $('.modal').hide();
+          $('body').removeClass('noScroll')
+        })
+
+        // var businessModal = document.getElementsByClassName('businessModal')
+        // var modalGif = businessModal.getElementsByTagName('img')[0];
+        // var modalSrc = modalGif.src;
+    
+        // modalGif.setAttribute('src', '');
+        // setTimeout(function () {
+        //   modalGif.setAttribute('src', modalSrc);
+        // }, 0);
+      }
+    
+      businessModal();
+
 
       var diagramAni2 = gsap.timeline({
         scrollTrigger:{
@@ -328,20 +363,6 @@ $(document).ready(function () {
   })
 
 
-  // $(function(){
-  //   $('.tabcontent > div').hide();
-  //   $('.tabnav a').click(function () {
-  //     $('.tabcontent > div').hide().filter(this.hash).fadeIn();
-  //     $('.tabnav a').removeClass('active');
-  //     $(this).addClass('active');
-  //     return false;
-  //   }).filter(':eq(0)').click();
-  //   });
-
-
-
-  
- 
     $('.tabcontent > div').hide();
     $('.tabnav a').click(function () {
       $('.tabcontent > div').hide().filter(this.hash).fadeIn();
@@ -410,7 +431,7 @@ $(document).ready(function () {
     });
 
 
- 
+
 
 
     function esg01Timeline() {
@@ -447,7 +468,7 @@ $(document).ready(function () {
 
 
    //레이어팝업 open 상태 function 만들기
-   function layer_open(no){
+  function layer_open(no){
     $(".world-layer[layer="+no+"]").addClass("open");
     $(".layer-dimm").addClass("open");
     $('body').addClass('noScroll');
@@ -485,7 +506,7 @@ $(document).ready(function () {
     })
   })
 
- 
+
 
   ScrollTrigger.refresh();
   window.addEventListener("resize", ScrollTrigger.update);
@@ -557,13 +578,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   }
 
-  
- 
 
- 
-
-    
- 
 });
 
 
