@@ -506,13 +506,13 @@ $(document).ready(function () {
     function() { 
       var layerNo = $(this).attr("layer");  
      
-      $(".company04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').addClass('active');      
-      $(".company04 .article[layer='" + layerNo + "']").addClass('active');
+      $(".company04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').addClass('hover');      
+      $(".company04 .article[layer='" + layerNo + "']").addClass('hover');
     }, 
     function() { // 마우스가 요소에서 벗어났을 때
       var layerNo = $(this).attr("layer");
-      $(".company04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').removeClass('active');
-      $(".company04 .article[layer='" + layerNo + "']").removeClass('active');
+      $(".company04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').removeClass('hover');
+      $(".company04 .article[layer='" + layerNo + "']").removeClass('hover');
     }
   );
 
@@ -529,8 +529,8 @@ $(document).ready(function () {
   $(".world-layer-close").click(function() {
     var layerNo = $(this).closest(".world-layer").attr("layer");
     $(".world-layer[layer='" + layerNo + "']").removeClass('open').hide();
-    $(".btn_layer[layer='" + layerNo + "']").closest('.tablinks').removeClass('active');
-    $(".article[layer='" + layerNo + "']").removeClass('active');
+    // $(".btn_layer[layer='" + layerNo + "']").closest('.tablinks').removeClass('active');
+    // $(".article[layer='" + layerNo + "']").removeClass('active');
   });
   
 
