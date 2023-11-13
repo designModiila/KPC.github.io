@@ -275,6 +275,43 @@ $(document).ready(function () {
 
     },
     "(max-width: 767px)": function () {
+
+      function businessModal(){
+        $('#layer-dimm').hide();
+        $('.businessModal.modal').hide();
+    
+        $('.precursorModalBtn').click(function(){
+          $('#layer-dimm').show();
+          $('#precursorModal').show();
+          $('body').addClass('noScroll')
+        })
+
+        $('.recycleModalBtn').click(function(){
+          $('#layer-dimm').show();
+          $('#recycleModal').show();
+          $('body').addClass('noScroll')
+        })
+    
+
+        $('.modal-close').click(function(){
+          $('#layer-dimm').hide();
+          $('.businessModal.modal').hide();
+          $('body').removeClass('noScroll')
+        })
+
+        // var businessModal = document.getElementsByClassName('businessModal')
+        // var modalGif = businessModal.getElementsByTagName('img')[0];
+        // var modalSrc = modalGif.src;
+    
+        // modalGif.setAttribute('src', '');
+        // setTimeout(function () {
+        //   modalGif.setAttribute('src', modalSrc);
+        // }, 0);
+      }
+    
+      businessModal();
+
+
       const contD = gsap.utils.toArray('.contD')
       gsap.set(contD,{y: '25%', opacity: 0})
       contD.forEach(contD => {
