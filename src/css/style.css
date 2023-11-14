@@ -2701,6 +2701,11 @@
   width: 100%;
   max-width: 550px;
 }
+
+.business01 .section03 .graph-wrap .graph-title{font-weight: 700; font-size: 16px; color: #000; text-align: center; margin-bottom: 30px;}
+.business01 .section03 .graph-wrap .graph-unit{text-align: right; margin-bottom: 10px;}
+.business01 .section03 .graph-wrap .graph-desc{font-size: 16px; padding: 0 30px;}
+.business01 .section03 .graph-wrap .graph-desc .source{display: block; text-align: right; font-size: 14px; color: #ccc; margin-bottom: 10px;}
 /* .business01 .section03 .graph-wrapper{margin-bottom: 27px;}
 .business01 .section03 .graph-title{margin-bottom: 28px; font-size: 16px; font-weight: 700; text-align: center;}
 .business01 .section03 .graph{height: 388px; box-sizing: border-box; margin-bottom: 18px; border-bottom: 1px solid #cccccc; padding-bottom: 18px;}
@@ -2851,6 +2856,7 @@
   .business01 .section03 .graph-wrap {
     max-width: 100%;
   }
+  .business01 .section03 .graph-wrap .graph-desc{font-size: 14px; padding: 0 10px}
   /* .business01 .section03 .graph .graph-item{width: calc(100% / 4)}
   .business01 .section03 .graph .box{width: 48%;}
   .business01 .section03 .graph-item .box > span{font-size: 12px; line-height: 28px;}
