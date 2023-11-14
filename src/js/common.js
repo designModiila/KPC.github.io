@@ -152,11 +152,13 @@ $(document).ready(function(){
     $('.privacy').click(function(){
       $('.layer-dimm').addClass('open');
       $('.privacy-policy').show().addClass('open');
+      $('.privacy-policy .modal').show()
       $('body').addClass('noScroll');
     })
     $('.email').click(function(){
       $('.layer-dimm').addClass('open');
       $('.email-notice').show().addClass('open');
+      $('.email-notice .modal').show()
       $('body').addClass('noScroll');
     })
   }

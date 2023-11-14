@@ -168,7 +168,7 @@ $(document).ready(function () {
 
       function businessModal(){
         $('#layer-dimm').hide();
-        $('.modal').hide();
+        $('.businessModal.modal').hide();
     
         $('.precursorModalBtn').click(function(){
           $('#layer-dimm').show();
@@ -185,7 +185,7 @@ $(document).ready(function () {
 
         $('.modal-close').click(function(){
           $('#layer-dimm').hide();
-          $('.modal').hide();
+          $('.businessModal.modal').hide();
           $('body').removeClass('noScroll')
         })
 
@@ -275,6 +275,43 @@ $(document).ready(function () {
 
     },
     "(max-width: 767px)": function () {
+
+      function businessModal(){
+        $('#layer-dimm').hide();
+        $('.businessModal.modal').hide();
+    
+        $('.precursorModalBtn').click(function(){
+          $('#layer-dimm').show();
+          $('#precursorModal').show();
+          $('body').addClass('noScroll')
+        })
+
+        $('.recycleModalBtn').click(function(){
+          $('#layer-dimm').show();
+          $('#recycleModal').show();
+          $('body').addClass('noScroll')
+        })
+    
+
+        $('.modal-close').click(function(){
+          $('#layer-dimm').hide();
+          $('.businessModal.modal').hide();
+          $('body').removeClass('noScroll')
+        })
+
+        // var businessModal = document.getElementsByClassName('businessModal')
+        // var modalGif = businessModal.getElementsByTagName('img')[0];
+        // var modalSrc = modalGif.src;
+    
+        // modalGif.setAttribute('src', '');
+        // setTimeout(function () {
+        //   modalGif.setAttribute('src', modalSrc);
+        // }, 0);
+      }
+    
+      businessModal();
+
+
       const contD = gsap.utils.toArray('.contD')
       gsap.set(contD,{y: '25%', opacity: 0})
       contD.forEach(contD => {
@@ -330,11 +367,13 @@ $(document).ready(function () {
     $('.board li').click(function(){
       $('.layer-dimm').addClass('open');
       $('.board-view').show().addClass('open');
+      $('.board-view .modal').show();
       $('body').addClass('noScroll');
     })
     $('.privacy').click(function(){
       $('.layer-dimm').addClass('open');
       $('.privacy-policy').show().addClass('open');
+      $('.privacy-policy .modal').show();
       $('body').addClass('noScroll');
     })
   }
@@ -465,30 +504,81 @@ $(document).ready(function () {
     var overviewTl = gsap.timeline();
   overviewTl.add(esg01Timeline(), "+=1");
 
-
-
-   //레이어팝업 open 상태 function 만들기
-  function layer_open(no){
-    $(".world-layer[layer="+no+"]").addClass("open");
-    $(".layer-dimm").addClass("open");
-    $('body').addClass('noScroll');
+  function layer_open(no) {
+    var layer = $(".world-layer[layer=" + no + "]");
+    if (!layer.hasClass("open")) {
+      layer.addClass("open").show();
+      $(".layer-dimm").addClass("open");
+      $('body').addClass('noScroll');
+    }
   };
-  //레이어팝업 close 상태 function 만들기
-  function layer_close(){
-    $(".world-layer, .layer-dimm").removeClass("open");
-  };
-  //링크 클릭시 해당 레이어팝업 호출
-  $(".company04 .btn_layer,.company04 .article").click(function () {
+  
+  function triggerLayerEvent(layerNo) {
+    $(".world-layer").removeClass("open").hide();
+    var layerElement = $(".company04 .btn_layer[layer='" + layerNo + "'], .company04 .article[layer='" + layerNo + "']").first();
+    layerElement.trigger('click');
+  }
+  
+  var maxLayer = $(".world-layer").length;
+  
+  $(".prev.layer-btn").click(function() {
+    var currentLayer = parseInt($(".world-layer.open").attr("layer"));
+    var prevLayer = currentLayer - 1;
+    if (prevLayer < 1) {
+      prevLayer = maxLayer; 
+    }
+    triggerLayerEvent(prevLayer);
+  });
+  
+  $(".next.layer-btn").click(function() {
+    var currentLayer = parseInt($(".world-layer.open").attr("layer"));
+    var nextLayer = currentLayer + 1;
+    if (nextLayer > maxLayer) {
+      nextLayer = 1; 
+    }
+    triggerLayerEvent(nextLayer);
+  });
+  
+  $(".company04 .btn_layer, .company04 .article").hover(
+    function() { 
+      var layerNo = $(this).attr("layer");  
+     
+      $(".company04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').addClass('hover');      
+      $(".company04 .article[layer='" + layerNo + "']").addClass('hover');
+    }, 
+    function() { // 마우스가 요소에서 벗어났을 때
+      var layerNo = $(this).attr("layer");
+      $(".company04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').removeClass('hover');
+      $(".company04 .article[layer='" + layerNo + "']").removeClass('hover');
+    }
+  );
+
+  
+  $(".company04 .btn_layer, .company04 .article").click(function() {
     var no = $(this).attr("layer");
     layer_open(no);
-    $('.article').removeClass('active');
-    $('.' + $(this).data('rel')).addClass('active');
+  
+    $('.tablinks, .article').removeClass('active');
+    $(".btn_layer[layer='" + no + "']").closest('.tablinks').addClass('active');
+    $(".article[layer='" + no + "']").addClass('active');
   });
-  //닫기 버튼 클릭시 레이어 닫기
-  $(".close-btn").click(function () {
-    layer_close();
+  
+  $(".world-layer-close").click(function() {
+    var layerNo = $(this).closest(".world-layer").attr("layer");
+    $(".world-layer[layer='" + layerNo + "']").removeClass('open').hide();
+    // $(".btn_layer[layer='" + layerNo + "']").closest('.tablinks').removeClass('active');
+    // $(".article[layer='" + layerNo + "']").removeClass('active');
   });
+  
 
+
+  // //닫기 버튼 클릭시 레이어 닫기
+  // $(".close-btn").click(function () {
+  //   layer_close();
+  // });
+
+
+  
 
   const cont = gsap.utils.toArray('.cont')
   gsap.set(cont,{y: '25%', opacity: 0})
