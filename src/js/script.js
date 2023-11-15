@@ -152,19 +152,19 @@ $(document).ready(function () {
       gsap.from(".subVisual .title > p",{autoAlpha: 0, y: '25%', duration: 0.3, stagger: 0.3, delay: 0.1, ease: "power1.inOut"})
 
 
-      var businessDiagram = gsap.timeline({
-        scrollTrigger:{
-          trigger:".business02 .section01",
-          start:"top 10%",
-          pin: true,
-          // scrub: 3,
-          // end: "bottom +30%"
-          //end: "+=2500",
-          //toggleActions:"restart none none reset"
-        }
-      })
-      .from(".circle",{autoAlpha: 0, stagger: 0.2})
-      .from(".diagram-bg",{autoAlpha: 0})
+      // var businessDiagram = gsap.timeline({
+      //   scrollTrigger:{
+      //     trigger:".business02 .section01",
+      //     start:"top 10%",
+      //     pin: true,
+      //     // scrub: 3,
+      //     // end: "bottom +30%"
+      //     //end: "+=2500",
+      //     //toggleActions:"restart none none reset"
+      //   }
+      // })
+      // .from(".circle",{autoAlpha: 0, stagger: 0.2})
+      // .from(".diagram-bg",{autoAlpha: 0})
 
       function businessModal(){
         $('#layer-dimm').hide();
