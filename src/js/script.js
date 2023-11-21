@@ -123,7 +123,7 @@ $(document).ready(function () {
           //end: 'bottom center',
           //markers: true,
         },
-        yPercent: -120,
+        yPercent: -125,
         ease: 'none',
       })
 
