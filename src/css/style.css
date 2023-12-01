@@ -459,7 +459,7 @@
 
 .main .section04 .diagram-wrap .diagram-inner .diagram_circle01{animation: rotate01 5s linear infinite; z-index: 9;}
 .main .section04 .diagram-wrap .diagram-inner .diagram_circle02{animation: rotate01 1s linear infinite; z-index: 8;}
-.main .section04 .diagram-wrap .diagram-inner .diagram_circle03{animation: rotate01 3s linear infinite; z-index: 99;}
+.main .section04 .diagram-wrap .diagram-inner .diagram_circle03{animation: rotate01 10s linear infinite; z-index: 99;}
 .main .section04 .fill-primary{animation: col 3s linear infinite;}
 .main .section04 .fill-primary2{animation: col 3s linear infinite; animation-delay: 2s;}
 .main .section04 .fill-primary3{animation: col 3s linear infinite; animation-delay: 4s;}
