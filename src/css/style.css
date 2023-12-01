@@ -446,8 +446,8 @@
 
 
 .main .section04 .diagram-wrap .diagram-inner {
-  width: 667px;
-  height: 667px;
+  width: 625px;
+  height: 625px;
   margin: 0 auto;
   position: relative;
   text-align: center;
@@ -459,7 +459,7 @@
 
 .main .section04 .diagram-wrap .diagram-inner .diagram_circle01{animation: rotate01 5s linear infinite; z-index: 9;}
 .main .section04 .diagram-wrap .diagram-inner .diagram_circle02{animation: rotate01 1s linear infinite; z-index: 8;}
-.main .section04 .diagram-wrap .diagram-inner .diagram_circle03{animation: rotate01 10s linear infinite; z-index: 99;}
+.main .section04 .diagram-wrap .diagram-inner .diagram_circle03{animation: rotate01 2s linear infinite; z-index: 1;}
 .main .section04 .fill-primary{animation: col 3s linear infinite;}
 .main .section04 .fill-primary2{animation: col 3s linear infinite; animation-delay: 2s;}
 .main .section04 .fill-primary3{animation: col 3s linear infinite; animation-delay: 4s;}

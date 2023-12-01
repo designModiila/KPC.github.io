@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPC</title>
+    <link rel="stylesheet" href="../../src/js/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../src/plugin/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../../src/plugin/select/select2.min.css">
+  
+    <link rel="stylesheet" href="../../src/css/reset.css">
+    <link rel="stylesheet" href="../../src/css/font.css">
+    <link rel="stylesheet" href="../../src/css/common.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="../../src/css/english.css">
+  
+    <script src="../../src/js/jquery/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../src/plugin/gsap/gsap.min.js"></script>
+    <script type="text/javascript" src="../../src/plugin/gsap/ScrollTrigger.min.js"></script>
+    <script src="../../src/plugin/swiper/swiper.min.js"></script>
+    <script src="../../src/plugin/select/select2.min.js"></script>
+    <script src="../../src/js/common.js"></script>
+    <script src="../../src/js/script.js"></script>
+  </head>
+<body>
+  <header id="header" class="header">
+    <div class="header-wrap">
+      <div class="logo-wrap">
+        <a href="./main.html">
+          <h1><span class="hidden">kpc</span></h1>
+        </a>
+      </div>
+      <div class="gnb-wrap">
+        <ul class="gnb">
+          <li><a href="#none" class="depth1">About US</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="./company/company_01.html">Overview</a></li>
+                <li><a href="./company/company_02.html">Greeting</a></li>
+                <li><a href="./company/company_03.html">Vision</a></li>
+                <li><a href="./company/company_04.html">Introduction to Affiliates</a></li>
+                <li><a href="./company/company_05.html">Location</a></li>
+              </ul>
+            </div>
+    
+          </li>
+          <li><a href="#none" class="depth1">Business</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="./business/business_01.html">Precursor</a></li>
+                <li><a href="./business/business_02.html">Recycle</a></li>
+                <li><a href="./business/business_03.html">Producation Process</a></li>
+                <!-- <li><a href="#none">생산제품</a></li> -->
+              </ul>
+            </div>
+          </li>
+          <li><a href="#none" class="depth1">ESG</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="./esg/esg_01.html">Overview</a></li>
+                <li><a href="./esg/esg_02.html">Health and Safety Environment</a></li>
+                <li><a href="./esg/esg_03.html">Ethical Management</a></li>
+                <li><a href="./esg/esg_04.html">Social Contribution</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#none" class="depth1">Media</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="./media/news.html">Newsroom</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#none" class="depth1"><span class="go-link">Recruiting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="lang-select">
+        <a href="#none" class="current"></a>
+        <ul class="lang-list">
+          <li class="kor active"><a href="#none">KOR</a></li>
+          <li class="eng"><a href="#none">ENG</a></li>
+        </ul>
+      </div>
+      <a href="#none" class="only-mo btn-mo-menu-wrapper">
+        <span class="btn-mo-menu-open"></span>
+      </a>
+    </div>
+  </header>
+  <div id="wrap" class="main wrap lastSec">
+    <div id="content" class="content main">
+      <div id="mainVisual" class="bg-swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide visual01">
+            <div class="bg-wrap">
+              <div class="video-wrap">
+                <video src="../../images/main/main-visual-bg01.mp4" muted autoplay loop playsinline data-keepplaying></video>
+              </div>
+              <div class="visual-bg">
+                <div class="title">
+                  <p data-swiper-parallax="300">Green Technology</p> 
+                  <p data-swiper-parallax="400">Brings Sustainable Tomorrow Ahead</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-slide visual02">
+            <div class="bg-wrap">
+              <div class="video-wrap">
+                <video src="../../images/main/main-visual-bg02.mp4" muted autoplay loop playsinline data-keepplaying></video>
+              </div>
+              <div class="visual-bg">
+                <div class="title">
+                  <p data-swiper-parallax="300">Key materials for secondary batteries </p> 
+                  <p data-swiper-parallax="400">representing eco-friendly energy</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide visual03">
+            <div class="bg-wrap">
+              <div class="video-wrap">
+                <video src="../../images/main/main-visual-bg03.mp4" muted autoplay loop playsinline data-keepplaying></video>
+              </div>
+              <div class="visual-bg">
+                <div class="title">
+                  <p data-swiper-parallax="300">Drawing a sustainable future </p> 
+                  <p data-swiper-parallax="400">based on ESG management</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-controller">
+          <!-- <div class="swiper-button-prev"></div> -->
+          <div class="swiper-progress-bar">
+            <span class="slide_progress-bar"></span>
+          </div>
+          <!-- <div class="swiper-button-next"></div> -->
+          <div class="swiper-pagination pagination-num">
+            <span class="swiper-pagination-current">1</span>
+            <span class="swiper-pagination-total">1</span>
+          </div>
+        </div>
+        <div class="swiper-pagination pagination-text"></div>
+      </div>
+      <div class="section section02">
+        <div class="inner_1600">
+          <div class="title-wrap">
+            <div class="sub-title cont">Korean precursor</div>
+            <div class="main-title cont">We are opening an eco-friendly era <br>with solid infrastructure and technology</div>
+            <div class="main-desc cont">
+              By supplying eco-friendly precursors based on the best technology and solid industrial infrastructure amid the global trend of 'de-carbonization (脫)', it is leading the internalization of secondary battery materials and the supply of new and renewable energy and the transition to the era of eco-friendly mobility.
+            </div>
+            <div class="btn-wrap cont">
+              <a href="#none" class="arrow-btn">Company Overview
+                <div class="arrow">
+                  <span></span>
+                  <span></span>
+                </div>
+              </a>
+              <a href="#none" class="arrow-btn">Greeting
+                <div class="arrow">
+                  <span></span>
+                  <span></span>
+                </div>
+              </a>
+              <a href="#none" class="arrow-btn">Affiliates
+                <div class="arrow">
+                  <span></span>
+                  <span></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-overview">
+        <p class="cont">Toward a Sustainable Future <br>With Green Precursor</p>
+      </div>
+      <div class="section section03">
+        <div class="flow-box-wrap">
+          <div class="rightSec">
+            <div class="sticky">
+              <div class="title-wrap">
+                <div class="sub-title cont">Competitiveness</div>
+                <div class="main-title cont">FROM RAW <br>MATERIALS TO SALES<br>END TO END <br>VALUE CHAIN</div>
+              </div>
+            </div>
+          </div>
+          <div class="leftSec">
+            <div class="leftimg leftimg01 cont">
+              <div class="img-info">
+                <div class="img-title">Raw Material Supply</div>
+                <div class="img-desc">By directly procuring nickel sulfate, a precursor manufacturing raw material, <br>from the joint venture company KEMCO to secure a stable raw material supply chain <br>that is not affected by external factors</div>
+              </div>
+              <div class="imgBg">
+                <img src="../../images/main/main-sec03-thumb01.png" alt="">
+              </div>
+            </div>
+            <div class="leftimg leftimg02 cont">
+              <div class="img-info">
+                <div class="img-title">Precursor Production</div>
+                <div class="img-desc">Enhance product competitiveness by producing <br>eco-friendly precursorsusing recycling raw materials <br>and applying high technology >and the latest precursor production process</div>
+              </div>
+              <div class="imgBg">
+                <img src="../../images/main/main-sec03-thumb02.png" alt="">
+              </div>
+            </div>
+            <div class="leftimg leftimg03 cont">
+              <div class="img-info">
+                <div class="img-title">Product Sales</div>
+                <div class="img-desc">Establishment of an industrial cycle structure that leads to supply-production-sales <br>by securing a fixed supply and demand using the industrial infrastructure of joint venture LG Chem</div>
+              </div>
+              <div class="imgBg">
+                <img src="../../images/main/main-sec03-thumb03.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section04">
+        <div class="inner_1600">
+          <div class="title-wrap">
+            <div class="sub-title cont">Eco-friendly</div>
+            <div class="main-title cont">Realization of eco-friendly <br>precursor production <br>through recycling</div>
+            <div class="defalut-btn cont">
+              <a href="#none">More</a>
+            </div>
+          </div>
+        </div>
+        <div class="diagram-wrap">
+          <img class="diagram-pc cont" src="../../images/main/main-sec04-diagram.png" alt="">
+          <img class="diagram-mo cont" src="../../images/main/main-sec04-diagram_mo.png" alt="">
+        </div>
+      </div>
+      <div class="section section05">
+        <div class="inner_1600">
+          <div class="content-wrap">
+            <div class="title-wrap">
+              <div class="sub-title cont">Media</div>
+              <div class="main-title cont">KPC News</div>
+              <div class="defalut-btn cont">
+                <a href="#none">More</a>
+              </div>
+            </div>
+
+            <div class="thumb-wrap contD">
+              <div class="thumb-info">
+                <div class="thumb-title">고려아연, K-배터리 산업의 미래 <br>모색하는 ‘전문가 소통 포럼’ 개최</div>
+                <div class="thumb-desc">고려아연이 지난 26일 K-배터리 산업의 현황과 미래 대응 방안 모색을 위한 ‘전문가 소통 포럼’을 개최했다. 이번 포럼은 배터리 산업이 차세대 먹거리로 부상하는 가운데 이를 둘러싼 고려아연이 지난 26일 K-배터리 산업의 현황과 미래 대응 방안 모색을 위한 ‘전문가 소통 포럼’을 개최했다.</div>
+                <div class="thumb-date">2022.05.31</div>
+              </div>
+              <div class="thumb">
+                <img src="../../images/main/main-sec05-thumb.png" alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer" class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-nav">
+          <dl>
+            <dt>About US</dt>
+            <dd><a href="./company/company_01.html">Overview</a></dd>
+            <dd><a href="./company/company_02.html">Greeting</a></dd>
+            <dd><a href="./company/company_03.html">Vision</a></dd>
+            <dd><a href="./company/company_04.html">Introduction to Affiliates</a></dd>
+            <dd><a href="./company/company_05.html">Location</a></dd>
+          </dl>
+          <dl>
+            <dt>Business</dt>
+            <dd><a href="./business/business_01.html">Precursor</a></dd>
+            <dd><a href="./business/business_02.html">Recycle</a></dd>
+            <dd><a href="./business/business_03.html">Producation Process</a></dd>
+            <!-- <dd><a href="#none">생산제품</a></dd> -->
+          </dl>
+          <dl>
+            <dt>ESG</dt>
+            <dd><a href="./esg/esg_01.html">Overview</a></dd>
+            <dd><a href="./esg/esg_02.html">Health and Safety Environment</a></dd>
+            <dd><a href="./esg/esg_03.html">Ethical Management</a></dd>
+            <dd><a href="./esg/esg_04.html">Social Contribution</a></dd>
+          </dl>
+          <dl>
+            <dt>Media</dt>
+            <dd><a href="./media/news.html">Newsroom</a></dd>
+          </dl>
+          <dl>
+            <dt><a href="#none" class="go-link">Recruiting</a></dt>
+          </dl>
+        </div>
+        <div class="family-site">
+          <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
+          <ul class="family-list">
+            <li>
+              <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
+            </li>
+            <li>
+              <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
+            </li>
+            <li>
+              <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
+            </li>
+            <li>
+              <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
+            </li>
+            <li>
+              <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
+            </li>
+            <li>
+              <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
+            </li>
+            <li>
+              <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
+            </li>
+            <li>
+              <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
+            </li>
+            <li>
+              <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <ul>
+          <li><a href="../customer/customer_voice.html">고객의소리</a></li>
+          <li><a href="#none" class="privacy">개인정보처리방침</a></li>
+          <li><a href="#none" class="email">이메일 무단수집 거부</a></li>
+          <li class="family-site  onlyMo">
+            <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
+            <ul class="family-list">
+              <li>
+                <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
+              </li>
+              <li>
+                <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
+              </li>
+              <li>
+                <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
+              </li>
+              <li>
+                <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
+              </li>
+              <li>
+                <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
+              </li>
+              <li>
+                <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
+              </li>
+              <li>
+                <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
+              </li>
+              <li>
+                <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
+              </li>
+              <li>
+                <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
+              </li>
+              <li>
+                <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
+              </li>
+              <li>
+                <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
+              </li>
+              <li>
+                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
+              </li>
+              <li>
+                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
+              </li>
+              <li>
+                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
+              </li>
+              <li>
+                <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
+              </li>
+              <li>
+                <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li><span>ADDRESS. </span>(45011) 울산 울주군 온산읍 당월로 216-51</li>
+          <li><span>TEL. </span>031-737-0954</li>
+          <li><span>E-MAIL. </span>Address@kpc.co.kr</li>
+        </ul>
+        <p class="copy">Copyright &copy; KPC All Right Reserved.</p>
+      </div>
+    </div>
+    <div class="layer-dimm"></div>
+    <div class="privacy-policy"></div>
+    <div class="email-notice"></div>
+  </footer>
+</body>
+</html>
