@@ -3454,9 +3454,14 @@
 }
 
 .business02 .diagram-wrap .diagram-inner > img{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
-.business02 .diagram-wrap .diagram-inner .diagram{z-index: 1;}
+.business02 .diagram-wrap .diagram-inner .diagram{z-index: 10;}
+.business02 .diagram-wrap .diagram-inner .diagram2{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .business02 .diagram-wrap .diagram-inner .diagram_circle01{animation: rotate01 5s linear infinite}
 .business02 .diagram-wrap .diagram-inner .diagram_circle02{animation: rotate01 1s linear infinite}
+.business02 .diagram-wrap .diagram-inner .diagram_circle03{animation: rotate01 2s linear infinite; z-index: 1;}
+.business02 .diagram-wrap .fill-primary{animation: col2 3s linear infinite;}
+.business02 .diagram-wrap .fill-primary2{animation: col2 3s linear infinite; animation-delay: 2s;}
+.business02 .diagram-wrap .fill-primary3{animation: col2 3s linear infinite; animation-delay: 4s;}
 
 @keyframes rotate01 {
   from {
@@ -3469,6 +3474,12 @@
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+}
+
+@keyframes col2 {
+  0% {fill:#D6D6D6}
+  50% {fill:#0FB5DF}
+  100% {fill: #D6D6D6}
 }
 
 
@@ -3736,6 +3747,7 @@
     min-height: 350px;
   }
   .business02 .diagram-wrap .diagram-inner > img{object-fit: contain;}
+  .business02 .diagram-wrap .diagram-inner .diagram2 svg{width: 50%; max-width: 100%;}
   /*
   .business02 .diagram-inner .circle p {
     font-size: 16px;
