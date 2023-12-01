@@ -69,6 +69,8 @@ body.noScroll {
   line-height: 80px;
   vertical-align: top;
 }
+
+
 #header .gnb-wrap .gnb > li .depth1 {
   display: block;
   font-size: 18px;
@@ -201,6 +203,11 @@ body.noScroll {
 #footer .go-link:after{background: url(../../images/common/link_icon.png) no-repeat center;}
 .go-link:after{position: absolute; width: 24px; height: 24px; content: ''; top: 50%; right: -26px; transform: translateY(-50%); background: url(../../images/common/link_icon_w.png) no-repeat center; transition: transform 0.3s ease-in;}
 
+
+/* #header .gnb-wrap .gnb > li{padding: 0 25px; max-width: calc(100% / 5 - 50px); width: 100%;}
+#header .gnb-wrap .gnb > li .depth1{padding: 0;}
+#header .gnb > li .depth2{text-align: left;}
+#header .gnb .depth2 ul > li > a{line-height: initial; padding: 10px 0;} */
 
 .footer {
   background: #ffffff;
