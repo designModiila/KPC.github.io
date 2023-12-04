@@ -2638,7 +2638,7 @@
 }
 
 .world-layer.layer01 .layer-content {
-  max-height: 1860px;
+  max-height: 2080px;
 }
 
 .world-layer.layer02 .layer-content {
@@ -2749,7 +2749,7 @@
   gap: 28px 40px;
   padding: 70px 0 300px;
   flex-direction: column;
-  height: 1860px;
+  height: 2080px;
   box-sizing: border-box;
 }
 
