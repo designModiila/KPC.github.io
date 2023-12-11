@@ -1,9 +1,30 @@
 
 
 $(document).ready(function () {
+
+
+  var $fullpage = $('#fullpage');
+  $('#fullpage').fullpage({
+    navigation: false,
+    autoScrolling: true,
+    scrollingSpeed:800,
+    bigSectionsDestination: top,
+    scrollOverflow: true,
+    afterLoad: function(anchorLink, index){
+      if((index == 3)){
+
+  
+      }
+
+    },
+    onLeave: function(anchorLink, index, direction){
+    }
+  });
+
+
   if (!$('body').hasClass('subPage')) {
     var interleaveOffset = 0.5;
-    var numSwiper = new Swiper("#mainVisual.bg-swiper-container", {
+    var numSwiper = new Swiper("#mainVisual", {
       loop: true,
       speed: 1000,
       autoplay: {
@@ -17,7 +38,7 @@ $(document).ready(function () {
       }
     });
 
-    var bgSwiper = new Swiper("#mainVisual.bg-swiper-container", {
+    var bgSwiper = new Swiper("#mainVisual", {
       loop: true,
       parallax: true,
       pagination: {
@@ -116,16 +137,17 @@ $(document).ready(function () {
         scrollTrigger: {
           trigger: ".flow-box-wrap",
           scrub: true,
-          pin: ".main .section03",
+          pin: ".main .section03 .content",
           start: 'top top',
           //end: elmHeight + "bottom",
-          end: `+=${window.innerHeight * 3}`,
+          end: `+=${window.innerHeight * 1}`,
           //end: 'bottom center',
           //markers: true,
         },
         yPercent: -125,
         ease: 'none',
       })
+
 
       _startPosition = window.innerHeight + 0 + "px";
       var $subVisual = document.querySelector('.subVisual')
@@ -258,19 +280,20 @@ $(document).ready(function () {
 
       // });
 
-      gsap.set(".footer-inner", { yPercent: -50 });
-      const uncover = gsap.timeline({ paused: true });
-      uncover.to(".footer-inner", { yPercent: 0, ease: "none" });
-      ScrollTrigger.create({
-        trigger: ".lastSec",
-        start: "bottom +=98%",
-        end: "+=30%",
-        animation: uncover,
-        scrub: true,
-        //markers: true
-      });
-      ScrollTrigger.refresh();
-
+      if ($('body').hasClass('subPage')) {
+        gsap.set(".footer-inner", { yPercent: -50 });
+        const uncover = gsap.timeline({ paused: true });
+        uncover.to(".footer-inner", { yPercent: 0, ease: "none" });
+        ScrollTrigger.create({
+          trigger: ".lastSec",
+          start: "bottom +=98%",
+          end: "+=30%",
+          animation: uncover,
+          scrub: true,
+          //markers: true
+        });
+        ScrollTrigger.refresh();
+      }
 
 
     },

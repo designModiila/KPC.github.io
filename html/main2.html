@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="../src/js/jquery/jquery-ui.min.css">
     <link rel="stylesheet" href="../src/plugin/swiper/swiper.min.css">
     <link rel="stylesheet" href="../src/plugin/select/select2.min.css">
+    <link rel="stylesheet" href="../src/plugin/fullpage/jquery.fullPage.css">
   
     <link rel="stylesheet" href="../src/css/reset.css">
     <link rel="stylesheet" href="../src/css/font.css">
     <link rel="stylesheet" href="../src/css/common.css">
-    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/style2.css">
   
     <script src="../src/js/jquery/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../src/plugin/fullpage/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="../src/plugin/fullpage/scrolloverflow.js"></script>
     <script type="text/javascript" src="../src/plugin/gsap/gsap.min.js"></script>
     <script type="text/javascript" src="../src/plugin/gsap/ScrollTrigger.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollToPlugin.min.js"></script>
     <script src="../src/plugin/swiper/swiper.min.js"></script>
     <script src="../src/plugin/select/select2.min.js"></script>
     <script src="../src/js/common.js"></script>
-    <script src="../src/js/script.js"></script>
+    <script src="../src/js/script2.js"></script>
   </head>
 <body>
   <header id="header" class="header">
@@ -92,9 +94,9 @@
       </a>
     </div>
   </header>
-  <div id="wrap" class="main wrap lastSec">
-    <div id="content" class="content main">
-      <div id="mainVisual" class="section bg-swiper-container">
+  <div id="wrap" class="main wrap">
+    <div id="fullpage" class="content main">
+      <div id="mainVisual" class="section section01 bg-swiper-container swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
@@ -155,14 +157,15 @@
         <div class="swiper-pagination pagination-text"></div>
       </div>
       <div class="section section02">
+        <div class="section02-bg"></div>
         <div class="inner_1600">
           <div class="title-wrap">
-            <div class="sub-title cont">한국전구체</div>
-            <div class="main-title cont">견고한 인프라와 기술력으로 <br>친환경 시대를 열어갑니다</div>
-            <div class="main-desc cont">
+            <div class="sub-title">한국전구체</div>
+            <div class="main-title">견고한 인프라와 기술력으로 <br>친환경 시대를 열어갑니다</div>
+            <div class="main-desc">
               '탈(脫) 탄소화'라는 글로벌 트렌드 속에서 최고의 기술력과 견고한 산업인프라를 기반으로 친환경 전구체를 공급함으로써, 2차전지 소재 공급의 내재화에 앞장서고 신재생에너지 보급과 친환경 모빌리티 시대로의 전환을 선도하고 있습니다.
             </div>
-            <div class="btn-wrap cont">
+            <div class="btn-wrap">
               <a href="#none" class="arrow-btn">기업개요
                 <div class="arrow">
                   <span></span>
@@ -185,54 +188,53 @@
           </div>
         </div>
       </div>
-      <div class="bg-overview">
-        <p class="cont">Toward a Sustainable Future <br>With Precursor, Lithium</p>
-      </div>
       <div class="section section03">
-        <div class="flow-box-wrap">
-          <div class="rightSec">
-            <div class="sticky">
-              <div class="title-wrap">
-                <div class="sub-title cont">경쟁력</div>
-                <div class="main-title cont">원료부터 판매까지 <br>END TO END <br>VALUE CHAIN</div>
+        <div class="content">
+          <div class="flow-box-wrap">
+            <div class="rightSec">
+              <div class="sticky">
+                <div class="title-wrap">
+                  <div class="sub-title">경쟁력</div>
+                  <div class="main-title">원료부터 판매까지 <br>END TO END <br>VALUE CHAIN</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="leftSec">
-            <div class="leftimg leftimg01 cont">
-              <div class="img-info">
-                <div class="img-title">원료공급</div>
-                <div class="img-desc">합작사 KEMCO로부터 전구체 제조 원료인 황산니켈을 <br class="onlyPc">
-                  직접 조달하여 외부 요인에 영향을 받지 않는 안정된 원료 공급망 확보</div>
+            <div class="leftSec">
+              <div class="leftimg leftimg01">
+                <div class="img-info">
+                  <div class="img-title">원료공급</div>
+                  <div class="img-desc">합작사 KEMCO로부터 전구체 제조 원료인 황산니켈을 <br class="onlyPc">
+                    직접 조달하여 외부 요인에 영향을 받지 않는 안정된 원료 공급망 확보</div>
+                </div>
+                <div class="imgBg">
+                  <img src="../images/main/main-sec03-thumb01.png" alt="">
+                </div>
               </div>
-              <div class="imgBg">
-                <img src="../images/main/main-sec03-thumb01.png" alt="">
+              <div class="leftimg leftimg02">
+                <div class="img-info">
+                  <div class="img-title">전구체 생산</div>
+                  <div class="img-desc">리싸이클 원료를 활용한 친환경 전구체 생산 및 <br class="onlyPc">
+                    높은 기술력과 최신 전구체 생산공정 적용을 통한 제품 경쟁력 제고</div>
+                </div>
+                <div class="imgBg">
+                  <img src="../images/main/main-sec03-thumb02.png" alt="">
+                </div>
               </div>
-            </div>
-            <div class="leftimg leftimg02 cont">
-              <div class="img-info">
-                <div class="img-title">전구체 생산</div>
-                <div class="img-desc">리싸이클 원료를 활용한 친환경 전구체 생산 및 <br class="onlyPc">
-                  높은 기술력과 최신 전구체 생산공정 적용을 통한 제품 경쟁력 제고</div>
-              </div>
-              <div class="imgBg">
-                <img src="../images/main/main-sec03-thumb02.png" alt="">
-              </div>
-            </div>
-            <div class="leftimg leftimg03 cont">
-              <div class="img-info">
-                <div class="img-title">제품 판매</div>
-                <div class="img-desc">합작사 LG 화학의 산업 인프라를 활용한 고정된 <br class="onlyPc">
-                  수급처 확보로 공급-생산-판매로 이어지는 산업 순환구조 구축</div>
-              </div>
-              <div class="imgBg">
-                <img src="../images/main/main-sec03-thumb03.png" alt="">
+              <div class="leftimg leftimg03">
+                <div class="img-info">
+                  <div class="img-title">제품 판매</div>
+                  <div class="img-desc">합작사 LG 화학의 산업 인프라를 활용한 고정된 <br class="onlyPc">
+                    수급처 확보로 공급-생산-판매로 이어지는 산업 순환구조 구축</div>
+                </div>
+                <div class="imgBg">
+                  <img src="../images/main/main-sec03-thumb03.png" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="section section04 contD">
+      <div class="section section04">
         <div class="inner_1600">
           <div class="title-wrap">
             <div class="sub-title ">친환경</div>
@@ -268,18 +270,18 @@
           </div>
         </div>
       </div>
-      <div class="section section05">
+      <div class="section section05 fp-auto-height">
         <div class="inner_1600">
           <div class="content-wrap">
             <div class="title-wrap">
-              <div class="sub-title cont">미디어</div>
-              <div class="main-title cont">생생한 KPC 소식</div>
-              <div class="defalut-btn cont">
+              <div class="sub-title">미디어</div>
+              <div class="main-title">생생한 KPC 소식</div>
+              <div class="defalut-btn">
                 <a href="#none">더보기</a>
               </div>
             </div>
 
-            <div class="thumb-wrap contD">
+            <div class="thumb-wrap">
               <div class="thumb-info">
                 <div class="thumb-title">고려아연, K-배터리 산업의 미래 <br>모색하는 ‘전문가 소통 포럼’ 개최</div>
                 <div class="thumb-desc">고려아연이 지난 26일 K-배터리 산업의 현황과 미래 대응 방안 모색을 위한 ‘전문가 소통 포럼’을 개최했다. 이번 포럼은 배터리 산업이 차세대 먹거리로 부상하는 가운데 이를 둘러싼 고려아연이 지난 26일 K-배터리 산업의 현황과 미래 대응 방안 모색을 위한 ‘전문가 소통 포럼’을 개최했다.</div>
@@ -293,166 +295,167 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <footer id="footer" class="footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-nav">
-          <dl>
-            <dt>기업소개</dt>
-            <dd><a href="./company/company_01.html">개요</a></dd>
-            <dd><a href="./company/company_02.html">인사말</a></dd>
-            <dd><a href="./company/company_03.html">비전</a></dd>
-            <dd><a href="./company/company_04.html">계열사소개</a></dd>
-            <dd><a href="./company/company_05.html">사업장</a></dd>
-          </dl>
-          <dl>
-            <dt>사업소개</dt>
-            <dd><a href="./business/business_01.html">전구체</a></dd>
-            <dd><a href="./business/business_02.html">Recycle</a></dd>
-            <dd><a href="./business/business_03.html">생산공정</a></dd>
-            <!-- <dd><a href="#none">생산제품</a></dd> -->
-          </dl>
-          <dl>
-            <dt>ESG</dt>
-            <dd><a href="./esg/esg_01.html">개요</a></dd>
-            <dd><a href="./esg/esg_02.html">안전보건환경(SHE)</a></dd>
-            <dd><a href="./esg/esg_03.html">윤리경영</a></dd>
-            <dd><a href="./esg/esg_04.html">사회공헌</a></dd>
-          </dl>
-          <dl>
-            <dt>Media</dt>
-            <dd><a href="./media/news.html">뉴스룸</a></dd>
-          </dl>
-          <dl>
-            <dt><a href="#none" class="go-link">채용</a></dt>
-          </dl>
-        </div>
-        <div class="family-site">
-          <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
-          <ul class="family-list">
-            <li>
-              <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
-            </li>
-            <li>
-              <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
-            </li>
-            <li>
-              <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
-            </li>
-            <li>
-              <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
-            </li>
-            <li>
-              <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
-            </li>
-            <li>
-              <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
-            </li>
-            <li>
-              <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
-            </li>
-            <li>
-              <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
-            </li>
-            <li>
-              <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
-            </li>
-            <li>
-              <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
-            </li>
-            <li>
-              <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
-            </li>
-            <li>
-              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
-            </li>
-            <li>
-              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
-            </li>
-            <li>
-              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
-            </li>
-            <li>
-              <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
-            </li>
-            <li>
-              <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <ul>
-          <li><a href="../customer/customer_voice.html">고객의소리</a></li>
-          <li><a href="#none" class="privacy">개인정보처리방침</a></li>
-          <li><a href="#none" class="email">이메일 무단수집 거부</a></li>
-          <li class="family-site  onlyMo">
-            <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
-            <ul class="family-list">
-              <li>
-                <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
-              </li>
-              <li>
-                <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
-              </li>
-              <li>
-                <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
-              </li>
-              <li>
-                <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
-              </li>
-              <li>
-                <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
-              </li>
-              <li>
-                <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
-              </li>
-              <li>
-                <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
-              </li>
-              <li>
-                <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
-              </li>
-              <li>
-                <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
-              </li>
-              <li>
-                <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
-              </li>
-              <li>
-                <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
-              </li>
-              <li>
-                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
-              </li>
-              <li>
-                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
-              </li>
-              <li>
-                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
-              </li>
-              <li>
-                <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
-              </li>
-              <li>
-                <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
+      <footer id="footer" class="footer section section06 fp-auto-height">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-nav">
+              <dl>
+                <dt>기업소개</dt>
+                <dd><a href="./company/company_01.html">개요</a></dd>
+                <dd><a href="./company/company_02.html">인사말</a></dd>
+                <dd><a href="./company/company_03.html">비전</a></dd>
+                <dd><a href="./company/company_04.html">계열사소개</a></dd>
+                <dd><a href="./company/company_05.html">사업장</a></dd>
+              </dl>
+              <dl>
+                <dt>사업소개</dt>
+                <dd><a href="./business/business_01.html">전구체</a></dd>
+                <dd><a href="./business/business_02.html">Recycle</a></dd>
+                <dd><a href="./business/business_03.html">생산공정</a></dd>
+                <!-- <dd><a href="#none">생산제품</a></dd> -->
+              </dl>
+              <dl>
+                <dt>ESG</dt>
+                <dd><a href="./esg/esg_01.html">개요</a></dd>
+                <dd><a href="./esg/esg_02.html">안전보건환경(SHE)</a></dd>
+                <dd><a href="./esg/esg_03.html">윤리경영</a></dd>
+                <dd><a href="./esg/esg_04.html">사회공헌</a></dd>
+              </dl>
+              <dl>
+                <dt>Media</dt>
+                <dd><a href="./media/news.html">뉴스룸</a></dd>
+              </dl>
+              <dl>
+                <dt><a href="#none" class="go-link">채용</a></dt>
+              </dl>
+            </div>
+            <div class="family-site">
+              <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
+              <ul class="family-list">
+                <li>
+                  <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
+                </li>
+                <li>
+                  <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
+                </li>
+                <li>
+                  <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
+                </li>
+                <li>
+                  <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
+                </li>
+                <li>
+                  <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
+                </li>
+                <li>
+                  <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
+                </li>
+                <li>
+                  <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
+                </li>
+                <li>
+                  <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
+                </li>
+                <li>
+                  <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
+                </li>
+                <li>
+                  <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
+                </li>
+                <li>
+                  <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
+                </li>
+                <li>
+                  <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
+                </li>
+                <li>
+                  <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
+                </li>
+                <li>
+                  <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
+                </li>
+                <li>
+                  <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
+                </li>
+                <li>
+                  <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <ul>
+              <li><a href="../customer/customer_voice.html">고객의소리</a></li>
+              <li><a href="#none" class="privacy">개인정보처리방침</a></li>
+              <li><a href="#none" class="email">이메일 무단수집 거부</a></li>
+              <li class="family-site  onlyMo">
+                <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
+                <ul class="family-list">
+                  <li>
+                    <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
+                  </li>
+                  <li>
+                    <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
+                  </li>
+                  <li>
+                    <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
+                  </li>
+                  <li>
+                    <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
+                  </li>
+                  <li>
+                    <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
+                  </li>
+                  <li>
+                    <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
+                  </li>
+                  <li>
+                    <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
+                  </li>
+                  <li>
+                    <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
+                  </li>
+                  <li>
+                    <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
+                  </li>
+                  <li>
+                    <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
+                  </li>
+                  <li>
+                    <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
+                  </li>
+                  <li>
+                    <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
+                  </li>
+                  <li>
+                    <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
+                  </li>
+                  <li>
+                    <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
+                  </li>
+                  <li>
+                    <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
+                  </li>
+                  <li>
+                    <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
+                  </li>
+                </ul>
               </li>
             </ul>
-          </li>
-        </ul>
-        <ul>
-          <li><span>ADDRESS. </span>(45011) 울산 울주군 온산읍 당월로 216-51</li>
-          <li><span>TEL. </span>031-737-0954</li>
-          <li><span>E-MAIL. </span>Address@kpc.co.kr</li>
-        </ul>
-        <p class="copy">Copyright &copy; KPC All Right Reserved.</p>
-      </div>
+            <ul>
+              <li><span>ADDRESS. </span>(45011) 울산 울주군 온산읍 당월로 216-51</li>
+              <li><span>TEL. </span>031-737-0954</li>
+              <li><span>E-MAIL. </span>Address@kpc.co.kr</li>
+            </ul>
+            <p class="copy">Copyright &copy; KPC All Right Reserved.</p>
+          </div>
+        </div>
+        <div class="layer-dimm"></div>
+        <div class="privacy-policy"></div>
+        <div class="email-notice"></div>
+      </footer>
     </div>
-    <div class="layer-dimm"></div>
-    <div class="privacy-policy"></div>
-    <div class="email-notice"></div>
-  </footer>
+  </div>
+
 </body>
 </html>
