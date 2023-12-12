@@ -24,7 +24,7 @@
     <script src="../src/js/common.js"></script>
     <script src="../src/js/script2.js"></script>
   </head>
-<body>
+<body id="mainBody">
   <header id="header" class="header">
     <div class="header-wrap">
       <div class="logo-wrap">
@@ -96,65 +96,87 @@
   </header>
   <div id="wrap" class="main wrap">
     <div id="fullpage" class="content main">
-      <div id="mainVisual" class="section section01 bg-swiper-container swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide visual01">
-            <div class="bg-wrap">
-              <div class="video-wrap">
-                <video src="../images/main/main-visual-bg01.mp4" muted autoplay loop playsinline data-keepplaying></video>
+      <div class="section section01">
+        <div class="swiper">
+          <div id="mainVisual" class="bg-swiper-container swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide visual01">
+                <div class="bg-wrap">
+                  <div class="video-wrap">
+                    <video src="../images/main/main-visual-bg01.mp4" muted autoplay loop playsinline data-keepplaying></video>
+                  </div>
+                </div>
               </div>
-              <div class="visual-bg">
-                <div class="title">
-                  <p data-swiper-parallax="300">지속가능한 내일을 앞당기는 </p> 
-                  <p data-swiper-parallax="400">Green Technology</p>
+              <div class="swiper-slide visual02">
+                <div class="bg-wrap">
+                  <div class="video-wrap">
+                    <video src="../images/main/main-visual-bg02.mp4" muted autoplay loop playsinline data-keepplaying></video>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide visual03">
+                <div class="bg-wrap">
+                  <div class="video-wrap">
+                    <video src="../images/main/main-visual-bg03.mp4" muted autoplay loop playsinline data-keepplaying></video>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="swiper-controller">
+              <!-- <div class="swiper-button-prev"></div> -->
+              <div class="swiper-progress-bar">
+                <span class="slide_progress-bar"></span>
+              </div>
+              <!-- <div class="swiper-button-next"></div> -->
+              <div class="swiper-pagination pagination-num">
+                <span class="swiper-pagination-current">1</span>
+                <span class="swiper-pagination-total">1</span>
+              </div>
+            </div>
+          </div>
+          <div id="textVisual" class="text-swiper-container swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide visual01">
+                <div class="bg-wrap">
+                  <div class="visual-bg">
+                    <div class="title">
+                      <p data-swiper-parallax="300">지속가능한 내일을 앞당기는 </p> 
+                      <p data-swiper-parallax="400">Green Technology</p>
+                    </div>
+                  </div>
+                </div>
 
-          </div>
-          <div class="swiper-slide visual02">
-            <div class="bg-wrap">
-              <div class="video-wrap">
-                <video src="../images/main/main-visual-bg02.mp4" muted autoplay loop playsinline data-keepplaying></video>
               </div>
-              <div class="visual-bg">
-                <div class="title">
-                  <p data-swiper-parallax="300">친환경 에너지를 대표하는 </p> 
-                  <p data-swiper-parallax="400">2차전지 핵심소재 기업</p>
-                  </p>
+              <div class="swiper-slide visual02">
+                <div class="bg-wrap">
+                  <div class="visual-bg">
+                    <div class="title">
+                      <p data-swiper-parallax="300">친환경 에너지를 대표하는 </p> 
+                      <p data-swiper-parallax="400">2차전지 핵심소재 기업</p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide visual03">
+                <div class="bg-wrap">
+                  <div class="visual-bg">
+                    <div class="title">
+                      <p data-swiper-parallax="300">ESG 경영을 기반으로 </p> 
+                      <p data-swiper-parallax="400">지속가능한 미래를 그려갑니다</p>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="swiper-slide visual03">
-            <div class="bg-wrap">
-              <div class="video-wrap">
-                <video src="../images/main/main-visual-bg03.mp4" muted autoplay loop playsinline data-keepplaying></video>
-              </div>
-              <div class="visual-bg">
-                <div class="title">
-                  <p data-swiper-parallax="300">ESG 경영을 기반으로 </p> 
-                  <p data-swiper-parallax="400">지속가능한 미래를 그려갑니다</p>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <div class="swiper-pagination pagination-text"></div>
           </div>
         </div>
-        <div class="swiper-controller">
-          <!-- <div class="swiper-button-prev"></div> -->
-          <div class="swiper-progress-bar">
-            <span class="slide_progress-bar"></span>
-          </div>
-          <!-- <div class="swiper-button-next"></div> -->
-          <div class="swiper-pagination pagination-num">
-            <span class="swiper-pagination-current">1</span>
-            <span class="swiper-pagination-total">1</span>
-          </div>
-        </div>
-        <div class="swiper-pagination pagination-text"></div>
       </div>
       <div class="section section02">
         <div class="section02-bg"></div>

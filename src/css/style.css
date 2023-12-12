@@ -351,7 +351,7 @@
 }
 
 .main .bg-overview {
-  background: url(../../images/main/main-sec02-bg.png) no-repeat center center;
+  background: url(../../images/main/main-sec02-bg1.png) no-repeat center center;
   height: 663px;
   background-attachment: fixed;
   background-size: cover;
@@ -384,10 +384,7 @@
 }
 
 .main .section03 .rightSec {
-  /* height: 100vh; */
-  position: sticky;
-  top: 200px;
-
+  height: 100vh;
 }
 
 .main .section03 .leftSec {

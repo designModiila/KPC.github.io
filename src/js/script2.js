@@ -24,7 +24,7 @@ $(document).ready(function () {
 
   if (!$('body').hasClass('subPage')) {
     var interleaveOffset = 0.5;
-    var numSwiper = new Swiper("#mainVisual", {
+    var numSwiper = new Swiper("#textVisual", {
       loop: true,
       speed: 1000,
       autoplay: {
@@ -33,7 +33,7 @@ $(document).ready(function () {
       },
       //autoplay : false,
       pagination: {
-        el: '#mainVisual .pagination-text',
+        el: '#textVisual .pagination-text',
         clickable: true,
       }
     });
