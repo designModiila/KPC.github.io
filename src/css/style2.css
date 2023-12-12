@@ -400,10 +400,10 @@
 
 .section03 { overflow:auto; scrollbar-width:none; }
 .main .section03 .content::-webkit-scrollbar { display:none; }
-.main .section03 .content{position: relative; height: 100vh; overflow: auto; padding: 0 0 0 8.333vw}
-.main .section03 .flow-box-wrap{position: relative;}
-.main .section03 .rightSec{position: sticky; left: 0; top: 200px; width: 540px; height: 300px;}
-.main .section03 .leftSec{padding-left: 540px; padding-bottom: 180px;}
+.main .section03 .content{position: relative; height: 100vh; overflow: auto;}
+.main .section03 .flow-box-wrap{position: relative; display: flex; justify-content: space-between;}
+.main .section03 .rightSec{position: sticky; left: 8.333vw; top: 200px; width: 540px; height: 300px;}
+.main .section03 .leftSec{padding-top: 340px; padding-bottom: 180px;}
 
 
 .main .section03 .leftimg {
