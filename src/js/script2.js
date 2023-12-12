@@ -8,9 +8,7 @@ $(function() {
     scrollOverflow: true,
     onLeave: function(anchorLink, index, direction) {
       $.fn.fullpage.setAllowScrolling(true);
-      if (index == 2) {
-
-      }else if (index == 3) {
+      if (index == 3) {
         $.fn.fullpage.setAllowScrolling(false);
 				$('.main .section03 .content').scroll(function() {
 					var scrollBox = $(this);
@@ -27,9 +25,8 @@ $(function() {
 						//$.fn.fullpage.setAllowScrolling(true);
 						console.log('처음')
 					}
-					
 				});
-				$('.section03 .content').on('wheel', function(e) {
+				$('.main .section03 .content').on('wheel', function(e) {
 					var scrollBox = $(this);
 					var scrZ = 0;
 					var scrT = $(scrollBox).scrollTop();
@@ -55,14 +52,9 @@ $(function() {
 						}
 					}
 				});
-      }else if (index == 4) {
-
-      }else if (index == 5) {
-
-      }else if (index == 6) {
-
       }
     },
+
 
   });
 
