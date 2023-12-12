@@ -1,26 +1,76 @@
-
-
-$(document).ready(function () {
-
-
-  var $fullpage = $('#fullpage');
+$(function() {
   $('#fullpage').fullpage({
     navigation: false,
-    autoScrolling: true,
+    verticalCentered: true,
+    // autoScrolling: true,
     scrollingSpeed:800,
-    bigSectionsDestination: top,
+    css3:true,
     scrollOverflow: true,
-    afterLoad: function(anchorLink, index){
-      if((index == 3)){
+    onLeave: function(anchorLink, index, direction) {
+      $.fn.fullpage.setAllowScrolling(true);
+      if (index == 2) {
 
-  
+      }else if (index == 3) {
+        $.fn.fullpage.setAllowScrolling(false);
+				$('.main .section03 .content').scroll(function() {
+					var scrollBox = $(this);
+					var scrT = $(scrollBox).scrollTop();
+					var scrH = $('.section03 .content .leftSec').height();
+					var scrB = scrH - $(window).height();
+					
+					if (scrT < scrB) {
+					} else {
+						//$.fn.fullpage.setAllowScrolling(true);
+						console.log('끝');
+					}
+					if (scrT == 0) {
+						//$.fn.fullpage.setAllowScrolling(true);
+						console.log('처음')
+					}
+					
+				});
+				$('.section03 .content').on('wheel', function(e) {
+					var scrollBox = $(this);
+					var scrZ = 0;
+					var scrT = $(scrollBox).scrollTop();
+					var scrH = $('.main .section03 .flow-box-wrap').height();
+					var scrB = scrH - $(window).height();
+					var wheelDelta = e.originalEvent.deltaY;
+					/*if (scrT == scrB) {
+						$.fn.fullpage.setAllowScrolling(true);
+					}*/
+					if (wheelDelta > -100) {
+						if (scrT < scrB) {
+							// Scroll down
+						} else {
+							$.fn.fullpage.setAllowScrolling(true);
+							console.log('down');
+						}
+					} else {
+						if (scrT > 0) {
+							// Scroll up
+						} else {
+							$.fn.fullpage.setAllowScrolling(true);
+							console.log('up');
+						}
+					}
+				});
+      }else if (index == 4) {
+
+      }else if (index == 5) {
+
+      }else if (index == 6) {
+
       }
-
     },
-    onLeave: function(anchorLink, index, direction){
-    }
+
   });
 
+
+
+});
+
+$(function() {
 
   if (!$('body').hasClass('subPage')) {
     var interleaveOffset = 0.5;
@@ -132,21 +182,21 @@ $(document).ready(function () {
 
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": function () {
-      const elmHeight = document.querySelectorAll('.flow-box-wrap').offsetHeight;
-      gsap.to(".leftSec", {
-        scrollTrigger: {
-          trigger: ".flow-box-wrap",
-          scrub: true,
-          pin: ".main .section03 .content",
-          start: 'top top',
-          //end: elmHeight + "bottom",
-          end: `+=${window.innerHeight * 1}`,
-          //end: 'bottom center',
-          //markers: true,
-        },
-        yPercent: -125,
-        ease: 'none',
-      })
+      // const elmHeight = document.querySelectorAll('.flow-box-wrap').offsetHeight;
+      // gsap.to(".leftSec", {
+      //   scrollTrigger: {
+      //     trigger: ".flow-box-wrap",
+      //     scrub: true,
+      //     pin: ".main .section03 .flow-box-wrap",
+      //     start: 'top top',
+      //     //end: elmHeight + "bottom",
+      //     end: `+=${window.innerHeight * 1}`,
+      //     //end: 'bottom center',
+      //     //markers: true,
+      //   },
+      //   yPercent: -125,
+      //   ease: 'none',
+      // })
 
 
       _startPosition = window.innerHeight + 0 + "px";

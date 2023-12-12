@@ -3,6 +3,8 @@
 #mainBody:not(.fp-viewing-0) #header .gnb-wrap .gnb>li .depth1{color: #2B2B2B;}
 #mainBody:not(.fp-viewing-0) #header h1{background: url(../../images/common/kpc_logo_c.png) no-repeat center;}
 #mainBody:not(.fp-viewing-0) #header .go-link:after{background: url(../../images/common/link_icon.png) no-repeat center;}
+.main{overflow: hidden;}
+.main .section {overflow: hidden;}
 
 .main .sub-title {
   font-weight: 500;
@@ -346,7 +348,6 @@
 
 /*-----1207추가-----*/
 .main .section02 {
-  height: 100vh;
   position: relative;
 }
 
@@ -373,26 +374,37 @@
 /*-----1207추가-----*/
 
 
-.section03 .flow-box-wrap {
+/* .section03 .flow-box-wrap {
   height: 100%;
   display: flex;
   flex-direction: row;
-  /* overflow: hidden; */
-  padding: 200px 0 0 8.333vw;
+  padding: 200px 0 200px 8.333vw;
   justify-content: space-between;
   box-sizing: border-box;
 }
 
-/* .main .section03 .rightSec {
+.main .section03 .rightSec {
   height: 100vh;
-} */
+  position: relative;
+}
 
-.main .section03 .rightSec .title-wrap{position: sticky; top: 0px;}
+.main .section03 .rightSec .sticky{
+  position: sticky;
+  top: 0px;
+}
 
 .main .section03 .leftSec {
   height: 100vh;
   padding-top: 100px;
-}
+} */
+
+.section03 { overflow:auto; scrollbar-width:none; }
+.main .section03 .content::-webkit-scrollbar { display:none; }
+.main .section03 .content{position: relative; height: 100vh; overflow: auto; padding: 0 0 0 8.333vw}
+.main .section03 .flow-box-wrap{position: relative;}
+.main .section03 .rightSec{position: sticky; left: 0; top: 200px; width: 540px; height: 300px;}
+.main .section03 .leftSec{padding-left: 540px; padding-bottom: 180px;}
+
 
 .main .section03 .leftimg {
   margin-bottom: 100px;
@@ -421,11 +433,10 @@
 }
 
 .main .section04 {
-  /*margin-top: 200px;*/
-  height: 100vh;
   background: url(../../images/main/main-sec04-bg.png) no-repeat center;
   background-size: cover;
   position: relative;
+  z-index: 2;
 }
 
 .main .section04 .title-wrap {
@@ -478,12 +489,14 @@
   display: none;
 }
 
-.main .section05 {
-  padding: 215px 0 290px;
+.main .section05 .inner_1600{
+  display: flex;
+  align-items: center;
 }
 
 .main .section05 .content-wrap {
   display: flex;
+  flex: 1;
   gap: 152px;
 }
 
