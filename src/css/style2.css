@@ -575,15 +575,15 @@
 .section03 .ani.on .leftSec .leftimg02{animation:ani 0.8s 1s; animation-fill-mode:both;}
 .section03 .ani.on .leftSec .leftimg03{animation:ani 0.8s 1.3s; animation-fill-mode:both;}
 
-.section04.ani .title-wrap .sub-title,
-.section04.ani .title-wrap .main-title,
-.section04.ani .title-wrap .defalut-btn,
-.section04.ani .diagram-wrap{opacity: 0;}
+.section04 .ani .sub-title,
+.section04 .ani .main-title,
+.section04 .ani .defalut-btn,
+.section04 .ani .diagram-inner{opacity: 0;}
 
-.section04.ani.on .title-wrap .sub-title{animation:ani 0.8s 0.1s; animation-fill-mode:both;}
-.section04.ani.on .title-wrap .main-title{animation:ani 0.8s 0.4s; animation-fill-mode:both;}
-.section04.ani.on .title-wrap .defalut-btn{animation:ani 0.8s 0.7s; animation-fill-mode:both;}
-.section04.ani.on .diagram-wrap{animation:ani 0.8s 1s; animation-fill-mode:both;}
+.section04 .ani.on .sub-title{animation:ani 0.8s 0.1s; animation-fill-mode:both;}
+.section04 .ani.on .main-title{animation:ani 0.8s 0.4s; animation-fill-mode:both;}
+.section04 .ani.on .defalut-btn{animation:ani 0.8s 0.7s; animation-fill-mode:both;}
+.section04 .ani.on .diagram-inner{animation:ani 0.8s 1s; animation-fill-mode:both;}
 
 .section05 .ani .title-wrap .sub-title,
 .section05 .ani .title-wrap .main-title,
