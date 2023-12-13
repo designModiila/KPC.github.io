@@ -1,4 +1,5 @@
 $(function() {
+  // var aniBox = $('.ani');
   $('#fullpage').fullpage({
     navigation: false,
     verticalCentered: true,
@@ -54,6 +55,11 @@ $(function() {
 				});
       }
     },
+    // afterLoad: function (anchorLink, index, direction) {
+		// 	if (index != 0) {
+		// 		$(this).find(aniBox).addClass('on');
+		// 	}
+    // },
 
 
   });

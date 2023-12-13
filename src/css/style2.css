@@ -544,6 +544,56 @@
   flex: 1;
   text-align: right;
 }
+/*에니메이션*/
+@keyframes ani {
+	0% { -webkit-transform:translateY(100px); -ms-transform:translateY(100px); transform:translateY(100px); opacity:0;}
+	100% { -webkit-transform:translateY(0); -ms-transform:translateY(0); transform:translateY(0); opacity:1;}
+}
+
+.section02 .section02-bg{transform: scale(1.0,1.0);  transition: all 14s cubic-bezier(0, 1, 0.34, 0.99);}
+.section02 .sub-title,
+.section02 .main-title,
+.section02 .main-desc,
+.section02 .btn-wrap{opacity: 0;}
+
+.section02.active .section02-bg{transform: scale(1.1,1.1) rotate(0.0001deg); transition: all 14s cubic-bezier(0, 1, 0.34, 0.99);}
+.section02.active .sub-title{animation:ani 0.8s 0.1s; animation-fill-mode:both;}
+.section02.active .main-title{animation:ani 0.8s 0.4s; animation-fill-mode:both;}
+.section02.active .main-desc{animation:ani 0.8s 0.7s; animation-fill-mode:both;}
+.section02.active .btn-wrap{animation:ani 0.8s 1s; animation-fill-mode:both;}
+
+
+.section03 .rightSec .sub-title, 
+.section03 .rightSec .main-title,
+.section03 .leftSec .leftimg01,
+.section03 .leftSec .leftimg02,
+.section03 .leftSec .leftimg03{opacity: 0;}
+
+.section03.active .rightSec .sub-title{animation:ani 0.8s 0.1s; animation-fill-mode:both;}
+.section03.active .rightSec .main-title{animation:ani 0.8s 0.4s; animation-fill-mode:both;}
+.section03.active .leftSec .leftimg01{animation:ani 0.8s 0.7s; animation-fill-mode:both;}
+.section03.active .leftSec .leftimg02{animation:ani 0.8s 1s; animation-fill-mode:both;}
+.section03.active .leftSec .leftimg03{animation:ani 0.8s 1.3s; animation-fill-mode:both;}
+
+.section04 .title-wrap .sub-title,
+.section04 .title-wrap .main-title,
+.section04 .title-wrap .defalut-btn,
+.section04 .diagram-wrap{opacity: 0;}
+
+.section04.active .title-wrap .sub-title{animation:ani 0.8s 0.1s; animation-fill-mode:both;}
+.section04.active .title-wrap .main-title{animation:ani 0.8s 0.4s; animation-fill-mode:both;}
+.section04.active .title-wrap .defalut-btn{animation:ani 0.8s 0.7s; animation-fill-mode:both;}
+.section04.active .diagram-wrap{animation:ani 0.8s 1s; animation-fill-mode:both;}
+
+.section05 .title-wrap .sub-title,
+.section05 .title-wrap .main-title,
+.section05 .title-wrap .defalut-btn,
+.section05 .thumb-wrap{opacity: 0}
+
+.section05.active .title-wrap .sub-title{animation:ani 0.8s 0.1s; animation-fill-mode:both;}
+.section05.active .title-wrap .main-title{animation:ani 0.8s 0.4s; animation-fill-mode:both;}
+.section05.active .title-wrap .defalut-btn{animation:ani 0.8s 0.7s; animation-fill-mode:both;}
+.section05.active .thumb-wrap{animation:ani 0.8s 1s; animation-fill-mode:both;}
 
 /* 반응형 */
 
@@ -738,9 +788,7 @@
     width: 100%;
   }
 
-  .main .section02 {
-    padding: 60px 0 44px;
-  }
+
 
   .main .sub-title {
     font-size: 14px;
@@ -762,14 +810,18 @@
     padding-bottom: 0;
   }
 
+  .main .section03 .rightSec{height: auto; position: initial}
+
   .main .section03 .flow-box-wrap {
-    padding: 60px 32px;
+    padding: 90px 32px;
     flex-direction: column;
     height: auto;
+    gap: 30px;
   }
 
   .main .section03 .leftSec {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .main .section03 .leftimg {
@@ -806,11 +858,10 @@
   .main .section04 .diagram-wrap .diagram-inner > img{object-fit: contain;}
   .main .section04 .diagram-wrap .diagram-inner .diagram2 svg{width: 70%;}
 
-  .main .section05 {
-    padding: 60px 0 115px;
-  }
+
 
   .main .section05 .content-wrap {
+    padding-top: 80px;
     flex-direction: column;
     gap: 0;
   }
