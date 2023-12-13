@@ -400,10 +400,10 @@
 
 .section03 { overflow:auto; scrollbar-width:none; }
 .main .section03 .content::-webkit-scrollbar { display:none; }
-.main .section03 .content{position: relative; height: 100vh; overflow: auto;}
-.main .section03 .flow-box-wrap{position: relative; display: flex; justify-content: space-between;}
-.main .section03 .rightSec{position: sticky; left: 8.333vw; top: 200px; width: 540px; height: 300px;}
-.main .section03 .leftSec{padding-top: 340px; padding-bottom: 180px;}
+.main .section03 .content{position: relative; margin: 0 auto;; height: 100vh; overflow: auto;}
+.main .section03 .flow-box-wrap{position: relative;}
+.main .section03 .rightSec{position: sticky; left: 0; top: 200px; max-width: 1600px; margin: auto; height: 300px;}
+.main .section03 .leftSec{padding-left: 810px; padding-bottom: 180px; display: flex; flex-direction: column; flex-wrap: wrap; align-content: flex-end;}
 
 
 .main .section03 .leftimg {
@@ -598,6 +598,8 @@
 /* 반응형 */
 
 @media (max-width: 1700px) {
+  .main .section03 .rightSec{width: 100%; padding: 0 5vw;}
+  .main .section03 .leftSec{padding-left: 590px;}
   .main .section04 .diagram-wrap {
     right: 5vw;
   }
@@ -664,6 +666,7 @@
     font-size: 22px;
   }
 
+  .main .section03 .leftSec{padding-left: 490px;}
   .main .section03 .leftimg .img-title {
     font-size: 30px;
   }
@@ -703,6 +706,7 @@
     line-height: 30px;
   }
 
+  .main .section03 .leftSec{padding-left: 450px;}
 
   .main .section03 .leftimg .img-title {
     font-size: 26px;
@@ -731,7 +735,7 @@
 }
 
 @media (max-width: 825px) {
-  #mainVisual .title p {
+  #textVisual .title p {
     font-size: 35px;
     line-height: 43px;
   }
@@ -763,11 +767,11 @@
 }
 
 @media (max-width: 767px) {
-  #mainVisual .title {
+  #textVisual .title {
     padding-bottom: 212px;
   }
 
-  #mainVisual .title p {
+  #textVisual .title p {
     font-size: 28px;
     line-height: normal;
   }
@@ -776,7 +780,7 @@
     bottom: 147px;
   }
 
-  #mainVisual .swiper-pagination-bullets.pagination-text {
+  #textVisual .swiper-pagination-bullets.pagination-text {
     bottom: 99px;
   }
 
@@ -810,18 +814,16 @@
     padding-bottom: 0;
   }
 
-  .main .section03 .rightSec{height: auto; position: initial}
-
   .main .section03 .flow-box-wrap {
-    padding: 90px 32px;
+    padding: 90px 32px 120px;
     flex-direction: column;
     height: auto;
-    gap: 30px;
   }
 
+  .main .section03 .rightSec{height: auto; position: initial; padding: 0; margin-bottom: 30px;}
+
   .main .section03 .leftSec {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .main .section03 .leftimg {
@@ -849,8 +851,7 @@
   .main .section04 .diagram-wrap {
     width: 100%;
     right: auto;
-    left: 50%;
-    transform: translateX(-50%);
+    left: auto;
     bottom: 5.3vh;
   }
   .main .section04 .diagram-wrap{zoom: inherit}

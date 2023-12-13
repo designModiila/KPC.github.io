@@ -4,7 +4,7 @@ $(function() {
     navigation: false,
     verticalCentered: true,
     // autoScrolling: true,
-    scrollingSpeed:800,
+    scrollingSpeed:1000,
     css3:true,
     scrollOverflow: true,
     onLeave: function(anchorLink, index, direction) {
