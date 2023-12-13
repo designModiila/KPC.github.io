@@ -767,6 +767,10 @@
 }
 
 @media (max-width: 767px) {
+  #mainBody:not(.fp-viewing-0) #header #header .btn-mo-menu-open{background: #2b2b2b;}
+  #mainBody:not(.fp-viewing-0) #header #header #header .btn-mo-menu-open:before{background: #2b2b2b;}
+  #mainBody:not(.fp-viewing-0) #header #header #header .btn-mo-menu-open:after{background: #2b2b2b;}
+
   #textVisual .title {
     padding-bottom: 212px;
   }
