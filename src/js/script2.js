@@ -7,7 +7,7 @@ $(function() {
     scrollingSpeed:1000,
     css3:true,
     scrollOverflow: true,
-    // responsiveWidth: 767,
+    responsiveWidth: 767,
     onLeave: function(anchorLink, index, direction) {
       $.fn.fullpage.setAllowScrolling(true);
       if (index == 3) {
