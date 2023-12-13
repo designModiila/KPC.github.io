@@ -556,7 +556,7 @@
 .section02 .ani .main-desc,
 .section02 .ani .btn-wrap{opacity: 0;}
 
-.section02.active .section02-bg{transform: scale(1.1,1.1) rotate(0.0001deg); transition: all 8s cubic-bezier(0, 1, 0.34, 0.99);}
+.section02.active .section02-bg{transform: scale(1.2,1.2) rotate(0.0001deg); transition: all 8s cubic-bezier(0, 1, 0.34, 0.99);}
 .section02 .ani.on .sub-title{animation:ani 0.8s 0.1s; animation-fill-mode:both;}
 .section02 .ani.on .main-title{animation:ani 0.8s 0.4s; animation-fill-mode:both;}
 .section02 .ani.on .main-desc{animation:ani 0.8s 0.7s; animation-fill-mode:both;}

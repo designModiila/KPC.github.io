@@ -57,12 +57,51 @@ $(function() {
       }
     },
     afterLoad: function (anchorLink, index, direction) {
+      setTimeout(function () {
+        $('.fp-table.active').addClass('loaded');
+      }, 2500);
 			if (index != 0) {
 				$(this).find(aniBox).addClass('on');
 			}
     },
 
 
+  });
+
+
+  var chkSectionHeight = function chkSectionHeight() {
+    var $target = $('.main .section');
+    var winHeight = $(window).height();
+    $target.height(winHeight);
+  };
+
+  chkSectionHeight();
+  $(window).on('resize', function () {
+    chkSectionHeight();
+  });
+
+  var chkScrollPages = function chkScrollPages() {
+    var scrollTop = $(window).scrollTop();
+    var $target = $fullpage.find('.section');
+    var $body = $('body');
+    var currentNum = 0;
+    $target.each(function (idx, item) {
+      // console.log(idx, item);
+      var $target = $(item);
+      var targetOffsetTop = $target.offset().top;
+      $body.removeClass("fp-viewing-".concat(idx));
+
+      if (scrollTop >= targetOffsetTop) {
+        $target.addClass('loaded');
+        currentNum = idx;
+      }
+    });
+    $body.addClass("fp-viewing-".concat(currentNum));
+  };
+
+  chkScrollPages();
+  $(window).on('scroll', function (e) {
+    chkScrollPages();
   });
 
 
