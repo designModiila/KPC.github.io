@@ -10,7 +10,7 @@ $(function() {
       $.fn.fullpage.setAllowScrolling(true);
       if (index == 3) {
         $.fn.fullpage.setAllowScrolling(false);
-				$('.main .section03 .content').scroll(function() {
+				$('.section03 .content').scroll(function() {
 					var scrollBox = $(this);
 					var scrT = $(scrollBox).scrollTop();
 					var scrH = $('.section03 .content .leftSec').height();
@@ -26,11 +26,11 @@ $(function() {
 						console.log('처음')
 					}
 				});
-				$('.main .section03 .content').on('wheel', function(e) {
+				$('.section03 .content').on('wheel', function(e) {
 					var scrollBox = $(this);
 					var scrZ = 0;
 					var scrT = $(scrollBox).scrollTop();
-					var scrH = $('.main .section03 .flow-box-wrap').height();
+					var scrH = $('.section03 .flow-box-wrap').height();
 					var scrB = scrH - $(window).height();
 					var wheelDelta = e.originalEvent.deltaY;
 					/*if (scrT == scrB) {
