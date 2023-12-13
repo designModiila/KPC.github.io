@@ -1,8 +1,8 @@
 @charset "utf-8";
-#mainBody:not(.fp-viewing-0) #header{background: #FFFFFF;}
+/* #mainBody:not(.fp-viewing-0) #header{background: #FFFFFF;}
 #mainBody:not(.fp-viewing-0) #header .gnb-wrap .gnb>li .depth1{color: #2B2B2B;}
 #mainBody:not(.fp-viewing-0) #header h1{background: url(../../images/common/kpc_logo_c.png) no-repeat center;}
-#mainBody:not(.fp-viewing-0) #header .go-link:after{background: url(../../images/common/link_icon.png) no-repeat center;}
+#mainBody:not(.fp-viewing-0) #header .go-link:after{background: url(../../images/common/link_icon.png) no-repeat center;} */
 .main{overflow: hidden;}
 .main .section {overflow: hidden;}
 

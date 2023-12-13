@@ -10,7 +10,11 @@ $(function() {
     responsiveWidth: 767,
     onLeave: function(anchorLink, index, direction) {
       $.fn.fullpage.setAllowScrolling(true);
-      if (index == 3) {
+      if(index == 1){
+        $('#header').removwClass('__w')
+      }else if(index == 2){
+        $('#header').removeClass('__w')
+      }else if (index == 3) {
         $.fn.fullpage.setAllowScrolling(false);
 				$('.section03 .content').scroll(function() {
 					var scrollBox = $(this);
@@ -54,6 +58,11 @@ $(function() {
 						}
 					}
 				});
+      }
+      else if(index == 4){
+        $('#header').removeClass('__w')
+      }else{
+        $('#header').addClass('__w')
       }
     },
     afterLoad: function (anchorLink, index, direction) {
