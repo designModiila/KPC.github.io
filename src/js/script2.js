@@ -11,10 +11,11 @@ $(function() {
     onLeave: function(anchorLink, index, direction) {
       $.fn.fullpage.setAllowScrolling(true);
       if(index == 1){
-        $('#header').removwClass('__w')
+        $('#header').removeClass('__w')
       }else if(index == 2){
         $('#header').removeClass('__w')
       }else if (index == 3) {
+        $('#header').addClass('__w')
         $.fn.fullpage.setAllowScrolling(false);
 				$('.section03 .content').scroll(function() {
 					var scrollBox = $(this);
