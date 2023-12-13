@@ -3,7 +3,7 @@ $(function() {
   $('#fullpage').fullpage({
     navigation: false,
     verticalCentered: true,
-    // autoScrolling: true,
+    autoScrolling: true,
     scrollingSpeed:1000,
     css3:true,
     scrollOverflow: true,
