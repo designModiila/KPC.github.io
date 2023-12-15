@@ -422,88 +422,93 @@ $(document).ready(function () {
 
 
 
-    var $swiperSelector = $('.project-slide');
-    $swiperSelector.each(function(index) {
-      var $this = $(this);
-      $this.addClass('swiper-slider-' + index);
-      
-      // var dragSize = $this.data('drag-size') ? $this.data('drag-size') : 99;
-      var freeMode = $this.data('free-mode') ? $this.data('free-mode') : false;
-      var loop = $this.data('loop') ? $this.data('loop') : false;
-      var slidesDesktop = $this.data('slides-desktop') ? $this.data('slides-desktop') : 1;
-      var slidesTablet = $this.data('slides-tablet') ? $this.data('slides-tablet') : 1;
-      var slidesMobile = $this.data('slides-mobile') ? $this.data('slides-mobile') : 1;
-      var spaceBetween = $this.data('space-between') ? $this.data('space-between'): 20;
-  
-      var swiper = new Swiper('.swiper-slider-' + index, {
-        direction: 'horizontal',
-        loop: loop,
-        freeMode: freeMode,
-        spaceBetween: spaceBetween,
-        breakpoints: {
-          1920: {
-            slidesPerView: slidesDesktop
-          },
-          1085: {
-            slidesPerView: slidesTablet
-          },
-          768: {
-            slidesPerView: slidesMobile
-          }
+  var $swiperSelector = $('.project-slide');
+  $swiperSelector.each(function(index) {
+    var $this = $(this);
+    $this.addClass('swiper-slider-' + index);
+    
+    // var dragSize = $this.data('drag-size') ? $this.data('drag-size') : 99;
+    var freeMode = $this.data('free-mode') ? $this.data('free-mode') : false;
+    var loop = $this.data('loop') ? $this.data('loop') : false;
+    var slidesDesktop = $this.data('slides-desktop') ? $this.data('slides-desktop') : 1;
+    var slidesTablet = $this.data('slides-tablet') ? $this.data('slides-tablet') : 1;
+    var slidesMobile = $this.data('slides-mobile') ? $this.data('slides-mobile') : 1;
+    var spaceBetween = $this.data('space-between') ? $this.data('space-between'): 20;
+
+    var swiper = new Swiper('.swiper-slider-' + index, {
+      direction: 'horizontal',
+      loop: loop,
+      speed: 500,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      freeMode: freeMode,
+      spaceBetween: spaceBetween,
+      breakpoints: {
+        1920: {
+          slidesPerView: slidesDesktop
         },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-          formatFractionCurrent: function (number) {
-              return + number;
-          }
+        1085: {
+          slidesPerView: slidesTablet
         },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          draggable: true,
-          // dragSize: dragSize
-        },
-  
-      });
+        768: {
+          slidesPerView: slidesMobile
+        }
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            return + number;
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+        // dragSize: dragSize
+      },
+
+    });
+  });
+
+
+
+
+
+  function esg01Timeline() {
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".esg01-timeline",
+        start: "top top",
+        end: "+=300%",
+        scrub: 1,
+        pin: true,
+      },
     });
 
+    tl.to(".esg01-timeline", {duration: 1, delay: 0.5})
+      .to(".esg01-timeline .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
+      .to(".esg01-timeline .sec01 .img", {duration: 1}, "myLabel-=1")
+      .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel-=1")
+      .to(".esg01-timeline .sec02", {duration: 1, opacity: 1}, "myLabel")
+      .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
+      .to(".esg01-timeline .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
+      .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel")
+      
+      .to(".esg01-timeline .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
+      .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
+      .to(".esg01-timeline .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
+      .to(".esg01-timeline .sec03 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel+=1")
 
+    return tl;
+  }
 
-
-
-    function esg01Timeline() {
-      var tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".esg01-timeline",
-          start: "top top",
-          end: "+=300%",
-          scrub: 1,
-          pin: true,
-        },
-      });
-  
-      tl.to(".esg01-timeline", {duration: 1, delay: 0.5})
-        .to(".esg01-timeline .sec01", {duration: 1, opacity: 1}, "myLabel-=1")
-        .to(".esg01-timeline .sec01 .img", {duration: 1}, "myLabel-=1")
-        .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel-=1")
-        .to(".esg01-timeline .sec02", {duration: 1, opacity: 1}, "myLabel")
-        .to(".esg01-timeline .sec01 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel")
-        .to(".esg01-timeline .sec02 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel")
-        .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel")
-        
-        .to(".esg01-timeline .sec03", {duration: 1, opacity: 1}, "myLabel+=1")
-        .to(".esg01-timeline .sec02 .sub-txt", {duration: 1, top: "0", y: "-100%"}, "myLabel+=1")
-        .to(".esg01-timeline .sec03 .img", {duration: 1, scale: 1, transformOrigin: "50% 0%"}, "myLabel+=1")
-        .to(".esg01-timeline .sec03 .sub-txt", {duration: 1, top: "30%", y: "-50%"}, "myLabel+=1")
-  
-      return tl;
-    }
-
-    var overviewTl = gsap.timeline();
+  var overviewTl = gsap.timeline();
   overviewTl.add(esg01Timeline(), "+=1");
 
   function layer_open(no) {

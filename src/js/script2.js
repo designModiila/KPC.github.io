@@ -559,6 +559,11 @@ $(function() {
       var swiper = new Swiper('.swiper-slider-' + index, {
         direction: 'horizontal',
         loop: loop,
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
         freeMode: freeMode,
         spaceBetween: spaceBetween,
         breakpoints: {
