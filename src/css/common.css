@@ -528,7 +528,7 @@ body.noScroll {
     height: auto;
     transition: height 0.3s ease-in-out;
   }
-  #header .gnb .depth2 ul > li > a{margin-bottom: 12px; line-height: unset;}
+  #header .gnb .depth2 ul > li > a{margin-bottom: 5px; line-height: unset;}
   #header .gnb > li.expend .depth2 {
     height: 100%;
   }
