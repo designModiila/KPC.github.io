@@ -12,8 +12,10 @@ $(function() {
       $.fn.fullpage.setAllowScrolling(true);
       if(index == 1){
         $('#header').removeClass('__w')
+        $('.btn_top').css('opacity','0');
       }else if(index == 2){
         $('#header').removeClass('__w')
+        $('.btn_top').css('opacity','1');
       }else if (index == 3) {
         $('#header').addClass('__w')
         $.fn.fullpage.setAllowScrolling(false);
@@ -78,6 +80,10 @@ $(function() {
 
   });
 
+  $('.btn_top').click(function() {
+		$.fn.fullpage.moveTo(1, 1); // 이동하고싶은 페이지
+	});
+
 
   var chkSectionHeight = function chkSectionHeight() {
     var $target = $('.main .section');
@@ -119,6 +125,17 @@ $(function() {
 });
 
 $(function() {
+  $(window).scroll(function(){
+    if( $(this).scrollTop() > 500 ){
+      $(".btn_top").addClass("on");
+    }
+    else{
+      $(".btn_top").removeClass("on");
+    }
+  });
+  $(".btn_top").click(function(){
+    window.scrollTo({top : 0, behavior: 'smooth'}); 
+  });
 
   if (!$('body').hasClass('subPage')) {
     var interleaveOffset = 0.5;
@@ -202,6 +219,21 @@ $(function() {
 
     numSwiper.controller.control = bgSwiper;
     bgSwiper.controller.control = numSwiper;
+
+    $(window).scroll(function(){
+    
+      if( $(this).scrollTop() > 100 ){
+        $(".btn_top").addClass("on");
+      }
+      else{
+        $(".btn_top").removeClass("on");
+      }
+      
+    });
+      
+    $(".btn_top").click(function(){
+      window.scrollTo({top : 0, behavior: 'smooth'}); 
+    });
   }
   
 

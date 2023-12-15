@@ -1,6 +1,18 @@
 
 
 $(document).ready(function () {
+  $(window).scroll(function(){
+    if( $(this).scrollTop() > 1000 ){
+      $(".btn_top").addClass("on");
+    }
+    else{
+      $(".btn_top").removeClass("on");
+    }
+  });
+  $(".btn_top").click(function(){
+    window.scrollTo({top : 0, behavior: 'smooth'}); 
+  });
+
   if (!$('body').hasClass('subPage')) {
     var interleaveOffset = 0.5;
     var numSwiper = new Swiper("#mainVisual.bg-swiper-container", {
@@ -83,9 +95,8 @@ $(document).ready(function () {
 
     numSwiper.controller.control = bgSwiper;
     bgSwiper.controller.control = numSwiper;
-  }
-  
 
+  }
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -270,7 +281,6 @@ $(document).ready(function () {
         //markers: true
       });
       ScrollTrigger.refresh();
-
 
 
     },
