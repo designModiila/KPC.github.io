@@ -32,9 +32,9 @@ body.noScroll {
 #header.down {
   transform: translateY(0);
 }
-#header .logo-wrap {
+/* #header .logo-wrap {
   min-width: 200px;
-}
+} */
 #header h1 {
   background: url(../../images/common/kpc_logo.png) no-repeat center;
   width: 92px;
@@ -52,7 +52,8 @@ body.noScroll {
 }
 #header .gnb-wrap {
   height: 100%;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -204,7 +205,7 @@ body.noScroll {
 .go-link:after{position: absolute; width: 24px; height: 24px; content: ''; top: 50%; right: -26px; transform: translateY(-50%); background: url(../../images/common/link_icon_w.png) no-repeat center; transition: transform 0.3s ease-in;}
 
 /*!-----1207추가----->*/
-#header .gnb-wrap .gnb > li{width: 19.7%}
+#header .gnb-wrap .gnb > li{width: 19.7%; max-width: 165px;}
 #header .gnb-wrap .gnb > li .depth1{padding: 0;}
 #header .gnb > li .depth2{text-align: left;}
 /*!-----1207추가----->*/
@@ -346,9 +347,13 @@ body.noScroll {
   font-weight: 500;
 }
 
-.btn_top{position: fixed; bottom: 60px; right: 160px; border-radius: 100%; width: 83px; height: 83px; background: #0FB5DF; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: opacity 0.5s ease-in-out; box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15); z-index: 9999;}
+.btn_top{position: fixed; bottom: 60px; right: 8.3333vw; border-radius: 100%; width: 83px; height: 83px; background: #0FB5DF; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: opacity 0.5s ease-in-out; box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15); z-index: 9999;}
 .btn_top.on{opacity: 1}
 .btn_top p{color: #FFFFFF; font-weight: 700; font-size: 18px;}
+
+@media (max-width: 1600px) {
+  .btn_top{right: 5vw;}
+}
 
 @media (max-width: 1460px) {
   #header .gnb-wrap {
@@ -362,6 +367,7 @@ body.noScroll {
   #header .gnb-wrap .gnb > li .depth1 {
     padding: 0;
   }
+
 }
 
 @media (max-width: 1240px) {
@@ -505,6 +511,7 @@ body.noScroll {
   }
   #header .gnb-wrap .gnb > li {
     width: 100%;
+    max-width: 100%;
     height: auto;
     line-height: 25px;
     display: flex;
@@ -583,6 +590,8 @@ body.noScroll {
   }
   .footer .family-site .family-select{width: 120px; padding-bottom: 0; font-weight: 700; font-size: 14px;}
   .footer .family-site .family-select:after{right: 0;}
+  .btn_top{bottom: 30px; width: 53px; height: 53px;}
+  .btn_top p{font-size: 14px;}
 }
 
 /*서브페이지 공통*/

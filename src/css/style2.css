@@ -3449,12 +3449,17 @@
   height: 100%;
   position: relative;
   padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.business02 .diagram-wrap .diagram-desc {max-width: 645px;}
+.business02 .diagram-wrap .diagram-desc p{font-weight: 700; font-size: 40px; letter-spacing: -0.02em; line-height: 52px;}
 
 .business02 .diagram-wrap .diagram-inner {
   width: 679px;
   height: 679px;
-  margin: 0 auto;
   position: relative;
   text-align: center;
 }
@@ -3652,7 +3657,9 @@
 
 @media (max-width: 1700px) {}
 
-@media (max-width: 1440px) {}
+@media (max-width: 1470px) {
+  .business02 .diagram-wrap .diagram-desc p{font-size: 30px; line-height: 42px;}
+}
 
 @media (max-width: 1400px) {
   .business02 .section03 .recycle-thumb {
@@ -3666,6 +3673,7 @@
 }
 
 @media (max-width: 1300px) {
+  .business02 .diagram-wrap .diagram-inner{width: 579px; height: 579px;}
   .business02 .section03 .recycle-thumb {
     width: 180px;
     height: 169px;
@@ -3690,6 +3698,8 @@
 }
 
 @media (max-width: 1200px) {
+  .business02 .diagram-wrap .diagram-desc p{font-size: 20px; line-height: 32px;}
+  .business02 .diagram-wrap .diagram-inner{width: 479px; height: 479px;}
   .business02 .section04 .item-title {
     font-size: 24px;
     line-height: 28px;
@@ -3710,6 +3720,7 @@
     display: none;
   }
 
+  .business02 .diagram-wrap .diagram-inner{width: 379px; height: 379px;}
   .business02 .section03 .title {
     font-size: 32px;
     line-height: 36px;
@@ -3745,8 +3756,10 @@
 @media (max-width: 767px) {
   .business02 .diagram-wrap {
     padding: 50px 0px;
+    flex-direction: column;
+    gap: 30px;
   }
-
+  .business02 .diagram-wrap .diagram-desc p{font-size: 16px; line-height: 28px;}
   .business02 .diagram-wrap .diagram-inner {
     width: 100%;
     height: auto;
