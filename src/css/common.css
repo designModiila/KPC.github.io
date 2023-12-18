@@ -675,6 +675,7 @@ body.noScroll {
   .footer .family-site .family-select:after{right: 0;}
   .btn_top{bottom: 30px; width: 53px; height: 53px;}
   .btn_top p{font-size: 14px;}
+  .scrolldown-box {display: none; opacity: 0;}
 }
 
 /*서브페이지 공통*/
@@ -912,6 +913,7 @@ body.noScroll {
 
 
 @media (max-width: 767px) {
+
   .inner {
     width: 100%;
     padding: 0 5vw;
