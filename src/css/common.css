@@ -91,13 +91,13 @@ body.noScroll {
   text-align: center;
   overflow: hidden;
 }
-#header .gnb .depth2 ul {
+/* #header .gnb .depth2 ul {
   padding: 26px 0 0px;
-}
+} */
 #header .gnb .depth2 ul > li > a {
   display: block;
   font-size: 16px;
-  line-height: 45px;
+  line-height: 40px;
   font-weight: 500;
   color: #252525;
   word-break: keep-all;

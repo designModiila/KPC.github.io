@@ -126,7 +126,7 @@ $(function() {
 
 $(function() {
   $(window).scroll(function(){
-    if( $(this).scrollTop() > 500 ){
+    if( $(this).scrollTop() > 1000 ){
       $(".btn_top").addClass("on");
     }
     else{
@@ -138,6 +138,25 @@ $(function() {
   });
 
   if (!$('body').hasClass('subPage')) {
+    // const scrollTop = document.querySelector('.btn_top')
+    // window.addEventListener('scroll', function(){
+    //   if(this.window.scrollY > 1000){
+    //     gsap.to(scrollTop, .2,{
+    //       opacity : 1
+    //     })
+    //   }else {
+    //     gsap.to(scrollTop, .2,{
+    //       opacity : 0
+    //     })
+    //   }
+    // }, 300)
+    // scrollTop.addEventListener('click', function(){
+    //   gsap.to(window, .7,{
+    //     scrollTo: 0
+    //   })
+    // })
+
+
     var interleaveOffset = 0.5;
     var numSwiper = new Swiper("#textVisual", {
       loop: true,

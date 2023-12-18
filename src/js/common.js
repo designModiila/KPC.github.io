@@ -27,7 +27,7 @@ $(document).ready(function(){
         });
       function gnbOn() {
         $gnb.find($depth2).stop().animate({ height: "292" });
-        $header.stop().animate({ height: "400" });	
+        $header.stop().animate({ height: "300" });	
         $header.addClass("on");
       }
       function gnbOff() {
