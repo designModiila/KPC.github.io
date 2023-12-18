@@ -18,6 +18,7 @@ $(function() {
         $('.btn_top').css('opacity','1');
       }else if (index == 3) {
         $('#header').addClass('__w')
+        $('.scrolldown-box').css('opacity','0')
         $.fn.fullpage.setAllowScrolling(false);
 				$('.section03 .content').scroll(function() {
 					var scrollBox = $(this);
@@ -64,8 +65,10 @@ $(function() {
       }
       else if(index == 4){
         $('#header').removeClass('__w')
+        $('.scrolldown-box').css('opacity','1')
       }else{
         $('#header').addClass('__w')
+        $('.scrolldown-box').css('opacity','0')
       }
     },
     afterLoad: function (anchorLink, index, direction) {

@@ -351,6 +351,89 @@ body.noScroll {
 .btn_top.on{opacity: 1}
 .btn_top p{color: #FFFFFF; font-weight: 700; font-size: 18px;}
 
+
+
+.scrolldown-box {
+  position: fixed;
+  bottom: 40px;
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: 140px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scrolldown-box .scrolldown{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.scrolldown-box p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  font-variant: small-caps;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  color: #FFFFFF;
+}
+
+.arrows path {
+  -webkit-animation-name: scrollDown;
+          animation-name: scrollDown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.arrows path.a1 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.arrows path.a2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
 @media (max-width: 1600px) {
   .btn_top{right: 5vw;}
 }

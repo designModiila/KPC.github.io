@@ -332,7 +332,7 @@
 }
 
 #textVisual .swiper-pagination-bullets.pagination-text {
-  bottom: 41px;
+  bottom: 130px;
 }
 
 #textVisual .swiper-pagination-bullets.pagination-text .swiper-pagination-bullet {
@@ -784,9 +784,9 @@
     bottom: 147px;
   }
 
-  #textVisual .swiper-pagination-bullets.pagination-text {
+  /* #textVisual .swiper-pagination-bullets.pagination-text {
     bottom: 99px;
-  }
+  } */
 
   .inner_1600 {
     padding: 0 32px;
