@@ -11,10 +11,10 @@ $(function() {
     onLeave: function(anchorLink, index, direction) {
       $.fn.fullpage.setAllowScrolling(true);
       if(index == 1){
-        $('#header').removeClass('__w')
+        $('#header').removeClass('__w');
         $('.btn_top').css('opacity','0');
       }else if(index == 2){
-        $('#header').removeClass('__w')
+        $('#header').removeClass('__w');
         $('.btn_top').css('opacity','1');
       }else if (index == 3) {
         $('#header').addClass('__w')
@@ -70,6 +70,7 @@ $(function() {
         $('#header').addClass('__w')
         $('.scrolldown-box').css('opacity','0')
       }
+
     },
     afterLoad: function (anchorLink, index, direction) {
       setTimeout(function () {
@@ -100,6 +101,7 @@ $(function() {
   });
 
   var chkScrollPages = function chkScrollPages() {
+    var $fullpage = $('#fullpage');
     var scrollTop = $(window).scrollTop();
     var $target = $fullpage.find('.section');
     var $body = $('body');
