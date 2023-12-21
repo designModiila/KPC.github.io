@@ -143,7 +143,7 @@
 }
 
 /*메인비주얼*/
-.swiper{position: relative;}
+.main .swiper{position: relative;}
 
 #mainVisual.bg-swiper-container {
   overflow: hidden;
