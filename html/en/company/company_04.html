@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPC</title>
+    <link rel="stylesheet" href="../../../src/js/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../../src/plugin/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../../../src/plugin/select/select2.min.css">
+  
+    <link rel="stylesheet" href="../../../src/css/reset.css">
+    <link rel="stylesheet" href="../../../src/css/font.css">
+    <link rel="stylesheet" href="../../../src/css/common.css">
+    <link rel="stylesheet" href="../../../src/css/style2.css">
+    <link rel="stylesheet" href="../../../src/css/english.css">
+  
+    <script src="../../../src/js/jquery/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../../src/plugin/gsap/gsap.min.js"></script>
+    <script type="text/javascript" src="../../../src/plugin/gsap/ScrollTrigger.min.js"></script>
+    <script src="../../../src/plugin/swiper/swiper.min.js"></script>
+    <script src="../../../src/plugin/select/select2.min.js"></script>
+    <script src="../../../src/js/common.js"></script>
+    <script src="../../../src/js/script2.js"></script>
+  </head>
+<body class="subPage">
+  <header id="header" class="header">
+    <div class="header-wrap">
+      <div class="logo-wrap">
+        <a href="../main.html">
+          <h1><span class="hidden">kpc</span></h1>
+        </a>
+      </div>
+      <div class="gnb-wrap">
+        <ul class="gnb">
+          <li><a href="#none" class="depth1">기업소개</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="../company/company_01.html">개요</a></li>
+                <li><a href="../company/company_02.html">인사말</a></li>
+                <li><a href="../company/company_03.html">비전</a></li>
+                <li><a href="../company/company_04.html">계열사 소개</a></li>
+                <li><a href="../company/company_05.html">사업장</a></li>
+              </ul>
+            </div>
+    
+          </li>
+          <li><a href="#none" class="depth1">사업소개</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="../business/business_01.html">전구체</a></li>
+                <li><a href="../business/business_02.html">Recycle</a></li>
+                <li><a href="../business/business_03.html">생산공정</a></li>
+                <!-- <li><a href="#none">생산제품</a></li> -->
+              </ul>
+            </div>
+          </li>
+          <li><a href="#none" class="depth1">ESG</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="../esg/esg_01.html">개요</a></li>
+                <li><a href="../esg/esg_02.html">안전보건환경</a></li>
+                <li><a href="../esg/esg_03.html">윤리경영</a></li>
+                <li><a href="../esg/esg_04.html">사회공헌</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#none" class="depth1">Media</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="../media/news.html">뉴스룸</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li><a href="#none" class="depth1">채용</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="#none">채용</a></li>
+              </ul>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+      <div class="lang-select">
+        <a href="#none" class="current"></a>
+        <ul class="lang-list">
+          <li class="kor active"><a href="#none">KOR</a></li>
+          <li class="eng"><a href="#none">ENG</a></li>
+        </ul>
+      </div>
+      <a href="#none" class="only-mo btn-mo-menu-wrapper">
+        <span class="btn-mo-menu-open"></span>
+      </a>
+    </div>
+  </header>
+  <div id="wrap" class="wrap lastSec">
+    <div id="content" class="content company04">
+      <div class="subVisual">
+        <div class="title-wrap">
+          <div class="sub-title">Domestic and Overseas Affiliates</div>
+          <div class="title">
+            <p>It is accelerating global growth through </p>
+            <p>cooperative networks around the world</p>
+          </div>
+        </div>
+        <div class="sub-visual">
+          <div class="image-wrap">
+            <img src="../../../images/sub/company04_sub-visual.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="section section01">
+        <div class="inner">
+          <div class="top-menu cont">
+            <ul>
+              <li class="tablinks"><a href="javascript:;" class="btn_layer" layer="1" data-rel="articleKr">Domestic</a></li>
+              <li class="tablinks"><a href="javascript:;" class="btn_layer" layer="2" data-rel="articleAsia">Asia</a></li>
+              <li class="tablinks"><a href="javascript:;" class="btn_layer" layer="3" data-rel="articleOceania">Oceania</a></li>
+              <li class="tablinks"><a href="javascript:;" class="btn_layer" layer="4" data-rel="articleAmerica">Africa</a></li>
+            </ul>
+          </div>
+          <div class="world-map cont">
+            <div class="bg">
+              <img src="../../../images/sub/company04_worldMap.png" alt="">
+            </div>
+            <span id="" class="article article01 articleKr" layer="1" data-rel="articleKr">12</span>
+            <span id="" class="article article02 articleAsia" layer="2" data-rel="articleAsia">2</span>
+            <span id="" class="article article03 articleAsia" layer="2" data-rel="articleAsia">1</span>
+            <span id="" class="article article04 articleOceania" layer="3" data-rel="articleOceania">8</span>
+            <span id="" class="article article05 articleAmerica" layer="4" data-rel="articleAmerica">1</span>
+            <span id="" class="article article06 articleAmerica" layer="4" data-rel="articleAmerica">2</span>
+            <span id="" class="article article07 articleAmerica" layer="4" data-rel="articleAmerica">1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn_top">
+      <p>TOP</p>
+    </div>
+  </div>
+  <div class="layer-dimm"></div>
+  <div class="world-layer modal layer01" layer="1">
+    <div class="world-layer-wrap">
+      <div class="world-layer-close close-btn"></div>
+      <div class="inner">
+        <div class="layer-top">
+          <div class="layer-title">
+            <p>Domestic</p>
+            <div class="layer-controller">
+              <div class="prev layer-btn">America</div>
+              <div class="next layer-btn">Asia</div>
+            </div>
+          </div>
+        </div>
+        <div class="layer-content">
+          <div class="box box02">
+            <div class="box-title">Korea Zinc</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(06110) 542, Gangnam-daero, Gangnam-gu, Seoul, Republic of Korea</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>Tel</dt>
+                <dd>82-2-519-3416</dd>
+              </dl>
+              <dl>
+                <dt>Onsan Plant</dt>
+                <dd>(44997) Onsan Refinery 139, Ijin-ro, Onsan-eup, Ulju-gun, Ulsan, Republic of Korea
+                </dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-52-231-6000</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="http://www.koreazinc.co.kr" target="_blank" class="site-btn"></a>
+              <a href="https://maps.app.goo.gl/BeGjvZLC1c1ptvhG8" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box02">
+            <div class="box-title">Young Poong Precision Corporation</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(06110) 542, Gangnam-daero, Gangnam-gu, Seoul, Korea</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>Tel</dt>
+                <dd>82-2-519-3416</dd>
+                <dt>Fax</dt>
+                <dd>82-2-511-1095</dd>
+              </dl>
+              <dl>
+                <dt>Plant</dt>
+                <dd>(15609) 97, Haean-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-31-491-5581</dd>
+                <dt>Fax</dt>
+                <dd>82-31-491-1594</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="http://www.yppc.co.kr" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/g3uWV3pgLFTiRdYz6" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box03">
+            <div class="box-title">Sorin Information Technology Co., Ltd</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(06110) 542 Gangnam-daero, Gangnam-gu, Seoul</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-2-519-3600</dd>
+                <dt>Fax</dt>
+                <dd>82-2-549-5069</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="http://www.sorin.co.kr" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/7dWfYchtksZ3SG47A" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box04">
+            <div class="box-title">KZ Green Tech Co., Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(44997) 139, Ijin-ro, Onsan-eup, Ulju-gun, Ulsan, Republic of Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-52-231-6601</dd>
+                <dt>Fax</dt>
+                <dd>82-52-231-6604</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/vDksQuT99wasiRyG8" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box05">
+            <div class="box-title">Steel Cycle Corporation Co., Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(38034) 8-65, Cheonbuksandan-ro 1-gil, Cheonbuk-myeon, Gyeongju-si, Gyeongsangbuk-do, Republic of Korea </dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-54-778-7600</dd>
+                <dt>Fax</dt>
+                <dd>82-54-777-6761</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/1aFLt57GqYsT88oo9" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box06">
+            <div class="box-title">Kemco Co., Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(06110) 542 Gangnam-daero, Gangnam-gu, Seoul</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>Tel</dt>
+                <dd>82-2-519-3271</dd>
+                <dt>Fax</dt>
+                <dd>85-2-519-3279</dd>
+              </dl>
+              <dl>
+                <dt>Plant</dt>
+                <dd>(45010) 27, Wonbong-ro, Onsan-eup, Ulju-gun, Ulsan, Republic of Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-52-240-6895</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="http://www.koreaenergymaterials.com" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/oJjTkGdhqNUXJuSF8" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box07">
+            <div class="box-title">KZAM Co., Ltd</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>216-2, Dangwol-ro, Onsan-eup, Ulju-gun, Ulsan, Republic of Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-54-778-7600</dd>
+                <dt>Fax</dt>
+                <dd>82-54-777-6761</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="https://www.kzam.co.kr/main?lang=ko" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/4cC7ZpKVdBY6NjHc9" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box08">
+            <div class="box-title">Sorin Corporation</div>
+            <div class="box-con">
+              <dl class="mb12">
+                <dt>Headquarters</dt>
+                <dd>(06110) 542 Gangnam-daero, Gangnam-gu, Seoul</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-2-519-3381</dd>
+                <dt>Fax</dt>
+                <dd>82-2-542-0013</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>Busan Office</dt>
+                <dd>(49256) 108, 67 utongdanji 1-ro 57beonga-gil, Gangseo-gu, Busan</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-51-243-5313</dd>
+              </dl>
+              <dl class="mb12">
+                <dt>Incheon Office</dt>
+                <dd>(22215) 597-36 Michuhol-daero, Michuhol-gu, Incheon</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="http://www.sorincorporation.com" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/zr1MCXTGpGi4gu9M6" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box09">
+            <div class="box-title">KZ X Co., Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(44992) 461, Deoksin-ro, Onsan-eup, Ulju-gun, Ulsan, Republic of Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-52-231-6411</dd>
+                <dt>Fax</dt>
+                <dd>82-52-239-2213</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/uZi36NXKuy53oTPU9" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box10">
+            <div class="box-title">Korea Nickel Co., Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(13229) 400, Dunchon-daero, Jungwon-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-31-737-0920</dd>
+                <dt>Fax</dt>
+                <dd>82-31-737-0930</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="http://www.korea-nickel.co.kr" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/YRiSdtNHjsBKyJ2n8" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box11">
+            <div class="box-title">Steel Cycle SC Co., Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(58035) 23, Yulchonsandan 2-ro, Haeryong-myeon, Suncheon-si, Jeollanam-do, Republic of Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-61-740-2700</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/zQvQ2zJG6bE31RsRA" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box12">
+            <div class="box-title">Alantum Co., Ltd.</div>
+            <div class="box-con">
+              <dl class="mb12">
+                <dt>Headquarters</dt>
+                <dd>(44997) 318, Gongdan-ro, Onsan-eup. Ulju-gun, Ulsan, Republic of Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-52-231-6484</dd>
+                <dt>Fax</dt>
+                <dd>82-52-231-6489</dd>
+              </dl>
+              <dl>
+                <dt>Seoul Office </dt>
+                <dd>6F, Young Poong Bdg. 542, Gangnam-daero Gangnam-gu, Seoul, Republic of Korea</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>82-2-519-3297</dd>
+                <dt>Fax</dt>
+                <dd>82-2-519-3290</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="http://alantum.com" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/jNXbtw9MeRmjKUDp6" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box13">
+            <div class="box-title">SINL Co., Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Headquarters</dt>
+                <dd>(21990) D - 1401, 30, Songdomirae-ro, Yeonsu-gu, Incheon, Republic of Korea</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="https://www.sinl.co.kr/" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/bL2tkP3t7Rw8J2vn7" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="world-layer modal layer02" layer="2">
+    <div class="world-layer-wrap">
+      <div class="world-layer-close close-btn"></div>
+      <div class="inner">
+        <div class="layer-top">
+          <div class="layer-title">
+            <p>Asia</p>
+            <div class="layer-controller">
+              <div class="prev layer-btn">Domestic</div>
+              <div class="next layer-btn">Oceania</div>
+            </div>
+          </div>
+        </div>
+        <div class="layer-content">
+          <div class="box box01">
+            <div class="box-title">Zinc Oxide Corp. Thailand Ltd.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Address</dt>
+                <dd>75/51 Ocean Tower2 24th Floor, Soi Sukhumvit 19, Sukhumvit Road, Klongtoey Nua, Wattana, Bangkok 10110</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>(66)(2) 204-1441~2</dd>
+                <dt>Fax</dt>
+                <dd>(66)(2) 204-1444</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/LqXbwBJNBpCjy7sK7" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box02">
+            <div class="box-title">Zinc Oxide Corp. Vietnam LLC</div>
+            <div class="box-con">
+              <dl>
+                <dt>Address</dt>
+                <dd>Lot C, Phu My 3 Specialized Industrial Park, Phuoc Hoa Village, Tan Thanh District, Ba Ria Vung Tau Province, Vietnam</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>(84)-126-8954-016</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/ScmEe823GXag92F3A" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box03">
+            <div class="box-title">KZ Minerals Holdings Ltd</div>
+            <div class="box-con">
+              <dl>
+                <dt>Address</dt>
+                <dd>8 Cross Street, #11-00 PWC Building Singapore 048424</dd>
+              </dl>
+              <dl>
+                <dt>Fax</dt>
+                <dd>(66)(2) 204-1444</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/ZqpraMpBLgPxAKGU8" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="world-layer modal layer03" layer="3">
+    <div class="world-layer-wrap">
+      <div class="world-layer-close close-btn"></div>
+        <div class="inner">
+          <div class="layer-top">
+            <div class="layer-title">
+              <p>Oceania</p>
+              <div class="layer-controller">
+                <div class="prev layer-btn">Asia</div>
+                <div class="next layer-btn">America</div>
+              </div>
+            </div>
+          </div>
+          <div class="layer-content">
+            <div class="box box01">
+              <div class="box-title">Sun Metals Holdings</div>
+              <div class="box-con">
+                <dl>
+                  <dt>Address</dt>
+                  <dd>1 Zinc Avenue Stuart, Townsville, Queensland 4811, Australia</dd>
+                </dl>
+                <dl>
+                  <dt>Tel</dt>
+                  <dd>(61)(7) 4726-6666</dd>
+                  <dt>Fax</dt>
+                  <dd>(61)(7) 4726-6300</dd>
+                </dl>
+              </div>
+              <div class="icon-wrap">
+                <a href="#none" class="site-btn noitem"></a>
+                <a href="https://goo.gl/maps/jDpcZXM7j6UfJVih7" target="_blank" class="map-btn"></a>
+              </div>
+            </div>
+            <div class="box box02">
+              <div class="box-title">Townsville Logistics</div>
+              <div class="box-con">
+                <dl>
+                  <dt>Address</dt>
+                  <dd>1 Zinc Avenue Stuart, Townsville, Queensland 4811, Australia</dd>
+                </dl>
+                <dl>
+                  <dt>Tel</dt>
+                  <dd>(61)(7) 4726-6666</dd>
+                  <dt>Fax</dt>
+                  <dd>(61)(7) 4726-6300</dd>
+                </dl>
+              </div>
+              <div class="icon-wrap">
+                <a href="https://www.townsvillelogistics.com.au/" target="_blank" class="site-btn"></a>
+                <a href="https://goo.gl/maps/umnhwj4dVUgbnriw8" target="_blank" class="map-btn"></a>
+              </div>
+            </div>
+            <div class="box box03">
+              <div class="box-title">Townsville Marine Logistics</div>
+              <div class="box-con">
+                <dl>
+                  <dt>Address</dt>
+                  <dd>1 Zinc Avenue Stuart, Townsville, Queensland 4811, Australia</dd>
+                </dl>
+                <dl>
+                  <dt>Tel</dt>
+                  <dd>(61)(7) 4726-6666</dd>
+                  <dt>Fax</dt>
+                  <dd>(61)(7) 4726-6300</dd>
+                </dl>
+              </div>
+              <div class="icon-wrap">
+                <a href="https://www.tsvml.com.au/" target="_blank" class="site-btn"></a>
+                <a href="https://goo.gl/maps/BYpYzAT8Pbg6kRQ67" target="_blank" class="map-btn"></a>
+              </div>
+            </div>
+            <div class="box box04">
+              <div class="box-title">Sun Metals Corporation</div>
+              <div class="box-con">
+                <dl>
+                  <dt>Address</dt>
+                  <dd>1 Zinc Avenue Stuart, Townsville, Queensland 4811, Australia</dd>
+                </dl>
+                <dl>
+                  <dt>Tel</dt>
+                  <dd>(61)(7) 4726-6666</dd>
+                  <dt>Fax</dt>
+                  <dd>(61)(7) 4726-6300</dd>
+                </dl>
+              </div>
+              <div class="icon-wrap">
+                <a href="https://www.sunmetals.com.au/" target="_blank" class="site-btn"></a>
+                <a href="https://goo.gl/maps/CfJumaEBNB6QfXaY8" target="_blank" class="map-btn"></a>
+              </div>
+            </div>
+            <div class="box box05">
+              <div class="box-title">Ark Energy H2</div>
+              <div class="box-con">
+                <dl>
+                  <dt>Address</dt>
+                  <dd>Level 6,200 Adelaide Street,Brisbane QLD 4811, Australia</dd>
+                </dl>
+                <dl>
+                  <dt>Tel</dt>
+                  <dd>(61)(7) 4726-6666</dd>
+                  <dt>Fax</dt>
+                  <dd>(61)(7) 4726-6300</dd>
+                </dl>
+              </div>
+              <div class="icon-wrap">
+                <a href="https://arkenergy.com.au/" target="_blank" class="site-btn"></a>
+                <a href="https://goo.gl/maps/eicskRhTYzC4fdbB6" target="_blank" class="map-btn"></a>
+              </div>
+            </div>
+            <div class="box box06">
+              <div class="box-title">Ark Energy Corporation</div>
+              <div class="box-con">
+                <dl>
+                  <dt>Address</dt>
+                  <dd>Level 6,200 Adelaide Street,Brisbane QLD 4811, Australia</dd>
+                </dl>
+                <dl>
+                  <dt>Tel</dt>
+                  <dd>(61)(7) 4726-6666</dd>
+                  <dt>Fax</dt>
+                  <dd>(61)(7) 4726-6300</dd>
+                </dl>
+              </div>
+              <div class="icon-wrap">
+                <a href="https://arkenergy.com.au/" target="_blank" class="site-btn"></a>
+                <a href="https://goo.gl/maps/JJ7xVfvYQRCYZGZWA" target="_blank" class="map-btn"></a>
+              </div>
+            </div>
+            <div class="box box07">
+              <div class="box-title">Ark Energy Macintrye</div>
+              <div class="box-con">
+                <dl>
+                  <dt>Address</dt>
+                  <dd>Level 6,200 Adelaide Street,Brisbane QLD 4811, Australia</dd>
+                </dl>
+                <dl>
+                  <dt>Tel</dt>
+                  <dd>(61)(7) 4726-6666</dd>
+                  <dt>Fax</dt>
+                  <dd>(61)(7) 4726-6300</dd>
+                </dl>
+              </div>
+              <div class="icon-wrap">
+                <a href="https://arkenergy.com.au/" target="_blank" class="site-btn"></a>
+                <a href="https://goo.gl/maps/h69pvDqnn7DfBppq5" target="_blank" class="map-btn"></a>
+              </div>
+            </div>
+            <div class="box box08">
+              <div class="box-title">Epuron Holdings P/L</div>
+              <div class="box-con">
+                <dl>
+                  <dt>Address</dt>
+                  <dd>LEVEL 11 75 MILLER STREET NORTH SYDNEY NSW 2060</dd>
+                </dl>
+                <dl>
+                  <dt>Tel</dt>
+                  <dd>(61)(7) 8456-7400</dd>
+                </dl>
+              </div>
+              <div class="icon-wrap">
+                <a href="https://epuron.com.au/" target="_blank" class="site-btn"></a>
+                <a href="https://goo.gl/maps/T2RAPJXEt5j7GPGK7" target="_blank" class="map-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="world-layer modal layer04" layer="4">
+    <div class="world-layer-wrap">
+      <div class="world-layer-close close-btn"></div>
+      <div class="inner">
+        <div class="layer-top">
+          <div class="layer-title">
+            <p>America</p>
+            <div class="layer-controller">
+              <div class="prev layer-btn">Oceania</div>
+              <div class="next layer-btn">Domestic</div>
+            </div>
+          </div>
+        </div>
+        <div class="layer-content">
+          <div class="box box01">
+            <div class="box-title">Pan Pacific Metal Mining Corp.</div>
+            <div class="box-con">
+              <dl>
+                <dt>Address</dt>
+                <dd>Suite 4700, Toronto Dominion Bank Tower, Toronto, Ontario, Canada MSK 1E6</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>(1)(416) 601-7910</dd>
+                <dt>Fax</dt>
+                <dd>(1)(416) 868-0673</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/y5H4rdhc4hQ8rMar8" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box02">
+            <div class="box-title">Pedalpoint Holdings, LLC</div>
+            <div class="box-con">
+              <dl>
+                <dt>Address</dt>
+                <dd>400 Spectrum Center Dr. Suite 1900, Irvine CA, 92618</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/xyg4k3rAxMhfSEAw8" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box03">
+            <div class="box-title">IGNEO Holdings, LLC</div>
+            <div class="box-con">
+              <dl>
+                <dt>Address</dt>
+                <dd>222 Bloomingdale Road Suite 402 White Plains NY 10605 USA</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>(1)(914) 365-7600</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="https://www.igneo.com" target="_blank" class="site-btn"></a>
+              <a href="https://goo.gl/maps/wKz5JX2P42zKVDHf6" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+          <div class="box box04">
+            <div class="box-title">ICM Pachapaqui S.A.C</div>
+            <div class="box-con">
+              <dl>
+                <dt>Address</dt>
+                <dd>Calle Los Tulipanes 147, Oficina 701-A, Santiago de Surco, Lima, Peru. (우편번호 15023)</dd>
+              </dl>
+              <dl>
+                <dt>Tel</dt>
+                <dd>(51)(1) 415-0530</dd>
+                <dt>Fax</dt>
+                <dd>(51)(1) 422-7774</dd>
+              </dl>
+            </div>
+            <div class="icon-wrap">
+              <a href="#none" class="site-btn noitem"></a>
+              <a href="https://goo.gl/maps/SVjkAonYfjEPggoWA" target="_blank" class="map-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-nav">
+          <dl>
+            <dt>기업소개</dt>
+            <dd><a href="../company/company_01.html">개요</a></dd>
+            <dd><a href="../company/company_02.html">인사말</a></dd>
+            <dd><a href="../company/company_03.html">비전</a></dd>
+            <dd><a href="../company/company_04.html">계열사소개</a></dd>
+            <dd><a href="../company/company_05.html">사업장</a></dd>
+          </dl>
+          <dl>
+            <dt>사업소개</dt>
+            <dd><a href="../business/business_01.html">전구체</a></dd>
+            <dd><a href="../business/business_02.html">Recycle</a></dd>
+            <dd><a href="../business/business_03.html">생산공정</a></dd>
+            <!-- <dd><a href="#none">생산제품</a></dd> -->
+          </dl>
+          <dl>
+            <dt>ESG</dt>
+            <dd><a href="../esg/esg_01.html">개요</a></dd>
+            <dd><a href="../esg/esg_02.html">안전보건환경(SHE)</a></dd>
+            <dd><a href="../esg/esg_03.html">윤리경영</a></dd>
+            <dd><a href="../esg/esg_04.html">사회공헌</a></dd>
+          </dl>
+          <dl>
+            <dt>Media</dt>
+            <dd><a href="../media/news.html">뉴스룸</a></dd>
+          </dl>
+          <!-- <dl>
+            <dt>채용</dt>
+          </dl> -->
+        </div>
+        <div class="family-site">
+          <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
+          <ul class="family-list">
+            <li>
+              <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
+            </li>
+            <li>
+              <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
+            </li>
+            <li>
+              <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
+            </li>
+            <li>
+              <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
+            </li>
+            <li>
+              <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
+            </li>
+            <li>
+              <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
+            </li>
+            <li>
+              <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
+            </li>
+            <li>
+              <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
+            </li>
+            <li>
+              <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
+            </li>
+            <li>
+              <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
+            </li>
+            <li>
+              <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <ul>
+          <li><a href="../customer/customer_voice.html">고객의소리</a></li>
+          <li><a href="#none" class="privacy">개인정보처리방침</a></li>
+          <li><a href="#none" class="email">이메일 무단수집 거부</a></li>
+          <li class="family-site  onlyMo">
+            <button type="button" class="family-select" data-toggle="link">계열사전체보기</button>
+            <ul class="family-list">
+              <li>
+                <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
+              </li>
+              <li>
+                <a href="http://www.yppc.co.kr" target="_blank">영풍정밀 주식회사</a>
+              </li>
+              <li>
+                <a href="http://www.sorincorporation.com" target="_blank">서린상사 주식회사</a>
+              </li>
+              <li>
+                <a href="http://www.sorin.co.kr" target="_blank">서린정보기술 주식회사</a>
+              </li>
+              <li>
+                <a href="http://www.korea-nickel.co.kr" target="_blank">코리아니켈 주식회사</a>
+              </li>
+              <li>
+                <a href="http://www.koreaenergymaterials.com" target="_blank">주식회사 켐코</a>
+              </li>
+              <li>
+                <a href="http://alantum.com" target="_blank">알란텀 주식회사</a>
+              </li>
+              <li>
+                <a href="https://www.sinl.co.kr" target="_blank">에스아이앤엘 주식회사</a>
+              </li>
+              <li>
+                <a href="https://www.townsvillelogistics.com.au/" target="_blank">Townsville Logistics</a>
+              </li>
+              <li>
+                <a href="https://www.tsvml.com.au/" target="_blank">Townsville Marine Logistics</a>
+              </li>
+              <li>
+                <a href="https://www.sunmetals.com.au/" target="_blank">Sun Metals Corporation</a>
+              </li>
+              <li>
+                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy H2</a>
+              </li>
+              <li>
+                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Corporation</a>
+              </li>
+              <li>
+                <a href="https://arkenergy.com.au/" target="_blank">Ark Energy Macintrye</a>
+              </li>
+              <li>
+                <a href="https://epuron.com.au/" target="_blank">Epuron Holdings P/L</a>
+              </li>
+              <li>
+                <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li><span>ADDRESS. </span>(45011) 울산 울주군 온산읍 당월로 216-51</li>
+          <li><span>TEL. </span>031-737-0954</li>
+          <li><span>E-MAIL. </span>Address@kpc.co.kr</li>
+        </ul>
+        <p class="copy">Copyright &copy; KPC All Right Reserved.</p>
+      </div>
+    </div>
+    <div class="layer-dimm"></div>
+    <div class="privacy-policy">
+      <script> 
+          $('.privacy-policy').load('../../html/customer/privacy-policy.html')
+      </script>
+    </div>
+    <div class="email-notice">
+      <script> 
+          $('.email-notice').load('../../html/customer/email-notice.html')
+      </script>
+    </div>
+  </footer>
+</body>
+</html>
