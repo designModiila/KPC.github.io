@@ -398,7 +398,7 @@
   padding-top: 100px;
 } */
 
-.main .section03 {overflow:auto; scrollbar-width:none; }
+.main .section03 {scrollbar-width:none; }
 .main .section03 .content::-webkit-scrollbar { display:none; }
 .main .section03 .content{position: relative; margin: 0 auto;; height: 100vh; overflow: auto;}
 .main .section03 .flow-box-wrap{position: relative;}
