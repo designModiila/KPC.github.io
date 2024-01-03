@@ -465,6 +465,7 @@ body.noScroll {
 
 
 @media (max-width: 1024px) {
+  #header h1{width: 100px; height: 40px; background-size: contain !important;}
   #header .gnb-wrap .gnb > li .depth1 {
     font-size: 16px;
     padding: 0 25px;
