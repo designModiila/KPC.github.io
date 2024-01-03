@@ -25,6 +25,7 @@ body.noScroll {
   box-sizing: border-box;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
+  transition: transform .3s ease-in-out;
 }
 #header.up {
   transform: translateY(-100%);
