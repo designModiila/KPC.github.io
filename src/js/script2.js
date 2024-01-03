@@ -7,7 +7,7 @@ $(function() {
     scrollingSpeed:1000,
     css3:true,
     scrollOverflow: true,
-    responsiveWidth: 1023,
+    responsiveWidth: 767,
     onLeave: function(anchorLink, index, direction) {
       $.fn.fullpage.setAllowScrolling(true);
       if(index == 1){
@@ -40,8 +40,8 @@ $(function() {
 					var scrollBox = $(this);
 					var scrZ = 0;
 					var scrT = $(scrollBox).scrollTop();
-					//var scrH = $('.section03 .flow-box-wrap').height();
-          var scrH = $('.section03 .content .leftSec').height();
+					var scrH = $('.section03 .flow-box-wrap').height();
+          //var scrH = $('.section03 .content .leftSec').height();
 					var scrB = scrH - $(window).height();
 					var wheelDelta = e.originalEvent.deltaY;
 					/*if (scrT == scrB) {

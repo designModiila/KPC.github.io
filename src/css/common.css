@@ -36,7 +36,7 @@ body.noScroll {
   min-width: 200px;
 } */
 #header h1 {
-  background: url(../../images/common/kpc_logo_c.gif) no-repeat center;
+  background: url(../../images/common/kpc_logo_c.png) no-repeat center;
   width: 151px;
   height: 39px;
 }
@@ -636,7 +636,7 @@ body.noScroll {
   }
 
   #header.__open .gnb-wrap .gnb > li .depth1{color: #2b2b2b}
-  #header.__open h1{background: url(../../images/common/kpc_logo.png) no-repeat center;}
+  #header.__open h1{background: url(../../images/common/kpc_logo_c.png) no-repeat center;}
   #header.__open .btn-mo-menu-open{background: #2b2b2b;}
   #header.__open .btn-mo-menu-open:before{background: #2b2b2b;}
 
