@@ -40,14 +40,14 @@ $(function() {
 					var scrollBox = $(this);
 					var scrZ = 0;
 					var scrT = $(scrollBox).scrollTop();
-					var scrH = $('.section03 .flow-box-wrap').height();
-          //var scrH = $('.section03 .content .leftSec').height();
+					//var scrH = $('.section03 .flow-box-wrap').height();
+          var scrH = $('.section03 .content .leftSec').height();
 					var scrB = scrH - $(window).height();
 					var wheelDelta = e.originalEvent.deltaY;
 					/*if (scrT == scrB) {
 						$.fn.fullpage.setAllowScrolling(true);
 					}*/
-					if (wheelDelta > -100) {
+					if (wheelDelta > -50) {
 						if (scrT < scrB) {
 							// Scroll down
 						} else {
