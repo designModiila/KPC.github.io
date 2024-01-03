@@ -8,7 +8,6 @@ $(function() {
     css3:true,
     scrollOverflow: true,
     responsiveWidth: 1023,
-    responsiveHeight: 760,
     onLeave: function(anchorLink, index, direction) {
       $.fn.fullpage.setAllowScrolling(true);
       if(index == 1){
