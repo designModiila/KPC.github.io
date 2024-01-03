@@ -38,8 +38,8 @@ body.noScroll {
 } */
 #header h1 {
   background: url(../../images/common/kpc_logo_c.png) no-repeat center;
-  width: 151px;
-  height: 39px;
+  width: 140px;
+  height: 40px;
 }
 #header h1 span {
   display: none;
@@ -48,7 +48,7 @@ body.noScroll {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 23px 2.083vw 24px;
+  padding: 20px 2.083vw 21px;
   align-items: center;
 }
 #header .gnb-wrap {
