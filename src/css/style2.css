@@ -99,7 +99,7 @@
 }
 
 #header h1 {
-  background: url(../../images/common/kpc_logo_w.png) no-repeat center;
+  background: url(../../images/common/kpc_logo_w.gif) no-repeat center;
 }
 
 #header .lang-select>a {
@@ -117,7 +117,7 @@
 }
 
 #header.on h1 {
-  background: url(../../images/common/kpc_logo.png) no-repeat center;
+  background: url(../../images/common/kpc_logo_c.gif) no-repeat center;
 }
 
 #header.on .lang-select>a {
@@ -134,7 +134,7 @@
 }
 
 #header.__w h1 {
-  background: url(../../images/common/kpc_logo_c.png) no-repeat center;
+  background: url(../../images/common/kpc_logo_c.gif) no-repeat center;
 }
 
 #header.__w .lang-select>a {

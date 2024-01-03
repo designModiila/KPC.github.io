@@ -36,9 +36,9 @@ body.noScroll {
   min-width: 200px;
 } */
 #header h1 {
-  background: url(../../images/common/kpc_logo.png) no-repeat center;
-  width: 92px;
-  height: 33px;
+  background: url(../../images/common/kpc_logo_c.gif) no-repeat center;
+  width: 151px;
+  height: 39px;
 }
 #header h1 span {
   display: none;
