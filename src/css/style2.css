@@ -671,6 +671,12 @@
     font-size: 30px;
   }
   .main .section04 .title-wrap{padding-top: 120px;}
+
+  .main .section03 .content{overflow: hidden;}
+  .main .section03 .leftSec{position: relative; top: -180px; padding-bottom: 0; box-sizing: border-box;}
+  .main .section03 .leftimg{margin-bottom: 50px;}
+  .main .section03 .leftimg.leftimg03{margin: 0;}
+  .main .section03 .leftimg .img-desc{margin-bottom: 20px;}
 }
 
 @media (max-width: 1100px) {
@@ -687,6 +693,7 @@
   .main .section05 .content-wrap {
     gap: 100px;
   }
+
 
 
 }
@@ -827,6 +834,7 @@
 
   .main .section03 .leftSec {
     padding: 0;
+    position: static;
   }
 
   .main .section03 .leftimg {
