@@ -1373,6 +1373,7 @@
   .news .inner {
     padding-top: 48px;
     padding-bottom: 24px;
+    overflow: hidden;
   }
 
   .news .swiper-slide a {
@@ -1385,6 +1386,8 @@
     width: 100%;
     left: 0;
     transform: unset;
+    min-height: 250px;
+    height: auto;
   }
 
   .cont-wrapper:after {

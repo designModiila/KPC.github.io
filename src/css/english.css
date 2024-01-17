@@ -124,13 +124,15 @@
 
   .company03 .section01 .swiper-controller{bottom: 65px;}
   .company03 .section01 .slide-title{font-size: 18px; line-height: 21px;}
+  .company03 .section01 .slide-desc br{display: none;}
 
   .business02 .section03 .box{width: 100%}
   .business02 .section04 .content-wrap{gap: 50px;}
   .business03 .section02 .tabcontent .box{min-height: auto; gap: 50px;}
   .business03 .section02 .tabcontent .box-desc{min-height: 150px;}
+  .business03 .section01 .video-title br{display: none;}
 
-  .esg01 .esg01-timeline .esg01-timeline-title{left: 5vw;}
+  .esg01 .esg01-timeline .esg01-timeline-title{left: 5vw; font-size: 18px; line-height: 23px;}
   .esg01 .esg01-timeline .img-txt-div .sub-txt{padding:  40px 10px 70px;}
 
   .esg02 .section02{padding: 30px 0 150px;}
