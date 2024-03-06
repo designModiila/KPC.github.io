@@ -3056,7 +3056,7 @@
 .company05 .content-wrap {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 120px 0 48px;
+  padding: 0 0 48px;
 }
 
 .company05 .content-wrap .title {
@@ -3091,26 +3091,122 @@
   color: #787878;
 }
 
+
+
+.company05 .section01 .tab .tabnav {
+  padding: 80px 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 77px;
+}
+
+.company05 .section01 .tab .tabnav a {
+  display: inline-block;
+  color: #a7a7a7;
+  font-weight: 500;
+  font-size: 32px;
+  position: relative;
+}
+
+.company05 .section01 .tab .tabnav a.active {
+  color: #000;
+  font-weight: 700;
+}
+
+.company05 .section01 .tab .tabnav a.active:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #000;
+  left: 0;
+  bottom: -6px;
+}
+
+.company05 .section01 #tab01 {
+  width: 100%;
+  /* padding: 124px 0 228px; */
+}
+
+.company05 .section01 #tab02 {
+  width: 100%;
+  /* padding: 124px 0 228px; */
+}
+
+.company05 .section01 .tabcontent .content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 0px;
+  flex-direction: column;
+}
+
+
 @media (max-width: 1600px) {
   .company05 .content-wrap {
     max-width: 100%;
-    padding: 120px 5vw 48px;
+    padding: 0 5vw 48px;
+  }
+}
+@media (max-width: 1240px) {
+  .company05 .section01 .tab .tabnav {
+    padding: 80px 5vw;
+    gap: 37px;
+  }
+
+  .company05 .section01 .tab .tabnav a {
+    font-size: 28px;
   }
 }
 
+@media (max-width: 1024px) {
+  .company05 .section01 .tab .tabnav {
+    padding: 60px 5vw;
+    gap: 27px;
+  }
+
+  .company05 .section01 .tab .tabnav a {
+    font-size: 24px;
+  }
+}
 @media (max-width: 767px) {
   .company05 {
     padding-bottom: 180px;
   }
 
   .company05 .content-wrap {
-    padding: 52px 5vw 20px;
+    padding: 0 5vw 20px;
   }
 
-  .company05 .content-wrap .title {
+  .business03 .section01 .tab .tabnav {
+    padding: 60px 5vw;
+    gap: 10px;
+  }
+
+  .company05 .section01 .tab .tabnav a {
+    font-size: 18px;
+  }
+
+  .company05 .section01 .tab .tabnav a.active:after {
+    height: 2px;
+    bottom: -4px;
+  }
+
+  .company05 .section01 #tab01 {
+    padding: 0 0 0;
+  }
+
+  .company05 .section01 #tab02 {
+    padding: 0 0 0;
+  }
+
+
+
+
+  /* .company05 .content-wrap .title {
     font-size: 18px;
     margin-bottom: 20px;
-  }
+  } */
 
   .company05 .content-wrap dl {
     margin-bottom: 0;
@@ -3859,13 +3955,13 @@
 }
 
 .business03 .section01 .video-wrap {
-  padding: 120px 0 46px;
+  padding: 120px 0 120px;
 }
 
 .business03 .section01 .video-title{font-weight: 700; font-size: 32px; margin-bottom: 72px; text-align: center;}
 
 .business03 .section01 .process-wrapper {
-  margin: 46px 0 48px;
+  margin: 0 0 48px;
   padding: 90px 0 102px;
   position: relative;
 }
