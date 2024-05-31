@@ -1,0 +1,124 @@
+
+
+   
+   <div class="customer-voice-write-wrap modal">
+    <div class="customer-close close-btn"></div>
+    <div class="customer-voice-inner">
+      
+          <div class="form-wrap">
+            <div class="form-title cont">
+              <p>내용을 입력해 주세요</p>
+            </div>
+
+            <div class="form-hori">
+              <div class="form-group cont">
+                <div class="form-label">
+                  <label>문의유형
+                    <span class="bul-must"></span>
+                  </label>
+                </div>
+                <input type="text" class="form-control" disabled placeholder="문의유형" name="name" value="일반 문의">
+                <!-- <select class="form-control js-select2">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select> -->
+              </div>
+             
+              <div class="form-group cont">
+                <div class="form-label">
+                  <label>이메일
+                    <span class="bul-must"></span>
+                  </label>
+                </div>
+                <input type="text" class="form-control" placeholder="이메일을 입력해 주세요" name="name">
+              </div>
+            </div>
+
+            <div class="form-hori">
+              <div class="form-group cont">
+                <div class="form-label">
+                  <label>성명</label>
+                </div>
+                <input type="text" class="form-control" placeholder="성명을 입력해 주세요" name="name">
+              </div>
+              <div class="form-group cont">
+                <div class="form-label">
+                  <label>연락처</label>
+                </div>
+                <input type="text" class="form-control" placeholder="연락처를 입력해 주세요" name="name">
+              </div>
+            </div>
+            
+            <div class="form-group cont">
+              <div class="form-label">
+                <label>제목
+                  <span class="bul-must"></span>
+                </label>
+              </div>
+              <input type="text" class="form-control" placeholder="제목을 입력해 주세요" name="name">
+            </div>
+            <div class="form-group cont">
+              <div class="form-label">
+                <label>제목
+                  <span class="bul-must"></span>
+                </label>
+              </div>
+              <textarea class="form-control" placeholder="내용을 입력해 주세요" id="textarea" rows="5"></textarea>
+            </div>
+            <div class="form-group cont">
+              <div class="form-label">
+                <label>첨부파일</label>
+              </div>
+              <div class="filebox">
+                <label for="file">첨부파일 추가</label> 
+                <input type="file" id="file" multiple>
+                <input class="upload-name" value="첨부파일" placeholder="첨부파일">
+              </div>
+            </div>
+
+            <div class="privacy-agree-box cont">
+              <div class="top">
+                <div>
+                  <input type="checkbox" name="check-privacy" value="privacy" class="icheckbox" id="agree">
+                  <label for="agree" class="agree">고객의 소리 등록을 위한 개인정보 수집 및 이용에 대해 동의합니다. (필수)</label>
+                  <div class="more-btn"><button type="button" class="btn-toggle toggle-text on" data-target="privacy-agree" data-on="1" data-siblings="1"></button></div>
+                </div>
+              </div>
+              <div class="privacy-agree on">
+                <ul>
+                  <li>
+                    <p class="textBold">수집하는 개인정보의 항목</p>
+                    <p>이메일, 성명, 연락처</p>
+                  </li>
+                  <li>
+                    <p class="textBold">개인정보의 수집 이용 목적</p>
+                    <p>접수된 고객의 소리에 대한 처리를 위한 의사소통 및 처리결과 전달</p>
+                  </li>
+                  <li>
+                    <p class="textBold">개인정보의 보유기간</p>
+                    <p>수집한 개인정보는 최대 5년까지 보관되며, 보존기간이 만료되었을 경우 즉시 파기를 진행합니다. 또한, 본인의 개인정보 삭제 요청 시 지체없이 삭제를 진행하고 그에 대한 결과를 통보해 드립니다. 수집된 개인정보는 위의 수집 이용 목적 외 활용되지 않습니다.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-wrap cont">
+              <button type="submit" class="submit-btn">등록</button>
+            </div>
+          </div>
+    </div>
+    
+  </div>
+
+   
+    <script>
+      $(document).ready(function(){
+        $('.customer-voice-write .customer-close').click(function(){
+          $('.layer-dimm').removeClass('open');
+          $('.customer-voice-write').hide().removeClass('open');
+          $('body').removeClass('noScroll');
+        })
+      })
+</script>

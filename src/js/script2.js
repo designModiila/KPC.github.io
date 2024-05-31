@@ -560,6 +560,23 @@ $(function() {
     })
   }
   modalView();
+
+
+  function customerVoiceWrite(){
+    $('.type-list li').click(function(){
+      $('.layer-dimm').addClass('open');
+      $('.customer-voice-write').show().addClass('open');
+      $('.customer-voice-write .modal').show();
+      $('body').addClass('noScroll');
+    })
+    $('.privacy').click(function(){
+      $('.layer-dimm').addClass('open');
+      $('.privacy-policy').show().addClass('open');
+      $('.privacy-policy .modal').show();
+      $('body').addClass('noScroll');
+    })
+  }
+  customerVoiceWrite();
   //voc 개인정보처리방침
   $('.privacy-agree-box .btn-toggle').click(function(){
     $(this).toggleClass('on');
@@ -857,23 +874,45 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-let videoObserver = new IntersectionObserver((entries, videoObserver) => {
-  entries.forEach(entry => {
-      // entry.target은 이미 video 요소입니다.
+  let hasUserInteracted = false;
+
+  // 사용자 상호작용을 감지하는 이벤트 리스너를 추가합니다.
+  document.addEventListener('click', () => hasUserInteracted = true, { once: true });
+
+  let videoObserver = new IntersectionObserver((entries, videoObserver) => {
+    entries.forEach(entry => {
       const video = entry.target;
 
-      if (entry.isIntersecting) {
-          video.play();
+      if (entry.isIntersecting && hasUserInteracted) {
+        video.play().catch(e => console.error("비디오 재생 실패:", e));
       } else {
-          video.pause();
+        video.pause();
       }
-  });
-}, { threshold: 0.5 }); // 요소가 50% 이상 보일 때 콜백 함수가 실행되도록 설정
+    });
+  }, { threshold: 0.5 });
 
-// 모든 .video-wrap 내의 video 요소에 대해 observer를 적용합니다.
-document.querySelectorAll('.video-wrap video').forEach(video => {
-  videoObserver.observe(video);
-});
+  document.querySelectorAll('.subPage .video-wrap video').forEach(video => {
+    videoObserver.observe(video);
+  });
+
+
+  // let videoObserver = new IntersectionObserver((entries, videoObserver) => {
+  //   entries.forEach(entry => {
+  //       // entry.target은 이미 video 요소입니다.
+  //       const video = entry.target;
+
+  //       if (entry.isIntersecting) {
+  //           video.play();
+  //       } else {
+  //           video.pause();
+  //       }
+  //   });
+  // }, { threshold: 0.5 }); // 요소가 50% 이상 보일 때 콜백 함수가 실행되도록 설정
+
+  // // 모든 .video-wrap 내의 video 요소에 대해 observer를 적용합니다.
+  // document.querySelectorAll('.video-wrap video').forEach(video => {
+  //   videoObserver.observe(video);
+  // });
 
 
 
